@@ -28,23 +28,21 @@ name it `2026-11-13_comment.txt`, type your paragraph, and commit. It replaces t
 
 ---
 
-## 2. AI articles and videos
+## 2. AI Watch (videos, articles, papers)
 
-1. Open **content/ai-resources.md** → click the **pencil** (Edit) icon.
-2. Add a block like this at the end:
+**Use the form (easiest).** Bookmark this link:
+https://github.com/Biz-Datalab/Biz-Datalab.github.io/issues/new?template=ai-watch.yml
 
-```
-## Title of the article or video
-- link: https://www.example.com/article
-- type: Video
-- source: YouTube · Channel name
-- date: 2026-11-20
-- comment: One or two sentences on why it is worth watching. Commas are fine.
-```
+1. Open the link (you must be signed in to GitHub as Biz-Datalab).
+2. In the title box, replace `AI Watch: ` with the title of the video, article, or paper.
+3. Paste the **Link**, choose the **Type** (Video, Article, or Paper), optionally add the **Source** and **Your comment**.
+4. Click **Create**.
 
-3. Click **Commit changes**.
+Within about 2 minutes the item is on the website, and the form closes itself with the note
+"Added to AI Watch". Only forms you submit are added; anyone else's are ignored.
 
-Type is `Article` or `Video`. Newest dates show first. To remove an item, delete its block.
+**To edit or remove an item:** open **content/ai-resources.md** → pencil icon → change or delete
+its block → **Commit changes**.
 
 ---
 

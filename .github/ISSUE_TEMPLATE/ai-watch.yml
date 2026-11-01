@@ -1,0 +1,38 @@
+name: Add to AI Watch
+description: Add a video, article, or paper to the AI Watch list on the website.
+title: "AI Watch: "
+labels: ["ai-watch"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Replace "AI Watch: " above with the **title** of the video, article, or paper.
+        After you click **Create**, it is added to the website automatically within about 2 minutes.
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: Full web address, starting with https://
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Video
+        - Article
+        - Paper
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Optional. For example YouTube channel, journal, or publication name.
+  - type: textarea
+    id: comment
+    attributes:
+      label: Your comment
+      description: One or two sentences on why it is worth watching or reading.

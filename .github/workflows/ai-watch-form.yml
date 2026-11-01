@@ -1,0 +1,47 @@
+name: Add AI Watch item from form
+
+# When the site owner submits the "Add to AI Watch" form (a GitHub issue labeled ai-watch),
+# add the item to content/ai-resources.md, rebuild the site, and close the issue.
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+  actions: write
+
+jobs:
+  add:
+    if: contains(github.event.issue.labels.*.name, 'ai-watch') && github.event.issue.user.login == github.repository_owner
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Add the item
+        id: add
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: echo "title=$(python scripts/add_ai_item.py)" >> "$GITHUB_OUTPUT"
+      - name: Save and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/ai-resources.md
+          git commit -m "AI Watch: add ${{ steps.add.outputs.title }} (#${{ github.event.issue.number }})"
+          git push
+          gh workflow run build-site.yml --ref main
+      - name: Close the form
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue close ${{ github.event.issue.number }} --comment "Added to AI Watch. It will appear on https://biz-datalab.github.io in about 2 minutes."
+      - name: Report a problem
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue comment ${{ github.event.issue.number }} --body "This could not be added. Check that the title is filled in and the link starts with https://, then edit the issue or open a new form."

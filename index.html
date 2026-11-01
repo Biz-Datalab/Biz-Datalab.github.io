@@ -95,7 +95,7 @@ details.method p{margin-top:8px;max-width:90ch}
 .news{margin-top:36px}
 .news h3,.sub-h{font-size:1.3rem;margin-bottom:10px}
 .list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-.list li{display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:4px 18px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.list li{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:4px 18px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
 .list time,.list .kind{font-size:.88rem;font-variant-numeric:tabular-nums}
 .list a.t{font-weight:700;text-decoration:none}
 .list a.t:hover{text-decoration:underline}
@@ -107,6 +107,12 @@ details.method p{margin-top:8px;max-width:90ch}
 .empty,.loading{padding:14px 0}
 
 .fine{font-size:.78rem;margin-top:8px}
+.jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.btn{display:inline-block;font-weight:700;font-size:.95rem;text-decoration:none;border:1.5px solid var(--ink);padding:8px 16px;border-radius:3px}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.filters button{font:700 .88rem var(--font);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:3px;padding:5px 12px;cursor:pointer}
+.filters button.on{border-color:var(--ink);background:var(--ink);color:var(--bg)}
 footer{padding-block:28px;font-size:.92rem}
 
 @media (max-width:760px){
@@ -126,9 +132,9 @@ footer{padding-block:28px;font-size:.92rem}
   <div class="wrap">
     <a class="brand" href="#about" id="brand">Biz Data Lab</a>
     <div class="links">
-      <a href="#teaching">Teaching</a>
-      <a href="#market-watch">Market Watch</a>
-      <a href="#ai-resources" id="navAI" hidden>AI Resources</a>
+      <a href="#teaching">Experiential Learning</a>
+      <a href="#market-watch">Diamond Market Watch</a>
+      <a href="#ai-watch">AI Watch</a>
     </div>
   </div>
 </nav>
@@ -145,6 +151,7 @@ footer{padding-block:28px;font-size:.92rem}
         <p id="pBio"></p>
         <p id="pBio2"></p>
         <div class="areas" id="pAreas" hidden></div>
+        <div class="jump"><a class="btn" href="#ai-watch">AI Watch →</a><a class="btn" href="#market-watch">Diamond Market Watch →</a><a class="btn" href="#teaching">Student projects →</a></div>
       </div>
     </div>
   </section>
@@ -186,10 +193,11 @@ footer{padding-block:28px;font-size:.92rem}
     </div>
   </section>
 
-  <section class="band" id="ai-resources" hidden>
+  <section class="band" id="ai-watch">
     <div class="wrap">
-      <div class="sec-head"><span class="label">Reading and watching</span><h2>AI Resources</h2>
-        <p>Articles and videos on AI in business, education, and work.</p></div>
+      <div class="sec-head"><span class="label">Curated picks</span><h2>AI Watch</h2>
+        <p>Videos, articles, and papers on AI that are worth your time, each with a short note on why.</p></div>
+      <div class="filters" id="resFilters" role="group" aria-label="Filter by type"></div>
       <ul class="list" id="resList"></ul>
     </div>
   </section>
@@ -256,12 +264,17 @@ function renderNews() {
   const b = $("newsMore"); b.hidden = items.length <= 5;
   b.textContent = newsAll ? "Show fewer" : `Show all ${items.length} stories`;
 }
+let resType = "All";
 function renderRes() {
-  const items = DATA.resources.slice().sort((a, b) => (b.date || "").localeCompare(a.date || ""));
-  $("ai-resources").hidden = !items.length; $("navAI").hidden = !items.length;
-  $("resList").innerHTML = items.map(r => `<li><span class="kind">${esc(r.type)}${r.date ? "<br>" + esc(fmt(r.date)) : ""}</span>
-    <div><a class="t" href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener">${esc(r.title || host(r.url))}</a>${r.source ? ` <span class="src">· ${esc(r.source)}</span>` : ""}${r.comment ? `<div class="note">“${esc(r.comment)}”</div>` : ""}</div><span></span></li>`).join("");
+  const all = DATA.resources.slice().sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  const types = ["All", ...new Set(all.map(r => r.type).filter(Boolean))];
+  $("resFilters").innerHTML = types.length > 2 ? types.map(t => `<button type="button" class="${t === resType ? "on" : ""}" data-t="${esc(t)}" aria-pressed="${t === resType}">${esc(t)}</button>`).join("") : "";
+  const items = all.filter(r => resType === "All" || r.type === resType);
+  $("resList").innerHTML = items.map(r => `<li><span class="kind"><span class="tag">${esc(r.type)}</span>${r.date ? "<br>" + esc(fmt(r.date)) : ""}</span>
+    <div><a class="t" href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener">${esc(r.title || host(r.url))}</a>${r.source ? ` <span class="src">· ${esc(r.source)}</span>` : ""}${r.comment ? `<div class="note">${esc(r.comment)}</div>` : ""}</div><span></span></li>`).join("")
+    || '<li class="empty">First picks coming soon.</li>';
 }
+document.addEventListener("click", ev => { const b = ev.target.closest("#resFilters button"); if (b) { resType = b.dataset.t; renderRes(); } });
 $("edPick").addEventListener("change", ev => renderPrices(+ev.target.value));
 $("newsMore").addEventListener("click", () => { newsAll = !newsAll; renderNews(); });
 
