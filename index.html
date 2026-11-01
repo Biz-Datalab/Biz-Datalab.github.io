@@ -106,6 +106,7 @@ details.method p{margin-top:8px;max-width:90ch}
 .linkbtn{background:none;border:0;padding:0;font:inherit;font-weight:700;color:var(--ink);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 .empty,.loading{padding:14px 0}
 
+.fine{font-size:.78rem;margin-top:8px}
 footer{padding-block:28px;font-size:.92rem}
 
 @media (max-width:760px){
@@ -136,7 +137,7 @@ footer{padding-block:28px;font-size:.92rem}
   <section class="band tint" id="about">
     <div class="wrap intro">
       <div class="intro-left">
-        <span class="label">About</span>
+        <span class="label">About me</span>
         <h1 id="pName"></h1>
         <p class="role" id="pHead"></p>
       </div>
@@ -159,15 +160,15 @@ footer{padding-block:28px;font-size:.92rem}
   <section class="band tint" id="market-watch">
     <div class="wrap">
       <div class="sec-head">
-        <span class="label">Updated every two weeks</span>
+        <span class="label">Market tracking</span>
         <h2>Diamond Market Watch</h2>
-        <p>Average asking price per carat for round, E-color, VVS2 diamonds, natural and lab-grown.</p>
+        <p>Average asking price per carat for round, excellent-cut, E-color, VVS2 diamonds, natural and lab-grown. These specifications balance the 4Cs: most purchases fall between 0.90 and 1.49 carats, and lab-grown stones are mostly colorless and high clarity, so E color and VVS2 compare the two on equal footing.</p>
       </div>
       <div class="card">
         <div class="card-top"><strong id="edTitle">Loading…</strong>
           <label for="edPick">Edition <select id="edPick"></select></label></div>
         <div class="tbl"><table class="price">
-          <thead><tr><th scope="col">E · VVS2</th><th scope="col">0.90 – 0.99 ct</th><th scope="col">1.00 – 1.49 ct</th></tr></thead>
+          <thead><tr><th scope="col">Excellent · E · VVS2</th><th scope="col">0.90 – 0.99 ct</th><th scope="col">1.00 – 1.49 ct</th></tr></thead>
           <tbody id="priceBody"></tbody>
         </table></div>
         <div class="summary"><span class="ratio" id="ratio"></span><p id="comment"></p></div>
@@ -175,6 +176,7 @@ footer{padding-block:28px;font-size:.92rem}
           <p>Each cell samples online listings (Blue Nile) at one point in time. Price per carat = price ÷ carat weight. The 95% confidence interval (CI) = mean ± t(0.975, n−1) × standard error, and it describes the average price, not the spread of individual stones. These are asking prices, not transaction prices. Change markers compare with the previous edition. <a class="dl" href="data/price-history.csv">Download all editions (CSV)</a></p>
         </details>
       </div>
+      <p class="fine">Updated every two weeks.</p>
 
       <div class="news">
         <h3>Industry News</h3>
