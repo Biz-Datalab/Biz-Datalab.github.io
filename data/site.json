@@ -1,0 +1,142 @@
+{
+ "profile": {
+  "name": "[Your Name]",
+  "headline": "business educator and researcher",
+  "bio": "I teach business analytics, research methods, and operations, and I build every course around real data. My research follows two threads: how AI is changing business practice, and how diamond and jewelry markets work.",
+  "area1": "AI in business practice",
+  "area2": "Diamond & jewelry markets",
+  "email": "[your email]",
+  "statement": "My teaching rests on one conviction: in an era when AI can generate answers instantly, the lasting advantage belongs to those who can frame the right question, work with real-world data, and turn analysis into action. Every project I design puts students inside a real business problem, so they graduate with experience, not just textbook knowledge."
+ },
+ "projects": [
+  {
+   "title": "Bridging the AI Skills Gap",
+   "course": "Capstone · Business Analytics",
+   "description": "Two student teams compare what educators teach with what employers demand. Findings are headed to a conference.",
+   "pdf": ""
+  },
+  {
+   "title": "Amazon Marketplace Analysis",
+   "course": "Final project · Business Analytics",
+   "description": "Students analyze real Amazon listings in JMP Pro and decide whether a new seller could compete.",
+   "pdf": ""
+  },
+  {
+   "title": "The Full Research Cycle",
+   "course": "Research Methods & Ethics",
+   "description": "From literature review to peer review and a conference-style presentation.",
+   "pdf": ""
+  },
+  {
+   "title": "Bayes for Supplier Quality",
+   "course": "Operations Management",
+   "description": "Conditional probability applied to supplier quality and supply-chain decisions.",
+   "pdf": ""
+  }
+ ],
+ "resources": [],
+ "news": [
+  {
+   "title": "Natural vs. lab-grown: the 1-carat gap",
+   "url": "https://barkevs.com/blogs/blog/diamond-price-guide",
+   "source": "Barkev's",
+   "date": "2026-10-30",
+   "category": "prices"
+  },
+  {
+   "title": "Diamonds may not be forever, at least in value terms",
+   "url": "https://www.investmentnews.com/alternatives/diamonds-may-not-be-forever-at-least-in-value-terms/268370",
+   "source": "InvestmentNews",
+   "date": "2026-09-28",
+   "category": "market"
+  },
+  {
+   "title": "How will AI transform the UK jewellery and gemstone industry?",
+   "url": "https://www.thejewelleryshow.co.uk/conference-programme-2026/how-will-ai-transform-the-jewellery-and-gemstone-industry-in-the-uk",
+   "source": "The Jewellery Show",
+   "date": "2026-09-02",
+   "category": "ai"
+  },
+  {
+   "title": "Lab-grown wholesale prices down about 13% year over year in Q2",
+   "url": "https://www.bengarelick.com/blogs/news/lab-diamond-prices-by-size-2026",
+   "source": "Ben Garelick",
+   "date": "2026-07-15",
+   "category": "prices"
+  },
+  {
+   "title": "China produces over 60% of lab-grown diamonds; Shanghai exports up 65%",
+   "url": "https://www.wealthprofessional.ca/news/industry-news/diamonds-may-not-be-forever-at-least-in-value-terms/393633",
+   "source": "Wealth Professional",
+   "date": "2026-07-10",
+   "category": "market"
+  },
+  {
+   "title": "Lab-grown retail prices down about 88% since 2020",
+   "url": "https://brdiamonds.com/blogs/news/why-lab-grown-diamond-prices-keep-dropping",
+   "source": "Buchroeders",
+   "date": "2026-04-15",
+   "category": "prices"
+  },
+  {
+   "title": "AI becoming core to jewellery manufacturing and retail",
+   "url": "https://gjepc.org/solitaire/ai-becoming-core-to-jewellery-manufacturing-and-retail/",
+   "source": "GJEPC Solitaire",
+   "date": "2026-01-13",
+   "category": "ai"
+  }
+ ],
+ "editions": [
+  {
+   "date": "2026-10-30",
+   "source": "Blue Nile listings",
+   "comment": "Natural stones carry a 26% per-carat premium for crossing the 1-carat mark. Lab-grown prices are tightly clustered, which points to formula-based retail pricing.",
+   "cells": {
+    "n090": {
+     "n": 57,
+     "mean": 5563.1,
+     "lo": 5301.3,
+     "hi": 5825.0,
+     "median": 5220.0,
+     "min": 4565.6,
+     "max": 8818.9,
+     "avg_stone": 5066.3,
+     "avg_carat": 0.91
+    },
+    "n100": {
+     "n": 128,
+     "mean": 6990.1,
+     "lo": 6603.9,
+     "hi": 7376.4,
+     "median": 6435.1,
+     "min": 4252.3,
+     "max": 15796.9,
+     "avg_stone": 8150.4,
+     "avg_carat": 1.139
+    },
+    "l090": {
+     "n": 26,
+     "mean": 624.4,
+     "lo": 605.8,
+     "hi": 643.1,
+     "median": 608.3,
+     "min": 577.1,
+     "max": 715.2,
+     "avg_stone": 593.0,
+     "avg_carat": 0.95
+    },
+    "l100": {
+     "n": 32,
+     "mean": 568.4,
+     "lo": 567.7,
+     "hi": 569.1,
+     "median": 568.7,
+     "min": 565.0,
+     "max": 571.7,
+     "avg_stone": 615.7,
+     "avg_carat": 1.083
+    }
+   }
+  }
+ ]
+}
