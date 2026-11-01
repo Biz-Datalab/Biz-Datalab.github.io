@@ -8,4 +8,4 @@ Edit the text after each colon. Keep the labels before the colon as they are.
 - bio2: This site is my working window: experiential learning projects that give business students real work experience, ideas on teaching and learning, applied AI, and a running watch on the diamond and jewelry market.
 - areas:
 - email: [your email]
-- statement: My teaching rests on one conviction: in an era when AI can generate answers instantly, the lasting advantage belongs to those who can frame the right question, work with real-world data, and turn analysis into action. Every project I design puts students inside a real business problem, so they graduate with experience, not just textbook knowledge.
+- statement: The projects below come from my courses in recent semesters. In each one, students worked with real-world data and realistic business scenarios: they framed the problem, analyzed the evidence, and made and defended a decision. Several projects went on to public presentations and showcases.
