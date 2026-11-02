@@ -335,14 +335,14 @@
       ],
       [
        "Data acquisition",
-       "Collect prices and grades from retailer websites."
+       "Collect prices and grades."
       ],
       [
        "Data preparation",
-       "Clean the data and calculate price per carat."
+       "Clean the data and identify variables."
       ],
       [
-       "Analysis",
+       "Data analysis and visualization",
        "Pivot tables, heat maps, regression, and a 95% confidence interval."
       ],
       [

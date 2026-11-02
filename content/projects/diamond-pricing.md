@@ -14,9 +14,9 @@ In "Workflow", the parts of an item are separated by " | ". In "Student work", a
 
 ## Workflow
 - Domain knowledge | Learn the 4Cs and how grading reports set diamond value.
-- Data acquisition | Collect prices and grades from retailer websites.
-- Data preparation | Clean the data and calculate price per carat.
-- Analysis | Pivot tables, heat maps, regression, and a 95% confidence interval.
+- Data acquisition | Collect prices and grades.
+- Data preparation | Clean the data and identify variables.
+- Data analysis and visualization | Pivot tables, heat maps, regression, and a 95% confidence interval.
 - Communication | Build a dashboard, present in class, and write a report.
 
 ## Domain knowledge
