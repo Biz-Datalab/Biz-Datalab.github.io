@@ -19,7 +19,7 @@ A line "- intro: ..." directly under a section heading adds an introductory sent
 ## Numbers
 - intro: In one year, the team moved from an idea to evidence: a formal industry partnership, field-tested products, AI-assisted market research across the region, and direct engagement with campus leaders, businesses, investors, and the community.
 - 3 | student research assistants
-- 2 of 3 | student RAs hired by the time the project ended
+- 2 | student RAs received full-time job offers
 - 130+ | attendees reached at three school events
 - 300+ | potential sites identified with AI agents
 - 100+ | facilities leaders contacted
@@ -29,7 +29,7 @@ A line "- intro: ..." directly under a section heading adds an introductory sent
 
 ## Student learning
 - intro: The project was designed as experiential learning. Students did the work of a startup team, with real stakes, real partners, and real deadlines.
-- Job readiness | Students owned research, data analysis, and reporting on a biweekly cycle, and 2 of the 3 research assistants were hired by the time the project ended.
+- Job readiness | Students owned research, data analysis, and reporting on a biweekly cycle, and two of the research assistants received full-time job offers by the end of the project.
 - Industry mentorship | Biweekly reviews with Portor Lighting and a visit to its facility in Ontario, CA put students alongside industry veterans in product, manufacturing, and sales.
 - AI in daily work | AI was part of the workflow, not a side topic. The team used AI tools such as Claude, ChatGPT, Gemini, HeyGen, and Newport AI to build domain knowledge, brainstorm ideas, prepare and analyze data, write code, generate leads, craft stories for different audiences, and produce outreach videos with digital avatars.
 - Outreach and communication | Students presented at school events, joined an investor pitch, and met with campus leaders, local businesses, and regional organizations, using AI to shape the storytelling and outreach materials.
