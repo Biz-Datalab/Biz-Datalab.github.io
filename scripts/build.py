@@ -1,7 +1,7 @@
 """Build data/site.json (and data/price-history.csv) from the editable files.
 
 Inputs
-  content/profile.md, content/projects.md, content/ai-resources.md, content/news.md
+  content/profile.md, content/projects/*.md, content/ai-resources.md, content/news.md
   prices/YYYY-MM-DD_*.csv          Blue Nile exports (title column + price column)
   prices/YYYY-MM-DD_comment.txt    optional comment for that edition
 
@@ -47,6 +47,60 @@ def parse_fields(path):
         if m:
             out[m.group(1).lower()] = m.group(2).strip()
     return out
+
+
+FIELD_KEYS = {"text", "image", "images", "link", "caption"}
+
+
+def parse_project(path):
+    """A project file: '# Title', top '- key: value' fields, then '## Section' blocks.
+    A section holds '- item' lines, or '### Subsection' blocks with their own '- key: value' fields."""
+    text = re.sub(r"<!--.*?-->", "", read(path), flags=re.S)
+    proj = {"slug": os.path.splitext(os.path.basename(path))[0], "title": "", "sections": {}, "section_order": []}
+    sec = sub = None
+    for line in text.splitlines():
+        if line.startswith("# ") and not proj["title"]:
+            proj["title"] = line[2:].strip()
+            continue
+        if line.startswith("## "):
+            sec = {"name": line[3:].strip(), "items": [], "subs": []}
+            proj["sections"][sec["name"].lower()] = sec
+            proj["section_order"].append(sec["name"].lower())
+            sub = None
+            continue
+        if line.startswith("### ") and sec is not None:
+            sub = {"title": line[4:].strip(), "bullets": []}
+            sec["subs"].append(sub)
+            continue
+        m = re.match(r"\s*[-*]\s+(.*)$", line)
+        if not m:
+            continue
+        item = m.group(1).strip()
+        kv = re.match(r"([A-Za-z_]+)\s*:\s?(.*)$", item)
+        if sec is None:
+            if kv:
+                proj[kv.group(1).lower()] = kv.group(2).strip()
+        elif sub is not None:
+            if kv and kv.group(1).lower() in FIELD_KEYS:
+                sub[kv.group(1).lower()] = kv.group(2).strip()
+            else:
+                sub["bullets"].append(item)
+        else:
+            sec["items"].append([p.strip() for p in item.split(" | ")])
+    for s in proj["sections"].values():
+        for sb in s["subs"]:
+            if "images" in sb:
+                sb["images"] = [x.strip() for x in sb["images"].split(",") if x.strip()]
+            elif "image" in sb:
+                sb["images"] = [sb.pop("image")]
+            for img in sb.get("images", []):
+                if not os.path.exists(os.path.join(ROOT, img)):
+                    warnings.append(f"{os.path.basename(path)}: image '{img}' not found")
+    try:
+        proj["order_num"] = float(proj.get("order", 99))
+    except ValueError:
+        proj["order_num"] = 99
+    return proj
 
 
 def t975(df):
@@ -152,12 +206,9 @@ def build_prices():
 def main():
     cdir = os.path.join(ROOT, "content")
     profile = parse_fields(os.path.join(cdir, "profile.md"))
-    projects = [{"title": p["title"], "course": p.get("course", ""), "description": p.get("description", ""),
-                 "pdf": p.get("pdf", "")} for p in parse_md(os.path.join(cdir, "projects.md"))]
-    for p in projects:
-        if p["pdf"] and not os.path.exists(os.path.join(ROOT, "projects", p["pdf"])):
-            warnings.append(f"projects.md: PDF '{p['pdf']}' not found in the projects folder")
-            p["pdf"] = ""
+    pdir = os.path.join(cdir, "projects")
+    projects = sorted((parse_project(os.path.join(pdir, f)) for f in os.listdir(pdir) if f.endswith(".md")),
+                      key=lambda p: (p["order_num"], p["title"])) if os.path.isdir(pdir) else []
     resources = [{"title": r["title"], "url": r.get("link", ""), "type": r.get("type", "Article"),
                   "source": r.get("source", ""), "date": r.get("date", ""), "comment": r.get("comment", "")}
                  for r in parse_md(os.path.join(cdir, "ai-resources.md")) if r.get("link")]

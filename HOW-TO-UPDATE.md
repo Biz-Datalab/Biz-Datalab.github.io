@@ -46,19 +46,25 @@ its block → **Commit changes**.
 
 ---
 
-## 3. Experiential learning projects and PDFs
+## 3. Experiential learning projects
 
-**Attach a PDF to a project**
-1. Open the **projects** folder → **Add file → Upload files** → upload the PDF
-   (e.g. `ai-skills-gap.pdf`; avoid spaces in the name) → **Commit changes**.
-2. Open **content/projects.md** → pencil icon → find the project and type the file name after `- pdf:`
-   ```
-   - pdf: ai-skills-gap.pdf
-   ```
-3. **Commit changes.** A "Project brief & student work (PDF)" link appears on the site.
+Each project is one file in **content/projects/** (for example `thrive.md`) and gets its own story page.
+Images go in a folder under **projects/** (for example `projects/thrive/`).
 
-**Add a new project:** copy any block in projects.md (from `## Title` down to `- pdf:`), paste it,
-and change the text. Projects show in the order they appear in the file.
+**Add a new project**
+1. Open **content/projects/thrive.md**, select all the text, and copy it.
+2. In **content/projects/**, choose **Add file → Create new file**. Name it with a short word, e.g. `retail-pricing.md`.
+3. Paste, then change the text. Set `- type:` to `funded`, `group`, or `individual`, and `- order:` to its position on the page (1 = first).
+4. Delete any section you don't need (from its `## ` line to the next `## ` line). Sections you can use:
+   `Links`, `Numbers`, `Student work`, `Emerging needs and opportunities`, `Long-term vision`, `Student voices`,
+   `Outcomes`, `Team`, `Partners`. Any other `## Section` name shows as a simple list.
+5. **Commit changes.**
+
+**Add images:** open **projects/** → **Add file → Upload files**, upload into a project folder, then write the path
+in the project file, e.g. `- image: projects/retail-pricing/poster.jpg`. Several images: `- images: a.jpg, b.jpg`.
+
+**Attach a PDF (report, poster, slides):** upload it to the project's folder and add it under `## Links`, e.g.
+`- Student report (PDF) | projects/retail-pricing/report.pdf`.
 
 ---
 
