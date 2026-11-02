@@ -6,7 +6,7 @@
 <title>Project · Biz Data Lab</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=2f9fb07c">
+<link rel="stylesheet" href="assets/site.css?v=b6d9b4ee">
 <script data-goatcounter="https://biz-datalab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -61,15 +61,16 @@ function renderBrief(p) {
   const S = p.sections, out = [];
   const W = S.workflow;
   out.push(band(`<a class="back" href="index.html#teaching">← All projects</a>
-    <div class="brief-head"><span class="badge solid">${esc(p.label || TYPE[p.type] || "Project")}</span>
+    <div class="brief-head"><span class="badge solid ${esc(p.badge || (p.type === "funded" ? "funded" : "student"))}">${esc(p.label || TYPE[p.type] || "Project")}</span>
       <h1>${esc(p.title)}</h1><p class="sum">${esc(p.summary || "")}</p></div>
-    ${W ? `<ol class="steps">${W.items.map(i => `<li><b>${esc(i[0])}</b><span>${esc(i.slice(1).join(" | "))}</span></li>`).join("")}</ol>` : ""}`, true));
+    ${W ? `<ol class="steps">${W.items.map(i => `<li><b>${esc(i[0])}</b><span>${esc(i.slice(1).join(" | "))}</span></li>`).join("")}</ol>` : ""}
+    ${(S["domain knowledge"] || {}).subs ? S["domain knowledge"].subs.map(d => `<div class="callout"><b>${esc(d.title)}</b>${d.text ? `<p>${esc(d.text)}</p>` : ""}${d.link ? `<a href="${esc(safeUrl(d.link))}" target="_blank" rel="noopener">${esc(d.linktext || "Open ↗")}</a>` : ""}</div>`).join("") : ""}`, true));
   const R = S["student work"];
   if (R) out.push(band(head("Student work", "Selected results", R.intro) +
     `<div class="gallery">${R.subs.map(w => `<figure class="${w.size === "wide" ? "wide" : ""}">
       <div class="gimg">${(w.images || []).map(src => `<a href="${esc(src)}" target="_blank" rel="noopener"><img src="${esc(src)}" alt="${esc(w.title)}" loading="lazy"></a>`).join("")}</div>
       <figcaption><b>${esc(w.title)}</b>${w.text ? `<span>${esc(w.text)}</span>` : ""}${w.link ? `<a href="${esc(safeUrl(w.link))}" target="_blank" rel="noopener">${esc(w.linktext || "Open ↗")}</a>` : ""}</figcaption></figure>`).join("")}</div>`));
-  Object.keys(S).filter(k => !["workflow", "student work"].includes(k)).forEach(k => {
+  Object.keys(S).filter(k => !["workflow", "student work", "domain knowledge"].includes(k)).forEach(k => {
     const sec = S[k];
     out.push(band(head("Project", sec.name) + `<div class="generic">${sec.intro ? `<p>${esc(sec.intro)}</p>` : ""}<div class="prose">${paras(sec)}</div></div>`, true));
   });
@@ -84,7 +85,7 @@ function render(p) {
   const facts = [["Period", p.period], ["Funding", p.funder], ["Status", p.status]].filter(f => f[1]);
   out.push(band(`<a class="back" href="index.html#teaching">← All projects</a>
     <div class="phero"><div>
-      <span class="badge solid">${esc(p.label || TYPE[p.type] || "Project")}</span>
+      <span class="badge solid ${esc(p.badge || (p.type === "funded" ? "funded" : "student"))}">${esc(p.label || TYPE[p.type] || "Project")}</span>
       <h1>${esc(p.title)}</h1>
       <div class="facts">${facts.map(f => `<span><b>${esc(f[0])}:</b> ${esc(f[1])}</span>`).join("")}</div>
       <p class="sum">${esc(p.summary || "")}</p>

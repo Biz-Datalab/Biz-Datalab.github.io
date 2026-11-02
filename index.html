@@ -7,7 +7,7 @@
 <meta name="description" content="Experiential learning projects, a biweekly Diamond Market Watch, and curated AI resources.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=2f9fb07c">
+<link rel="stylesheet" href="assets/site.css?v=b6d9b4ee">
 <script data-goatcounter="https://biz-datalab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -45,6 +45,7 @@
       <p class="statement" id="pStatement"></p>
       <div class="types" id="projTypes"></div>
       <div class="proj-list" id="projList"></div>
+      <div class="more"><button class="linkbtn" id="projMore" type="button" hidden></button></div>
     </div>
   </section>
 
@@ -120,23 +121,31 @@ const PTYPES = [
   ["individual", "Individual research", "Independent student research conducted under faculty mentorship and supported by a summer research fellowship."]
 ];
 const PTYPE_LABEL = { funded: "Funded research project", group: "Student group project", individual: "Individual research" };
+let PFILTER = "all", PSHOWALL = false;
+const PFIRST = 6;
 function renderProjects(list) {
-  $("projTypes").innerHTML = PTYPES.map(([k, t, d]) => { const n = list.filter(p => p.type === k).length;
-    return `<div><b>${t}</b><p>${d}</p><small>${n ? n + (n > 1 ? " projects" : " project") : "Coming soon"}</small></div>`; }).join("");
-  $("projList").innerHTML = list.map(p => {
+  const count = k => list.filter(p => p.type === k).length;
+  $("projTypes").innerHTML = PTYPES.map(([k, t, d]) => { const n = count(k);
+    return `<button type="button" data-k="${k}" aria-pressed="${PFILTER === k}"${n ? "" : " disabled"}><b>${t}</b><p>${d}</p><small>${n ? n + (n > 1 ? " projects" : " project") + (PFILTER === k ? " · showing" : " · show") : "Coming soon"}</small></button>`; }).join("");
+  $("projTypes").querySelectorAll("button").forEach(b => b.onclick = () => { PFILTER = PFILTER === b.dataset.k ? "all" : b.dataset.k; PSHOWALL = false; renderProjects(list); });
+  const shown = list.filter(p => PFILTER === "all" || p.type === PFILTER);
+  const visible = PSHOWALL ? shown : shown.slice(0, PFIRST);
+  $("projList").innerHTML = visible.map(p => {
     const url = `project.html?p=${encodeURIComponent(p.slug)}`;
-    const nums = ((p.sections.numbers || {}).items || []).slice(0, 3);
-    const first = (p.summary || "").split(/(?<=\.)\s+/).slice(0, 2).join(" ");
+    const first = (p.summary || "").split(/(?<=\.)\s+/)[0];
     return `<article class="pcard">
       <a class="pcard-img" href="${url}" tabindex="-1" aria-hidden="true">${p.image ? `<img src="${esc(p.image)}" alt="" loading="lazy">` : ""}</a>
       <div class="pcard-body">
-        <span><span class="badge solid">${esc(p.label || PTYPE_LABEL[p.type] || p.type || "Project")}</span></span>
+        <span><span class="badge solid ${esc(p.badge || (p.type === "funded" ? "funded" : "student"))}">${esc(p.label || PTYPE_LABEL[p.type] || p.type || "Project")}</span></span>
         <h3><a href="${url}">${esc(p.title)}</a></h3>
-        <p class="meta">${[p.period, p.funder].filter(Boolean).map(esc).join(" · ")}</p>
-        <p>${esc(first)}</p>
-        ${nums.length ? `<div class="mini-stats">${nums.map(n => `<div><b>${esc(n[0])}</b><span>${esc(n[1] || "")}</span></div>`).join("")}</div>` : ""}
-        <a class="btn" href="${url}">Read the project story →</a>
+        ${p.period ? `<p class="meta">${esc(p.period)}</p>` : ""}
+        <p class="pcard-sum">${esc(first)}</p>
+        <a class="pcard-more" href="${url}">Read the project →</a>
       </div></article>`; }).join("") || '<p class="empty">Projects coming soon.</p>';
+  const more = $("projMore");
+  more.hidden = shown.length <= PFIRST;
+  more.textContent = PSHOWALL ? "Show fewer projects" : `Show all ${shown.length} projects`;
+  more.onclick = () => { PSHOWALL = !PSHOWALL; renderProjects(list); if (!PSHOWALL) $("teaching").scrollIntoView(); };
 }
 function cell(s, prev) {
   if (!s) return '<td class="none">No sample</td>';

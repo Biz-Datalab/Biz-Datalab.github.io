@@ -51,8 +51,19 @@ its block → **Commit changes**.
 Each project is one file in **content/projects/** (for example `thrive.md`) and gets its own story page.
 Images go in a folder under **projects/** (for example `projects/thrive/`).
 
+**Two page styles**
+- **Full story** (long funded projects): copy **content/projects/thrive.md**.
+- **Brief** (course and student projects): copy **content/projects/diamond-pricing.md**. It shows a short summary,
+  a row of workflow steps, and a gallery of results. Add `- size: wide` to a result to show it full width.
+
+**Label color** (the small banner above the title): set `- badge:` to `funded` (black), `capstone` (greenish grey),
+or `student` (grey), and `- label:` to the words shown, e.g. `- label: Capstone project`.
+
+On the home page, projects show as a grid of small cards. The first 6 are shown, with a "Show all" link for the rest,
+and the three type boxes above the grid filter the cards.
+
 **Add a new project**
-1. Open **content/projects/thrive.md**, select all the text, and copy it.
+1. Open the project file that matches the style you want (see above), select all the text, and copy it.
 2. In **content/projects/**, choose **Add file → Create new file**. Name it with a short word, e.g. `retail-pricing.md`.
 3. Paste, then change the text. Set `- type:` to `funded`, `group`, or `individual`, and `- order:` to its position on the page (1 = first).
 4. Delete any section you don't need (from its `## ` line to the next `## ` line). Sections you can use:

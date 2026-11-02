@@ -2,11 +2,13 @@
 How to edit: change the text after each colon. Sections start with "## ". Items in a section start with "- ".
 This project uses the short "brief" layout: a summary, workflow steps, and a results gallery.
 In "Workflow", the parts of an item are separated by " | ". In "Student work", add "- size: wide" to show an image full width.
+"badge" sets the label color: funded (black), capstone (greenish grey), or student (grey).
 
 - type: group
 - label: Student project
 - order: 2
 - layout: brief
+- badge: student
 - image: projects/diamond-pricing/dashboard.png
 - summary: Students learn business analytics hands-on with real-world diamond prices. Each student is assigned a carat range, collects current natural diamond listings from online retailers, and analyzes how price per carat changes with the 4Cs: carat, color, clarity, and cut. Results are benchmarked against the Rapaport industry price list and compared with lab-grown diamonds.
 
@@ -17,15 +19,14 @@ In "Workflow", the parts of an item are separated by " | ". In "Student work", a
 - Analysis | Pivot tables, heat maps, regression, and a 95% confidence interval.
 - Communication | Build a dashboard, present in class, and write a report.
 
-## Student work
-- intro: These are a fraction of one student's raw dataset and visuals, from a project on round, ideal-cut diamonds of 0.70 to 0.89 carat.
-
-### Domain knowledge: the grading report
-- text: A grading report lists the attributes behind every price. Each listing students collect becomes one row with the same fields.
-- image: projects/diamond-pricing/gia-sample-report.jpg
+## Domain knowledge
+### Sample GIA grading report
+- text: This is a sample grading report where the 4Cs data can be identified: carat weight, color grade, clarity grade, and cut grade. Each listing students collect becomes one row with these same fields.
 - link: projects/diamond-pricing/gia-sample-report.jpg
 - linktext: View the sample GIA report ↗
-- size: wide
+
+## Student work
+- intro: These are a fraction of one student's raw dataset and visuals, from a project on round, ideal-cut diamonds of 0.70 to 0.89 carat.
 
 ### Raw data
 - text: Price, carat, cut, color, and clarity for each stone, with price per carat calculated.

@@ -352,21 +352,23 @@
      ],
      "subs": []
     },
+    "domain knowledge": {
+     "name": "Domain knowledge",
+     "items": [],
+     "subs": [
+      {
+       "title": "Sample GIA grading report",
+       "bullets": [],
+       "text": "This is a sample grading report where the 4Cs data can be identified: carat weight, color grade, clarity grade, and cut grade. Each listing students collect becomes one row with these same fields.",
+       "link": "projects/diamond-pricing/gia-sample-report.jpg",
+       "linktext": "View the sample GIA report ↗"
+      }
+     ]
+    },
     "student work": {
      "name": "Student work",
      "items": [],
      "subs": [
-      {
-       "title": "Domain knowledge: the grading report",
-       "bullets": [],
-       "text": "A grading report lists the attributes behind every price. Each listing students collect becomes one row with the same fields.",
-       "link": "projects/diamond-pricing/gia-sample-report.jpg",
-       "linktext": "View the sample GIA report ↗",
-       "size": "wide",
-       "images": [
-        "projects/diamond-pricing/gia-sample-report.jpg"
-       ]
-      },
       {
        "title": "Raw data",
        "bullets": [],
@@ -432,6 +434,7 @@
    },
    "section_order": [
     "workflow",
+    "domain knowledge",
     "student work",
     "for instructors"
    ],
@@ -439,6 +442,7 @@
    "label": "Student project",
    "order": "2",
    "layout": "brief",
+   "badge": "student",
    "image": "projects/diamond-pricing/dashboard.png",
    "summary": "Students learn business analytics hands-on with real-world diamond prices. Each student is assigned a carat range, collects current natural diamond listings from online retailers, and analyzes how price per carat changes with the 4Cs: carat, color, clarity, and cut. Results are benchmarked against the Rapaport industry price list and compared with lab-grown diamonds.",
    "order_num": 2.0
