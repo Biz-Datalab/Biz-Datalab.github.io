@@ -238,3 +238,5 @@ footer{padding-block:28px;font-size:.92rem}
 .pcard-img img{object-fit:contain;padding:20px;max-height:420px}
 .phero-img{background:#ffffff}
 .phero-img img{object-fit:contain;max-height:460px;padding:20px}
+.phero-img.photo{background:var(--bg)}
+.phero-img.photo img{padding:0;object-fit:contain;max-height:none}

@@ -62,7 +62,7 @@ function render(p) {
       <div class="facts">${facts.map(f => `<span><b>${esc(f[0])}:</b> ${esc(f[1])}</span>`).join("")}</div>
       <p class="sum">${esc(p.summary || "")}</p>
       ${links.length ? `<div class="jump">${links.map(l => `<a class="btn" href="${esc(safeUrl(l[1]))}" target="_blank" rel="noopener">${esc(l[0])} ↗</a>`).join("")}</div>` : ""}
-    </div>${p.image ? `<div class="phero-img"><img src="${esc(p.image)}" alt="${esc(p.title)}"></div>` : ""}</div>`, true));
+    </div>${(p.hero || p.image) ? `<div class="phero-img${p.hero ? " photo" : ""}"><img src="${esc(p.hero || p.image)}" alt="${esc(p.title)}"></div>` : ""}</div>`, true));
 
   if (S.numbers) out.push(band(head("By the numbers", "Project at a glance", S.numbers.intro) +
     `<div class="stats">${S.numbers.items.map(n => `<div><b>${esc(n[0])}</b><span>${esc(n[1] || "")}</span></div>`).join("")}</div>`));
