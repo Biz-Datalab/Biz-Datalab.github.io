@@ -49,7 +49,7 @@ def parse_fields(path):
     return out
 
 
-FIELD_KEYS = {"text", "image", "images", "link", "caption"}
+FIELD_KEYS = {"text", "image", "images", "link", "caption", "size", "linktext"}
 
 
 def parse_project(path):

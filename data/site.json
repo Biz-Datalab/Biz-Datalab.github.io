@@ -326,129 +326,99 @@
    "slug": "diamond-pricing",
    "title": "Pricing Diamonds with Real-World Market Data",
    "sections": {
-    "numbers": {
-     "name": "Numbers",
+    "workflow": {
+     "name": "Workflow",
      "items": [
       [
-       "56",
-       "color and clarity combinations priced (8 colors × 7 clarity grades)"
-      ],
-      [
-       "0.99",
-       "R² for price per carat vs. color grade"
-      ],
-      [
-       "30",
-       "stones sampled for the confidence interval"
-      ],
-      [
-       "$3,992 ± $182",
-       "95% confidence interval for mean price per carat (D color, VVS1)"
-      ],
-      [
-       "70–112%",
-       "student prices as a share of Rapaport list prices"
-      ],
-      [
-       "About 21%",
-       "lab-grown price per carat relative to natural (D color, VVS1)"
-      ]
-     ],
-     "subs": [],
-     "intro": "Results from a student project on natural, round, ideal-cut diamonds of 0.70 to 0.89 carat, built entirely from prices the students collected themselves."
-    },
-    "student learning": {
-     "name": "Student learning",
-     "items": [
-      [
-       "Industry knowledge",
-       "Students learn how the 4Cs and grading reports from labs such as GIA and IGI set diamond value, and how the industry benchmarks prices."
+       "Domain knowledge",
+       "Learn the 4Cs and how grading reports set diamond value."
       ],
       [
        "Data acquisition",
-       "Students collect prices and 4Cs grades from public retailer websites, by hand or with tools such as Python, Microsoft Power Automate, or Easy Scraper."
+       "Collect prices and grades from retailer websites."
       ],
       [
        "Data preparation",
-       "They remove errors, duplicates, and irrelevant listings, fill gaps by extending the search, and calculate price per carat."
+       "Clean the data and calculate price per carat."
       ],
       [
-       "Descriptive analytics",
-       "Pivot tables and heat maps show how price per carat moves across color and clarity grades, and how student prices compare with the Rapaport benchmark."
-      ],
-      [
-       "Statistical inference",
-       "Students turn letter grades into numbers, fit regression lines with R², and build a 95% confidence interval from a 30-stone sample."
+       "Analysis",
+       "Pivot tables, heat maps, regression, and a 95% confidence interval."
       ],
       [
        "Communication",
-       "Students build an interactive dashboard, presents in class in six minutes plus Q&A, and submits a final report with the raw data."
+       "Build a dashboard, present in class, and write a report."
       ]
      ],
-     "subs": [],
-     "intro": "The project takes students through the full analytics workflow on live market data, from finding the numbers to explaining them."
+     "subs": []
     },
     "student work": {
      "name": "Student work",
      "items": [],
      "subs": [
       {
-       "title": "Domain knowledge: reading a diamond grading report",
+       "title": "Domain knowledge: the grading report",
        "bullets": [],
-       "text": "Before collecting data, students build domain knowledge of the 4Cs. A grading report from a lab such as GIA shows the attributes behind every price: carat weight, color grade, clarity grade, and cut grade. Each listing students collect becomes one row with these same fields, plus price and price per carat.",
+       "text": "A grading report lists the attributes behind every price. Each listing students collect becomes one row with the same fields.",
+       "link": "projects/diamond-pricing/gia-sample-report.jpg",
+       "linktext": "View the sample GIA report ↗",
+       "size": "wide",
        "images": [
         "projects/diamond-pricing/gia-sample-report.jpg"
        ]
       },
       {
-       "title": "Data acquisition: raw price data",
+       "title": "Raw data",
        "bullets": [],
-       "text": "Students recorded each stone's shape, price, carat, cut, color, and clarity from retailer listings, then calculated price per carat (price ÷ carat weight) so that stones of different sizes can be compared.",
+       "text": "Price, carat, cut, color, and clarity for each stone, with price per carat calculated.",
        "images": [
         "projects/diamond-pricing/raw-data.png"
        ]
       },
       {
-       "title": "Pivot table: price per carat by color and clarity",
+       "title": "95% confidence interval",
        "bullets": [],
-       "text": "A pivot table of average price per carat for ideal-cut natural diamonds, with color grades D to K in rows and clarity grades IF to SI2 in columns. Prices fall steadily as color and clarity grades decline.",
-       "images": [
-        "projects/diamond-pricing/pivot-table.png"
-       ]
-      },
-      {
-       "title": "Heat map: student prices vs. the Rapaport report",
-       "bullets": [],
-       "text": "Each cell shows the average collected price as a percentage of the Rapaport list price for the same grade. Most retail prices fall between 70% and 96% of the list price, and a few grades sit above it.",
-       "images": [
-        "projects/diamond-pricing/rapaport-heatmap.png"
-       ]
-      },
-      {
-       "title": "Regression: price per carat vs. color and clarity",
-       "bullets": [],
-       "text": "Converting grades to numbers (D = 1 to K = 8; IF = 1 to SI2 = 7) lets students fit a trend line. Each step down in color lowers price per carat by about $270 (R² = 0.99). Each step down in clarity has a similar effect (R² = 0.96).",
-       "images": [
-        "projects/diamond-pricing/regression.png"
-       ]
-      },
-      {
-       "title": "Confidence interval from a 30-stone sample",
-       "bullets": [],
-       "text": "For 30 D-color, VVS1, ideal-cut stones, the sample mean is $3,992 per carat with a standard deviation of $486. The 95% confidence interval runs from about $3,813 to $4,176 per carat.",
+       "text": "A 30-stone sample (D color, VVS1, ideal cut) gives a mean of about $3,992 per carat, with a 95% interval of about $3,813 to $4,176.",
        "images": [
         "projects/diamond-pricing/confidence-interval.png"
        ]
       },
       {
+       "title": "Price per carat by color and clarity",
+       "bullets": [],
+       "text": "Prices fall steadily as color and clarity grades decline.",
+       "images": [
+        "projects/diamond-pricing/pivot-table.png"
+       ]
+      },
+      {
+       "title": "Student prices vs. the Rapaport report",
+       "bullets": [],
+       "text": "Most retail prices fall between 70% and 96% of the Rapaport list price.",
+       "images": [
+        "projects/diamond-pricing/rapaport-heatmap.png"
+       ]
+      },
+      {
+       "title": "Regression on color and clarity",
+       "bullets": [],
+       "text": "Each step down in color or clarity lowers price per carat by about $270 (R² = 0.99 and 0.96).",
+       "size": "wide",
+       "images": [
+        "projects/diamond-pricing/regression.png"
+       ]
+      },
+      {
        "title": "Dashboard: natural vs. lab-grown",
        "bullets": [],
-       "text": "The results come together in a Tableau dashboard comparing natural and lab-grown diamonds by color and clarity, with both heat maps and the confidence interval results. It shows that lab-grown stones sell for about a fifth of the natural price per carat.",
+       "text": "Lab-grown stones sell for about a fifth of the natural price per carat.",
+       "size": "wide",
        "images": [
         "projects/diamond-pricing/dashboard.png"
        ]
       }
-     ]
+     ],
+     "intro": "These are a fraction of one student's raw dataset and visuals, from a project on round, ideal-cut diamonds of 0.70 to 0.89 carat."
     },
     "for instructors": {
      "name": "For instructors",
@@ -461,19 +431,16 @@
     }
    },
    "section_order": [
-    "numbers",
-    "student learning",
+    "workflow",
     "student work",
     "for instructors"
    ],
    "type": "group",
-   "order": "2",
-   "period": "One semester · business analytics course",
-   "status": "Recurring course project",
-   "image": "projects/diamond-pricing/dashboard.png",
-   "layout": "charts",
    "label": "Student project",
-   "summary": "Students learn business analytics hands-on with real-world diamond prices. They collect current natural diamond listings from online retailers for an assigned carat range, then clean the data and measure how price per carat changes with the 4Cs: carat, color, clarity, and cut. They also benchmark their prices against the Rapaport industry price list, compare natural with lab-grown stones, estimate a 95% confidence interval, and present the results in an interactive dashboard. The work shown here is from a student project on round, ideal-cut diamonds of 0.70 to 0.89 carat.",
+   "order": "2",
+   "layout": "brief",
+   "image": "projects/diamond-pricing/dashboard.png",
+   "summary": "Students learn business analytics hands-on with real-world diamond prices. Each student is assigned a carat range, collects current natural diamond listings from online retailers, and analyzes how price per carat changes with the 4Cs: carat, color, clarity, and cut. Results are benchmarked against the Rapaport industry price list and compared with lab-grown diamonds.",
    "order_num": 2.0
   }
  ],

@@ -6,7 +6,7 @@
 <title>Project · Biz Data Lab</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=5aea0817">
+<link rel="stylesheet" href="assets/site.css?v=2f9fb07c">
 <script data-goatcounter="https://biz-datalab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -55,8 +55,30 @@ function slideHTML(key, sec) {
   return `<h3>${esc(sec.name)}</h3><ul>${sec.items.map(i => `<li>${esc(i.join(" | "))}</li>`).join("")}</ul>`;
 }
 
+/* Brief layout for course projects (project field "layout: brief"):
+   title + summary + workflow steps, then a results gallery. No facts, numbers, or carousel. */
+function renderBrief(p) {
+  const S = p.sections, out = [];
+  const W = S.workflow;
+  out.push(band(`<a class="back" href="index.html#teaching">← All projects</a>
+    <div class="brief-head"><span class="badge solid">${esc(p.label || TYPE[p.type] || "Project")}</span>
+      <h1>${esc(p.title)}</h1><p class="sum">${esc(p.summary || "")}</p></div>
+    ${W ? `<ol class="steps">${W.items.map(i => `<li><b>${esc(i[0])}</b><span>${esc(i.slice(1).join(" | "))}</span></li>`).join("")}</ol>` : ""}`, true));
+  const R = S["student work"];
+  if (R) out.push(band(head("Student work", "Selected results", R.intro) +
+    `<div class="gallery">${R.subs.map(w => `<figure class="${w.size === "wide" ? "wide" : ""}">
+      <div class="gimg">${(w.images || []).map(src => `<a href="${esc(src)}" target="_blank" rel="noopener"><img src="${esc(src)}" alt="${esc(w.title)}" loading="lazy"></a>`).join("")}</div>
+      <figcaption><b>${esc(w.title)}</b>${w.text ? `<span>${esc(w.text)}</span>` : ""}${w.link ? `<a href="${esc(safeUrl(w.link))}" target="_blank" rel="noopener">${esc(w.linktext || "Open ↗")}</a>` : ""}</figcaption></figure>`).join("")}</div>`));
+  Object.keys(S).filter(k => !["workflow", "student work"].includes(k)).forEach(k => {
+    const sec = S[k];
+    out.push(band(head("Project", sec.name) + `<div class="generic">${sec.intro ? `<p>${esc(sec.intro)}</p>` : ""}<div class="prose">${paras(sec)}</div></div>`, true));
+  });
+  $("page").innerHTML = out.join("");
+}
+
 function render(p) {
   document.title = p.title + " · Biz Data Lab";
+  if (p.layout === "brief") return renderBrief(p);
   const S = p.sections, out = [];
   const links = (S.links || {}).items || [];
   const facts = [["Period", p.period], ["Funding", p.funder], ["Status", p.status]].filter(f => f[1]);
@@ -81,7 +103,7 @@ function render(p) {
   if (S["student work"]) {
     const subs = S["student work"].subs.slice().sort((a, b) => ((b.images || []).length > 0) - ((a.images || []).length > 0));
     out.push(band(head("Student work", "What students built", "Highlights from the students' reports, tools, and deliverables.") +
-      `<div class="work${p.layout === "charts" ? " charts" : ""}">${subs.map((w, idx) => `<article class="${(w.images || []).length ? "wide media" : (idx === subs.length - 1 && subs.filter(x => !(x.images || []).length).length % 2 ? "wide" : "")}">
+      `<div class="work">${subs.map((w, idx) => `<article class="${(w.images || []).length ? "wide media" : (idx === subs.length - 1 && subs.filter(x => !(x.images || []).length).length % 2 ? "wide" : "")}">
         ${(w.images || []).length ? `<div class="imgs">${w.images.map(src => `<img src="${esc(src)}" alt="${esc(w.title)}" loading="lazy">`).join("")}</div>` : ""}
         <div class="wb"><h3>${esc(w.title)}</h3>${w.text ? `<p>${esc(w.text)}</p>` : ""}${w.bullets.length ? `<ul>${w.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>` : ""}
         ${w.link ? `<a href="${esc(safeUrl(w.link))}" target="_blank" rel="noopener">See it live ↗</a>` : ""}</div></article>`).join("")}</div>`, true));
