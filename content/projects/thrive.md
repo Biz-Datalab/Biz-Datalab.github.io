@@ -32,8 +32,8 @@ A line "- intro: ..." directly under a section heading adds an introductory sent
 - intro: The project was designed as experiential learning. Students did the work of a startup team, with real stakes, real partners, and real deadlines.
 - Job readiness | Students owned research, data analysis, and reporting on a biweekly cycle, and 2 of the 3 research assistants were hired by the time the project ended.
 - Industry mentorship | Biweekly reviews with Portor Lighting and a visit to its facility in Ontario, CA put students alongside industry veterans in product, manufacturing, and sales.
-- AI in daily work | AI was part of the workflow, not a side topic: the team used Claude, ChatGPT, Gemini, and HeyGen for research, analysis, coding, lead generation, and video production.
-- Outreach and communication | Students presented at school events, joined an investor pitch, and met with campus leaders, local businesses, and regional organizations.
+- AI in daily work | AI was part of the workflow, not a side topic. The team used AI tools such as Claude, ChatGPT, Gemini, HeyGen, and Newport AI to build domain knowledge, brainstorm ideas, prepare and analyze data, write code, generate leads, craft stories for different audiences, and produce outreach videos with digital avatars.
+- Outreach and communication | Students presented at school events, joined an investor pitch, and met with campus leaders, local businesses, and regional organizations, using AI to shape the storytelling and outreach materials.
 - Building for the next stage | Students developed a technician training framework, a bill of materials, and a U.S. supplier list that prepare the project for its next phase.
 
 ## Student work
@@ -48,20 +48,20 @@ A line "- intro: ..." directly under a section heading adds an introductory sent
 - text: AI agents drew on six public data sources to find and rank places that could benefit from solar lighting: 300+ potential sites identified and 100+ opportunities ranked across 13 market segments.
 
 ### Live market dashboard
-- text: An e-commerce and residential dashboard built with SQL, Python, and Google Looker Studio, combining market research and competitor analysis to support decisions.
+- text: With AI-assisted data preparation and coding, students built an e-commerce and residential dashboard in SQL, Python, and Google Looker Studio, combining market research and competitor analysis to support decisions.
 
 ### Bill of materials and U.S. suppliers
 - text: Students built a bill of materials (BOM) for a commercial solar bollard and identified U.S. vendors for its components, paving the way for domestic, BABA-compliant manufacturing in the next stage.
 
 ### Market, supplier, and IP landscape
-- text: A competitive analysis of the solar lighting market, supported by legal consulting to understand the intellectual property landscape of the U.S. solar lighting industry.
+- text: AI tools helped the team build domain knowledge quickly. The result was a competitive analysis of the solar lighting market, supported by legal consulting to understand the intellectual property landscape of the U.S. solar lighting industry.
 
 ### Pitch, video, and community outreach
-- text: An investor pitch at Smart Living Silicon Valley 2026, a pilot proposal for Stockton's Miracle Mile, and an AI-produced "Invest in Stockton" video on clean-energy manufacturing.
+- text: An investor pitch at Smart Living Silicon Valley 2026, a pilot proposal for Stockton's Miracle Mile, and an "Invest in Stockton" outreach video on clean-energy manufacturing, presented by an AI digital avatar.
 - link: https://app.heygen.com/videos/invest-in-stockton-the-future-of-clean-energy-manufacturing-f579956b64304a1eb71ac71f01abcdc3
 
 ### Workforce training framework
-- text: A training framework for Solar Light Product Assembly Technicians, with a plan to grow it into a high school summer camp for local workforce development.
+- text: A training framework for Solar Light Product Assembly Technicians, with a plan to grow it into a high school summer camp, plus an AI-assisted marketing lecture for local workforce development.
 
 ## Emerging needs and opportunities
 - Interest in safe, sustainable lighting is growing across campuses, communities, and public spaces in the region.
