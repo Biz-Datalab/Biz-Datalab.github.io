@@ -50,7 +50,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px
 .areas span{font-size:.85rem;border:1px solid var(--line);padding:3px 10px;border-radius:3px}
 
 /* teaching */
-.statement{font-size:1.06rem;line-height:1.7;max-width:70ch;margin-bottom:28px}
+.statement{font-size:1.06rem;line-height:1.7;max-width:70ch;margin-bottom:28px;text-align:justify;hyphens:auto}
 .projects{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .projects li{border:1px solid var(--line);border-top:3px solid var(--ink);background:var(--bg);padding:20px 22px;display:flex;flex-direction:column;gap:6px;min-width:0}
 .projects small{font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
@@ -218,3 +218,15 @@ footer{padding-block:28px;font-size:.92rem}
   .timeline div{padding-bottom:16px}
 }
 @media (prefers-reduced-motion:reduce){.car-track{transition:none}}
+
+.learn{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:0;border:1px solid var(--line);background:var(--bg)}
+.learn div{padding:20px 22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:6px;min-width:0}
+.learn b{font-size:1.08rem}
+.work article.media{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr)}
+.work article.media .imgs img{height:100%;min-height:320px;max-height:460px}
+.work article.media .wb{justify-content:center;padding:26px 30px}
+.work article.media h3{font-size:1.35rem}
+.prose{display:flex;flex-direction:column;gap:12px;max-width:72ch}
+.prose p{font-size:1.06rem;line-height:1.75}
+.slide-intro{margin:-6px 0 22px;font-size:1.02rem}
+@media (max-width:860px){.work article.media{grid-template-columns:minmax(0,1fr)}.work article.media .imgs img{min-height:0;height:300px}}

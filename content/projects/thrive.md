@@ -1,15 +1,15 @@
 # Bringing Solar Light to the North San Joaquin Valley
 How to edit: change the text after each colon. Sections start with "## ". Items in a section start with "- ".
-In "Numbers", "Team", "Partners", "Links", "Student voices", and "Long-term vision", the two or three parts of an item are separated by " | ".
+In "Numbers", "Team", "Partners", "Links", "Student learning", "Student voices", and "Long-term vision", the parts of an item are separated by " | ".
+A line "- intro: ..." directly under a section heading adds an introductory sentence to that section.
 
 - type: funded
 - order: 1
-- short: THRIVE solar lighting project
 - period: 2025–2026 · one year
-- funder: North Valley Thrive (THRIVE) Catalyst grant · Idea Stage
-- status: Completed · next phase planned
-- image: projects/thrive/bollard-product.jpg
-- summary: Funded by North Valley Thrive, this one-year project tested whether a lighting manufacturer could bring its solar lighting products, and eventually its manufacturing, to the North San Joaquin Valley. With industry partner Portor Lighting, three student research assistants surveyed campus sites at night, built a campus siting map and an AI lead-intelligence platform, reverse-engineered a solar bollard, pitched to investors, and confirmed a pathway to Buy America (BABA 2021) compliance. The project found real market and community interest and now moves to its next phase: seeking funding for a local manufacturing entity.
+- funder: North Valley Thrive (THRIVE) Catalyst grant, Idea Stage · $43,815
+- status: Completed · ready for the next phase
+- image: projects/thrive/field-test.jpg
+- summary: Funded by North Valley Thrive, this one-year project assessed the viability of bringing solar lighting products, and ultimately clean-energy manufacturing, to the North San Joaquin Valley, so that this capability stays in California rather than moving to other states. Working with industry partner Portor Lighting, a faculty-led team of three student research assistants confirmed market and community interest, mapped campus lighting needs, built AI-driven market intelligence, studied the U.S. supply chain and the intellectual property landscape, confirmed a pathway to Buy America (BABA 2021) compliance, and developed a training framework for local technicians. The project is now ready for its next stage.
 
 ## Links
 - Project website | https://www.sjsinitiative.com/
@@ -18,51 +18,62 @@ In "Numbers", "Team", "Partners", "Links", "Student voices", and "Long-term visi
 - Instagram post 2 | https://www.instagram.com/p/DVMY0DAlGSq/
 
 ## Numbers
-- $43,815 | grant award
+- intro: In one year, the team moved from an idea to evidence: a formal industry partnership, field-tested products, AI-assisted market research across the region, and direct engagement with campus leaders, businesses, investors, and the community.
 - 3 | student research assistants
-- 2 of 3 | student RAs already hired
-- 130+ | attendees at 3 school events
-- 300+ | potential sites found by an AI platform
-- 100+ | outreach emails to facilities leaders
-- 5 | campus sites surveyed at night
-- 19 | solar lighting suppliers analyzed
+- 2 of 3 | student RAs hired by the time the project ended
+- 130+ | attendees reached at three school events
+- 300+ | potential sites identified with AI agents
+- 100+ | facilities leaders contacted
+- 13 | market segments researched
+- 64 | fixture locations planned on campus
+- 1 | formal industry partnership
+
+## Student learning
+- intro: The project was designed as experiential learning. Students did the work of a startup team, with real stakes, real partners, and real deadlines.
+- Job readiness | Students owned research, data analysis, and reporting on a biweekly cycle, and 2 of the 3 research assistants were hired by the time the project ended.
+- Industry mentorship | Biweekly reviews with Portor Lighting and a visit to its facility in Ontario, CA put students alongside industry veterans in product, manufacturing, and sales.
+- AI in daily work | AI was part of the workflow, not a side topic: the team used Claude, ChatGPT, Gemini, and HeyGen for research, analysis, coding, lead generation, and video production.
+- Outreach and communication | Students presented at school events, joined an investor pitch, and met with campus leaders, local businesses, and regional organizations.
+- Building for the next stage | Students developed a technician training framework, a bill of materials, and a U.S. supplier list that prepare the project for its next phase.
 
 ## Student work
+### Field test of the solar bollard
+- text: Pilot installations at residential sites in Northern California and on-campus demonstrations tested how the solar bollard performs at night, including its battery and electrical output.
+- image: projects/thrive/field-test.jpg
+
 ### LightScope campus siting map
-- text: Night-time field survey of 5 University of the Pacific sites turned into an interactive siting map: 13 lighting zones, 28 assessed points (7 critical, 18 high-need), and 64 planned fixture locations.
-- link: https://www.sjsinitiative.com/
+- text: A night-time field survey of University of the Pacific sites became an interactive siting map: 13 lighting zones, 28 assessed points, and 64 planned fixture locations.
 
 ### AI lead-intelligence platform
-- text: Seven AI agents pull from six public data sources to find and rank sites that need solar lighting: 300+ potential sites identified and 100+ opportunities ranked across 13 market segments.
+- text: AI agents drew on six public data sources to find and rank places that could benefit from solar lighting: 300+ potential sites identified and 100+ opportunities ranked across 13 market segments.
 
 ### Live market dashboard
-- text: An e-commerce and residential dashboard built with SQL, Python, and Google Looker Studio, combining market research and competitor analysis to support pricing and targeting decisions.
+- text: An e-commerce and residential dashboard built with SQL, Python, and Google Looker Studio, combining market research and competitor analysis to support decisions.
 
-### Solar bollard teardown and 3D model
-- text: Reverse engineering of a commercial solar bollard: product teardown, bill of materials, CAD model, and manufacturing process analysis, the groundwork for a U.S.-made, BABA-compliant product.
-- images: projects/thrive/bollard-product.jpg, projects/thrive/bollard-electronics.jpg, projects/thrive/bollard-frame.jpg
+### Bill of materials and U.S. suppliers
+- text: Students built a bill of materials (BOM) for a commercial solar bollard and identified U.S. vendors for its components, paving the way for domestic, BABA-compliant manufacturing in the next stage.
 
-### Market and supplier analysis
-- text: Competitive landscape of 19 solar lighting suppliers, 8 Portor products catalogued, and a 32-bollard photometric layout for the campus from Portor Lighting.
+### Market, supplier, and IP landscape
+- text: A competitive analysis of the solar lighting market, supported by legal consulting to understand the intellectual property landscape of the U.S. solar lighting industry.
 
-### Investor pitch and video
-- text: Investor pitch at Smart Living Silicon Valley 2026, an "Illuminating the Miracle Mile" pilot proposal for five downtown Stockton sites, and an AI-assisted "Invest in Stockton" manufacturing video.
+### Pitch, video, and community outreach
+- text: An investor pitch at Smart Living Silicon Valley 2026, a pilot proposal for Stockton's Miracle Mile, and an AI-produced "Invest in Stockton" video on clean-energy manufacturing.
 - link: https://app.heygen.com/videos/invest-in-stockton-the-future-of-clean-energy-manufacturing-f579956b64304a1eb71ac71f01abcdc3
 
 ### Workforce training framework
-- text: A training framework for Solar Light Product Assembly Technicians, with a plan to turn it into a high school summer camp for local workforce development.
+- text: A training framework for Solar Light Product Assembly Technicians, with a plan to grow it into a high school summer camp for local workforce development.
 
 ## Emerging needs and opportunities
-- Campuses, municipalities, and commercial sites are modernizing lighting on multi-year programs, which creates timing opportunities for broader adoption.
-- Small business owners want proof of payback before committing; consumer demand is large but price-sensitive.
-- Institutions value no-trench installation but want low-risk pilots first.
-- Pooled buyers such as HOAs and gated communities can meet supplier minimums that single homeowners cannot.
-- A BABA-compliant, U.S.-manufactured product opens doors to domestic manufacturing and public-sector buyers; it needs external funding and in-house engineering to move forward.
+- Interest in safe, sustainable lighting is growing across campuses, communities, and public spaces in the region.
+- Organizations want proven, low-risk solutions before they invest.
+- Domestic clean-energy manufacturing and skilled local jobs remain regional priorities.
+- We welcome conversations with institutions, companies, and investors interested in collaborating on the next phase.
 
 ## Long-term vision
-- 1–1.5 years | New entity, pilot manufacturing facility, and BABA-compliant prototype | 3–4 full-time jobs
+- intro: With Phase II grant funding or venture investment, the project could grow in three steps:
+- 1–1.5 years | A new local entity, a pilot manufacturing facility, and a BABA-compliant prototype | 3–4 full-time jobs
 - 3 years | Manufacturing, sales, and service operations reach break-even | 10–15 full-time jobs
-- 5 years | Fully operational manufacturer with protected IP, in-house design, manufacturing, and installation | 40–50 full-time jobs
+- 5 years | A fully operational manufacturer with protected IP and in-house design, manufacturing, and installation | 40–50 full-time jobs
 
 ## Student voices
 - This was my chance to actually do the work: research, build a dashboard, and eventually sit across the table from executives and project managers, making the case for why this matters and how it can change sustainability in our community. | Jenny Tran Vo | Data Analyst
@@ -70,14 +81,13 @@ In "Numbers", "Team", "Partners", "Links", "Student voices", and "Long-term visi
 - One of the most valuable parts of this experience was working on a project with multiple stakeholders and open-ended engineering challenges. Unlike many classroom assignments, this project required collaboration, organization, and problem-solving throughout the entire process. | Ben Wilkinson | Engineering Research Assistant
 
 ## Outcomes
-- 2 of the 3 student research assistants have already secured jobs.
-- Portor Lighting agreed to offer more internships, including commission-based sales internships for University of the Pacific students.
-- What began as installing a few bollards on campus grew into reusable digital tools (LightScope, the lead-intelligence platform, a 3D bollard model) and a regional framework for future projects.
-- Two written letters of support from University of the Pacific Public Safety, plus team visits to Portor Lighting's facility in Ontario, CA and the Port of Stockton.
-- The work opened doors to the Miracle Mile revitalization effort in Stockton and to district-level location research.
+- The project grew well beyond its original scope. Students left with professional experience that led directly to jobs, the industry partner expressed interest in hosting more student interns, and the work produced reusable tools and new community connections that will support future projects in the region.
+
+## Acknowledgments
+- We thank North Valley Thrive for funding this project through its Catalyst grant, and Portor Lighting for its partnership, product expertise, and mentorship of our students. We are also grateful to University of the Pacific Sustainability, Facilities, Engineering, and Public Safety, and to the community partners who shared their time and insight.
 
 ## Team
-- Dr. Chong Huang | Principal investigator
+- Prof. Chong Huang | Principal investigator
 - Jenny Tran Vo | Data Analyst
 - Eldar Aliev | Marketing & Sales Research Analyst
 - Ben Wilkinson | Engineering Research Assistant

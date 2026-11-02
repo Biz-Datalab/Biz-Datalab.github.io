@@ -32,7 +32,8 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "
 const safeUrl = u => /^https?:\/\//i.test(u || "") ? u : (u && !/^[a-z]+:/i.test(u) ? u : "#");
 const TYPE = { funded: "Funded research project", group: "Student group project", individual: "Individual research" };
 const CAROUSEL = ["emerging needs and opportunities", "long-term vision", "student voices"];
-const HANDLED = ["links", "numbers", "student work", "outcomes", "team", "partners", ...CAROUSEL];
+const HANDLED = ["links", "numbers", "student learning", "student work", "outcomes", "team", "partners", ...CAROUSEL];
+const paras = sec => sec.items.map(i => `<p>${esc(i.join(" | "))}</p>`).join("");
 
 function head(label, title, intro) {
   return `<div class="sec-head"><span class="label">${esc(label)}</span><h2>${esc(title)}</h2>${intro ? `<p>${esc(intro)}</p>` : ""}</div>`;
@@ -41,7 +42,7 @@ function band(inner, tint, id) { return `<section class="band${tint ? " tint" : 
 
 function slideHTML(key, sec) {
   if (key === "long-term vision") {
-    return `<h3>${esc(sec.name)}</h3><div class="timeline">${sec.items.map(i => `<div><span class="yr">${esc(i[0])}</span><p>${esc(i[1] || "")}</p>${i[2] ? `<span class="jobs">${esc(i[2])}</span>` : ""}</div>`).join("")}</div>`;
+    return `<h3>${esc(sec.name)}</h3>${sec.intro ? `<p class="slide-intro">${esc(sec.intro)}</p>` : ""}<div class="timeline">${sec.items.map(i => `<div><span class="yr">${esc(i[0])}</span><p>${esc(i[1] || "")}</p>${i[2] ? `<span class="jobs">${esc(i[2])}</span>` : ""}</div>`).join("")}</div>`;
   }
   if (key === "student voices") {
     return `<h3>Success stories: student voices</h3><div class="quotes">${sec.items.map(i => `<figure><blockquote>“${esc(i[0])}”</blockquote><figcaption><b>${esc(i[1] || "")}</b>${esc(i[2] || "")}</figcaption></figure>`).join("")}</div>`;
@@ -63,13 +64,19 @@ function render(p) {
       ${links.length ? `<div class="jump">${links.map(l => `<a class="btn" href="${esc(safeUrl(l[1]))}" target="_blank" rel="noopener">${esc(l[0])} ↗</a>`).join("")}</div>` : ""}
     </div>${p.image ? `<div class="phero-img"><img src="${esc(p.image)}" alt="${esc(p.title)}"></div>` : ""}</div>`, true));
 
-  if (S.numbers) out.push(band(head("By the numbers", "What the project achieved") +
+  if (S.numbers) out.push(band(head("By the numbers", "Project at a glance", S.numbers.intro) +
     `<div class="stats">${S.numbers.items.map(n => `<div><b>${esc(n[0])}</b><span>${esc(n[1] || "")}</span></div>`).join("")}</div>`));
 
+  if (S["student learning"]) {
+    const L = S["student learning"];
+    out.push(band(head("Experiential learning", "What students gained", L.intro) +
+      `<div class="learn">${L.items.map(i => `<div><b>${esc(i[0])}</b><p>${esc(i.slice(1).join(" | "))}</p></div>`).join("")}</div>`, true));
+  }
+
   if (S["student work"]) {
-    const subs = S["student work"].subs.slice().sort((a, b) => ((b.images || []).length > 1) - ((a.images || []).length > 1));
+    const subs = S["student work"].subs.slice().sort((a, b) => ((b.images || []).length > 0) - ((a.images || []).length > 0));
     out.push(band(head("Student work", "What students built", "Highlights from the students' reports, tools, and deliverables.") +
-      `<div class="work">${subs.map(w => `<article class="${(w.images || []).length > 1 ? "wide" : ""}">
+      `<div class="work">${subs.map((w, idx) => `<article class="${(w.images || []).length ? "wide media" : (idx === subs.length - 1 && subs.filter(x => !(x.images || []).length).length % 2 ? "wide" : "")}">
         ${(w.images || []).length ? `<div class="imgs">${w.images.map(src => `<img src="${esc(src)}" alt="${esc(w.title)}" loading="lazy">`).join("")}</div>` : ""}
         <div class="wb"><h3>${esc(w.title)}</h3>${w.text ? `<p>${esc(w.text)}</p>` : ""}${w.bullets.length ? `<ul>${w.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>` : ""}
         ${w.link ? `<a href="${esc(safeUrl(w.link))}" target="_blank" rel="noopener">See it live ↗</a>` : ""}</div></article>`).join("")}</div>`, true));
@@ -82,12 +89,12 @@ function render(p) {
       <div class="car-ctl"><div class="dots" id="dots">${slides.map((k, i) => `<button type="button" data-i="${i}">${esc(S[k].name)}</button>`).join("")}</div>
       <div class="arrows"><button type="button" id="prev" aria-label="Previous slide">←</button><button type="button" id="next" aria-label="Next slide">→</button></div></div></div>`));
 
-  if (S.outcomes) out.push(band(head("Impact", "Outcomes beyond the plan") +
-    `<ul class="checks">${S.outcomes.items.map(i => `<li>${esc(i.join(" | "))}</li>`).join("")}</ul>`, true));
+  if (S.outcomes) out.push(band(head("Impact", "Outcomes beyond the plan") + `<div class="prose">${paras(S.outcomes)}</div>`, true));
 
   Object.keys(S).filter(k => !HANDLED.includes(k)).forEach(k => {
     const sec = S[k];
-    out.push(band(head("Project", sec.name) + `<div class="generic"><ul>${sec.items.map(i => `<li>${esc(i.join(" | "))}</li>`).join("")}</ul>
+    const isProse = sec.items.length && sec.items.every(i => i.length === 1 && i[0].length > 80);
+    out.push(band(head(k === "acknowledgments" ? "Thank you" : "Project", sec.name) + `<div class="generic">${sec.intro ? `<p>${esc(sec.intro)}</p>` : ""}${isProse ? `<div class="prose">${paras(sec)}</div>` : `<ul>${sec.items.map(i => `<li>${esc(i.join(" | "))}</li>`).join("")}</ul>`}
       ${sec.subs.map(sb => `<h3>${esc(sb.title)}</h3>${sb.text ? `<p>${esc(sb.text)}</p>` : ""}`).join("")}</div>`));
   });
 

@@ -114,9 +114,9 @@ function renderProfile(p) {
   $("foot").textContent = `© ${new Date().getFullYear()} ${name || "Biz Data Lab"}` + (p.email && !/^\[/.test(p.email) ? ` · ${p.email}` : "");
 }
 const PTYPES = [
-  ["funded", "Funded research projects", "Faculty-led, externally funded, about one year, with paid student research assistants."],
+  ["funded", "Funded research projects", "Faculty-led, externally funded projects with paid student research assistants."],
   ["group", "Student group projects", "Course-based teams working on real business problems and presenting to stakeholders."],
-  ["individual", "Individual research", "One student, one research question, supervised by the professor and supported by a summer fellowship."]
+  ["individual", "Individual research", "Independent student research conducted under faculty mentorship and supported by a summer research fellowship."]
 ];
 const PTYPE_LABEL = { funded: "Funded research project", group: "Student group project", individual: "Individual research" };
 function renderProjects(list) {
