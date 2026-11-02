@@ -234,6 +234,12 @@ footer{padding-block:28px;font-size:.92rem}
 .prose{display:flex;flex-direction:column;gap:12px;max-width:72ch}
 .prose p{font-size:1.06rem;line-height:1.75}
 .slide-intro{margin:-6px 0 22px;font-size:1.02rem}
+/* opt-in layout for projects whose work items are charts and tables (project field "layout: charts"):
+   title and text above, the full image below, never cropped */
+.work.charts article.media{display:flex;flex-direction:column}
+.work.charts article.media .wb{order:-1;padding:22px 26px 10px}
+.work.charts .imgs{grid-auto-flow:row;grid-auto-columns:auto;gap:16px;background:#ffffff;padding:16px 20px 22px}
+.work.charts .imgs img,.work.charts article.media .imgs img{width:auto;max-width:100%;height:auto;min-height:0;max-height:none;object-fit:contain;margin:0 auto}
 @media (max-width:860px){.work article.media{grid-template-columns:minmax(0,1fr)}.work article.media .imgs img{min-height:0;height:300px}}
 .team-photo{margin:0 0 28px;border:1px solid var(--line);background:var(--bg)}
 .team-photo img{width:100%;display:block;max-height:520px;object-fit:cover}

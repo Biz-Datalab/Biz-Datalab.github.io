@@ -6,7 +6,7 @@
 <title>Project · Biz Data Lab</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=6bc63fb4">
+<link rel="stylesheet" href="assets/site.css?v=5aea0817">
 <script data-goatcounter="https://biz-datalab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -81,7 +81,7 @@ function render(p) {
   if (S["student work"]) {
     const subs = S["student work"].subs.slice().sort((a, b) => ((b.images || []).length > 0) - ((a.images || []).length > 0));
     out.push(band(head("Student work", "What students built", "Highlights from the students' reports, tools, and deliverables.") +
-      `<div class="work">${subs.map((w, idx) => `<article class="${(w.images || []).length ? "wide media" : (idx === subs.length - 1 && subs.filter(x => !(x.images || []).length).length % 2 ? "wide" : "")}">
+      `<div class="work${p.layout === "charts" ? " charts" : ""}">${subs.map((w, idx) => `<article class="${(w.images || []).length ? "wide media" : (idx === subs.length - 1 && subs.filter(x => !(x.images || []).length).length % 2 ? "wide" : "")}">
         ${(w.images || []).length ? `<div class="imgs">${w.images.map(src => `<img src="${esc(src)}" alt="${esc(w.title)}" loading="lazy">`).join("")}</div>` : ""}
         <div class="wb"><h3>${esc(w.title)}</h3>${w.text ? `<p>${esc(w.text)}</p>` : ""}${w.bullets.length ? `<ul>${w.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>` : ""}
         ${w.link ? `<a href="${esc(safeUrl(w.link))}" target="_blank" rel="noopener">See it live ↗</a>` : ""}</div></article>`).join("")}</div>`, true));
