@@ -70,7 +70,7 @@ function render(p) {
   if (S["student learning"]) {
     const L = S["student learning"];
     out.push(band(head("Experiential learning", "What students gained", L.intro) +
-      `<div class="learn">${L.items.map(i => `<div><b>${esc(i[0])}</b><p>${esc(i.slice(1).join(" | "))}</p></div>`).join("")}</div>`, true));
+      `<div class="learn${L.items.length === 5 ? " five" : ""}">${L.items.map(i => `<div class="${/^AI\b/.test(i[0]) ? "tall" : ""}"><b>${esc(i[0])}</b><p>${esc(i.slice(1).join(" | "))}</p></div>`).join("")}</div>`, true));
   }
 
   if (S["student work"]) {

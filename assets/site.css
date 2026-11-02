@@ -240,3 +240,7 @@ footer{padding-block:28px;font-size:.92rem}
 .phero-img img{object-fit:contain;max-height:460px;padding:20px}
 .phero-img.photo{background:var(--bg)}
 .phero-img.photo img{padding:0;object-fit:contain;max-height:none}
+.learn.five{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-flow:row dense}
+.learn.five .tall{grid-column:3;grid-row:1 / span 2;border-right:0;justify-content:center;background:var(--band)}
+.learn.five div:not(.tall):nth-of-type(n){border-right:1px solid var(--line)}
+@media (max-width:860px){.learn.five{grid-template-columns:minmax(0,1fr)}.learn.five .tall{grid-column:auto;grid-row:auto}}
