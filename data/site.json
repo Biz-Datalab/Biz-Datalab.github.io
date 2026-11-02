@@ -326,16 +326,6 @@
    "slug": "diamond-pricing",
    "title": "Pricing Diamonds with Real-World Market Data",
    "sections": {
-    "links": {
-     "name": "Links",
-     "items": [
-      [
-       "Interactive dashboard",
-       "https://public.tableau.com/shared/KW3XD7Q7K?:display_count=n&:origin=viz_share_link"
-      ]
-     ],
-     "subs": []
-    },
     "numbers": {
      "name": "Numbers",
      "items": [
@@ -365,7 +355,7 @@
       ]
      ],
      "subs": [],
-     "intro": "A sample team's results for natural, round, ideal-cut diamonds of 0.70 to 0.89 carat, built entirely from prices the students collected themselves."
+     "intro": "Results from a student project on natural, round, ideal-cut diamonds of 0.70 to 0.89 carat, built entirely from prices the students collected themselves."
     },
     "student learning": {
      "name": "Student learning",
@@ -392,7 +382,7 @@
       ],
       [
        "Communication",
-       "Each team builds an interactive dashboard, presents in class in six minutes plus Q&A, and submits a final report with the raw data."
+       "Students build an interactive dashboard, presents in class in six minutes plus Q&A, and submits a final report with the raw data."
       ]
      ],
      "subs": [],
@@ -403,9 +393,17 @@
      "items": [],
      "subs": [
       {
+       "title": "Domain knowledge: reading a diamond grading report",
+       "bullets": [],
+       "text": "Before collecting data, students build domain knowledge of the 4Cs. A grading report from a lab such as GIA shows the attributes behind every price: carat weight, color grade, clarity grade, and cut grade. Each listing students collect becomes one row with these same fields, plus price and price per carat.",
+       "images": [
+        "projects/diamond-pricing/gia-sample-report.jpg"
+       ]
+      },
+      {
        "title": "Data acquisition: raw price data",
        "bullets": [],
-       "text": "The team recorded each stone's shape, price, carat, cut, color, and clarity from retailer listings, then calculated price per carat (price ÷ carat weight) so that stones of different sizes can be compared.",
+       "text": "Students recorded each stone's shape, price, carat, cut, color, and clarity from retailer listings, then calculated price per carat (price ÷ carat weight) so that stones of different sizes can be compared.",
        "images": [
         "projects/diamond-pricing/raw-data.png"
        ]
@@ -421,7 +419,7 @@
       {
        "title": "Heat map: student prices vs. the Rapaport report",
        "bullets": [],
-       "text": "Each cell shows the team's average price as a percentage of the Rapaport list price for the same grade. Most retail prices fall between 70% and 96% of the list price, and a few grades sit above it.",
+       "text": "Each cell shows the average collected price as a percentage of the Rapaport list price for the same grade. Most retail prices fall between 70% and 96% of the list price, and a few grades sit above it.",
        "images": [
         "projects/diamond-pricing/rapaport-heatmap.png"
        ]
@@ -431,8 +429,7 @@
        "bullets": [],
        "text": "Converting grades to numbers (D = 1 to K = 8; IF = 1 to SI2 = 7) lets students fit a trend line. Each step down in color lowers price per carat by about $270 (R² = 0.99). Each step down in clarity has a similar effect (R² = 0.96).",
        "images": [
-        "projects/diamond-pricing/scatter-color.png",
-        "projects/diamond-pricing/scatter-clarity.png"
+        "projects/diamond-pricing/regression.png"
        ]
       },
       {
@@ -444,10 +441,9 @@
        ]
       },
       {
-       "title": "Interactive dashboard",
+       "title": "Dashboard: natural vs. lab-grown",
        "bullets": [],
-       "text": "The team brought everything together in a Tableau dashboard comparing natural and lab-grown diamonds by color and clarity, with both heat maps and the confidence interval results. It shows that lab-grown stones sell for about a fifth of the natural price per carat.",
-       "link": "https://public.tableau.com/shared/KW3XD7Q7K?:display_count=n&:origin=viz_share_link",
+       "text": "The results come together in a Tableau dashboard comparing natural and lab-grown diamonds by color and clarity, with both heat maps and the confidence interval results. It shows that lab-grown stones sell for about a fifth of the natural price per carat.",
        "images": [
         "projects/diamond-pricing/dashboard.png"
        ]
@@ -465,7 +461,6 @@
     }
    },
    "section_order": [
-    "links",
     "numbers",
     "student learning",
     "student work",
@@ -477,7 +472,8 @@
    "status": "Recurring course project",
    "image": "projects/diamond-pricing/dashboard.png",
    "layout": "charts",
-   "summary": "Students analyze real-world diamond prices to learn business analytics hands-on. Each team collects current natural diamond listings from online retailers for an assigned carat range, then cleans the data and measures how price per carat changes with the 4Cs: carat, color, clarity, and cut. They benchmark their prices against the Rapaport industry price list, compare natural with lab-grown stones, estimate a 95% confidence interval, and present the results in an interactive dashboard. The work shown here is from a sample team project on round, ideal-cut diamonds of 0.70 to 0.89 carat.",
+   "label": "Student project",
+   "summary": "Students learn business analytics hands-on with real-world diamond prices. They collect current natural diamond listings from online retailers for an assigned carat range, then clean the data and measure how price per carat changes with the 4Cs: carat, color, clarity, and cut. They also benchmark their prices against the Rapaport industry price list, compare natural with lab-grown stones, estimate a 95% confidence interval, and present the results in an interactive dashboard. The work shown here is from a student project on round, ideal-cut diamonds of 0.70 to 0.89 carat.",
    "order_num": 2.0
   }
  ],

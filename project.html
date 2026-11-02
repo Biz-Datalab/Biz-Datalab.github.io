@@ -62,7 +62,7 @@ function render(p) {
   const facts = [["Period", p.period], ["Funding", p.funder], ["Status", p.status]].filter(f => f[1]);
   out.push(band(`<a class="back" href="index.html#teaching">← All projects</a>
     <div class="phero"><div>
-      <span class="badge solid">${esc(TYPE[p.type] || "Project")}</span>
+      <span class="badge solid">${esc(p.label || TYPE[p.type] || "Project")}</span>
       <h1>${esc(p.title)}</h1>
       <div class="facts">${facts.map(f => `<span><b>${esc(f[0])}:</b> ${esc(f[1])}</span>`).join("")}</div>
       <p class="sum">${esc(p.summary || "")}</p>

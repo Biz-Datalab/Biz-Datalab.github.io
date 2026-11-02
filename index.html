@@ -130,7 +130,7 @@ function renderProjects(list) {
     return `<article class="pcard">
       <a class="pcard-img" href="${url}" tabindex="-1" aria-hidden="true">${p.image ? `<img src="${esc(p.image)}" alt="" loading="lazy">` : ""}</a>
       <div class="pcard-body">
-        <span><span class="badge solid">${esc(PTYPE_LABEL[p.type] || p.type || "Project")}</span></span>
+        <span><span class="badge solid">${esc(p.label || PTYPE_LABEL[p.type] || p.type || "Project")}</span></span>
         <h3><a href="${url}">${esc(p.title)}</a></h3>
         <p class="meta">${[p.period, p.funder].filter(Boolean).map(esc).join(" · ")}</p>
         <p>${esc(first)}</p>
