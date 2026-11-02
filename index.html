@@ -199,6 +199,7 @@ footer{padding-block:28px;font-size:.92rem}
         <p>Videos, articles, and papers on AI that are worth your time, each with a short note on why.</p></div>
       <div class="filters" id="resFilters" role="group" aria-label="Filter by type"></div>
       <ul class="list" id="resList"></ul>
+      <div class="more"><button class="linkbtn" id="resMore" type="button" hidden></button></div>
     </div>
   </section>
 </main>
@@ -209,7 +210,11 @@ footer{padding-block:28px;font-size:.92rem}
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const usd = v => "$" + Math.round(v).toLocaleString("en-US");
-const fmt = (d, o) => { const x = new Date(d + "T12:00:00"); return isNaN(x) ? d : x.toLocaleDateString("en-US", o || { year: "numeric", month: "short", day: "numeric" }); };
+const fmt = (d, o) => {
+  if (/^\d{4}$/.test(d || "")) return d;
+  if (/^\d{4}-\d{2}$/.test(d || "")) return new Date(d + "-15T12:00:00").toLocaleDateString("en-US", { year: "numeric", month: "short" });
+  const x = new Date(d + "T12:00:00"); return isNaN(x) ? (d || "") : x.toLocaleDateString("en-US", o || { year: "numeric", month: "short", day: "numeric" });
+};
 const safeUrl = u => /^https?:\/\//i.test(u) ? u : "#";
 const host = u => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return u; } };
 let DATA;
@@ -264,17 +269,21 @@ function renderNews() {
   const b = $("newsMore"); b.hidden = items.length <= 5;
   b.textContent = newsAll ? "Show fewer" : `Show all ${items.length} stories`;
 }
-let resType = "All";
+let resType = "All", resAll = false;
 function renderRes() {
   const all = DATA.resources.slice().sort((a, b) => (b.date || "").localeCompare(a.date || ""));
-  const types = ["All", ...new Set(all.map(r => r.type).filter(Boolean))];
+  const ORDER = ["Video", "Article", "Paper"], types = ["All", ...[...new Set(all.map(r => r.type).filter(Boolean))].sort((a, b) => (ORDER.indexOf(a) + 99 * (ORDER.indexOf(a) < 0)) - (ORDER.indexOf(b) + 99 * (ORDER.indexOf(b) < 0)))];
   $("resFilters").innerHTML = types.length > 2 ? types.map(t => `<button type="button" class="${t === resType ? "on" : ""}" data-t="${esc(t)}" aria-pressed="${t === resType}">${esc(t)}</button>`).join("") : "";
-  const items = all.filter(r => resType === "All" || r.type === resType);
+  const matched = all.filter(r => resType === "All" || r.type === resType);
+  const items = resAll ? matched : matched.slice(0, 8);
+  const mb = $("resMore"); mb.hidden = matched.length <= 8;
+  mb.textContent = resAll ? "Show fewer" : `Show all ${matched.length}`;
   $("resList").innerHTML = items.map(r => `<li><span class="kind"><span class="tag">${esc(r.type)}</span>${r.date ? "<br>" + esc(fmt(r.date)) : ""}</span>
     <div><a class="t" href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener">${esc(r.title || host(r.url))}</a>${r.source ? ` <span class="src">· ${esc(r.source)}</span>` : ""}${r.comment ? `<div class="note">${esc(r.comment)}</div>` : ""}</div><span></span></li>`).join("")
     || '<li class="empty">First picks coming soon.</li>';
 }
-document.addEventListener("click", ev => { const b = ev.target.closest("#resFilters button"); if (b) { resType = b.dataset.t; renderRes(); } });
+document.addEventListener("click", ev => { const b = ev.target.closest("#resFilters button"); if (b) { resType = b.dataset.t; resAll = false; renderRes(); } });
+$("resMore").addEventListener("click", () => { resAll = !resAll; renderRes(); });
 $("edPick").addEventListener("change", ev => renderPrices(+ev.target.value));
 $("newsMore").addEventListener("click", () => { newsAll = !newsAll; renderNews(); });
 

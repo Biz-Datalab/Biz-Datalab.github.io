@@ -33,7 +33,176 @@
    "pdf": ""
   }
  ],
- "resources": [],
+ "resources": [
+  {
+   "title": "Angela Duckworth commencement speech to 2025 Penn GSE graduates",
+   "url": "https://www.youtube.com/watch?v=DeXBEDXJMaQ",
+   "type": "Video",
+   "source": "YouTube",
+   "date": "2025",
+   "comment": ""
+  },
+  {
+   "title": "AI Could Wipe Out the Working Class, by Sen. Bernie Sanders",
+   "url": "https://www.youtube.com/watch?v=dthbi4lzO58",
+   "type": "Video",
+   "source": "YouTube",
+   "date": "",
+   "comment": ""
+  },
+  {
+   "title": "What Happens When Digital Superintelligence Arrives? Dr. Fei-Fei Li & Dr. Eric Schmidt at FII9",
+   "url": "https://www.youtube.com/watch?v=Q_9KNz7nnlA",
+   "type": "Video",
+   "source": "YouTube",
+   "date": "",
+   "comment": ""
+  },
+  {
+   "title": "'Musk Will Get Richer, People Will Get Unemployed': Nobel Laureate Hinton on AI",
+   "url": "https://www.youtube.com/watch?v=e1Hf-o1SzL4",
+   "type": "Video",
+   "source": "YouTube",
+   "date": "",
+   "comment": ""
+  },
+  {
+   "title": "AI Generated Videos Just Changed Forever",
+   "url": "https://www.youtube.com/watch?v=NXpdyAWLDas&t=3s",
+   "type": "Video",
+   "source": "YouTube",
+   "date": "",
+   "comment": ""
+  },
+  {
+   "title": "Machine Learning: Living in the Age of AI",
+   "url": "https://www.youtube.com/watch?v=ZJixNvx9BAc&t=2s",
+   "type": "Video",
+   "source": "YouTube",
+   "date": "",
+   "comment": ""
+  },
+  {
+   "title": "A.I. Revolution | Full Documentary | NOVA | PBS",
+   "url": "https://www.youtube.com/watch?v=-sB12gk9ESA&t=1s",
+   "type": "Video",
+   "source": "NOVA · PBS",
+   "date": "",
+   "comment": ""
+  },
+  {
+   "title": "The Revolution of AI | Artificial Intelligence Explained",
+   "url": "https://www.youtube.com/watch?v=8jY50cMB1TU&t=1s",
+   "type": "Video",
+   "source": "YouTube documentary",
+   "date": "",
+   "comment": ""
+  },
+  {
+   "title": "Simplest Explanation of How Artificial Intelligence Works: What Is AI? How AI Works?",
+   "url": "https://www.youtube.com/watch?v=m8o2GrbR3d8",
+   "type": "Video",
+   "source": "YouTube",
+   "date": "",
+   "comment": ""
+  },
+  {
+   "title": "Dr. Yann LeCun recent interview: his vision of AI",
+   "url": "https://www.youtube.com/watch?v=7u-DXVADyhc&t=2034s",
+   "type": "Video",
+   "source": "YouTube",
+   "date": "",
+   "comment": "About 2 hours."
+  },
+  {
+   "title": "Elon Musk on AGI Timeline, US vs China, Job Markets, Clean Energy & Humanoid Robots",
+   "url": "https://www.youtube.com/watch?v=RSNuB9pj9P8&t=6631s",
+   "type": "Video",
+   "source": "YouTube",
+   "date": "",
+   "comment": ""
+  },
+  {
+   "title": "Interview with Ivan Zhao and Simon Last, Co-Founders of Notion",
+   "url": "https://www.youtube.com/watch?v=ZMrjvxCIPpY&t=1103s",
+   "type": "Video",
+   "source": "YouTube",
+   "date": "",
+   "comment": "Companion read: Ivan Zhao's essay \"Steam, Steel, and Infinite Minds\" on the Notion blog (notion.com/blog/steam-steel-and-infinite-minds-ai)."
+  },
+  {
+   "title": "The Thinking Game",
+   "url": "https://www.youtube.com/watch?v=d95J8yzvjbQ",
+   "type": "Video",
+   "source": "YouTube",
+   "date": "",
+   "comment": ""
+  },
+  {
+   "title": "Silicon Valley Is Bracing for a Permanent Underclass",
+   "url": "https://www.nytimes.com/2026/04/30/opinion/ai-labor-work-force-silicon-valley.html",
+   "type": "Video",
+   "source": "The New York Times · Opinion",
+   "date": "2026-04-30",
+   "comment": ""
+  },
+  {
+   "title": "Palantir CEO Alex Karp says 'something has gone completely wrong' with how AI is sold",
+   "url": "https://www.cnbc.com/video/2026/07/01/palantir-ceo-alex-karp-says-something-has-gone-completely-wrong-with-how-ai-is-sold.html",
+   "type": "Video",
+   "source": "CNBC",
+   "date": "2026-07-01",
+   "comment": ""
+  },
+  {
+   "title": "The State of Startups in 2026",
+   "url": "https://www.youtube.com/watch?v=yslXlV2BP_Y&t=25s",
+   "type": "Video",
+   "source": "YouTube",
+   "date": "2026",
+   "comment": "20% of YC companies have a solo founder, and companies are reaching meaningful revenue faster than ever."
+  },
+  {
+   "title": "Andrej Karpathy: \"Delete Everything, Keep Attention\" (Stanford lecture)",
+   "url": "https://www.usetranscribe.io/yt/rxv6B7JODTY/andrej-karpathy-ai",
+   "type": "Video",
+   "source": "Stanford lecture · transcript and video",
+   "date": "2026-09-03",
+   "comment": ""
+  },
+  {
+   "title": "Research acceleration: The view inside OpenAI",
+   "url": "https://openai.com/index/research-acceleration-view-inside-openai/",
+   "type": "Article",
+   "source": "OpenAI",
+   "date": "2026-09-06",
+   "comment": ""
+  },
+  {
+   "title": "Effective harnesses for long-running agents",
+   "url": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
+   "type": "Article",
+   "source": "Anthropic Engineering",
+   "date": "2025",
+   "comment": ""
+  },
+  {
+   "title": "We Must Pace the Frontier",
+   "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
+   "type": "Article",
+   "source": "Dario Amodei",
+   "date": "2026-09",
+   "comment": ""
+  },
+  {
+   "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+   "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+   "type": "Article",
+   "source": "Anthropic",
+   "date": "2026-09-23",
+   "comment": ""
+  }
+ ],
  "news": [
   {
    "title": "Natural vs. lab-grown: the 1-carat gap",
