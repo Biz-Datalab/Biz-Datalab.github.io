@@ -85,8 +85,8 @@ def parse_project(path):
                 sub[kv.group(1).lower()] = kv.group(2).strip()
             else:
                 sub["bullets"].append(item)
-        elif kv and kv.group(1).lower() == "intro":
-            sec["intro"] = kv.group(2).strip()
+        elif kv and kv.group(1).lower() in ("intro", "photo", "caption"):
+            sec[kv.group(1).lower()] = kv.group(2).strip()
         else:
             sec["items"].append([p.strip() for p in item.split(" | ")])
     for s in proj["sections"].values():

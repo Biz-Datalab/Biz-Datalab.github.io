@@ -98,7 +98,9 @@ function render(p) {
       ${sec.subs.map(sb => `<h3>${esc(sb.title)}</h3>${sb.text ? `<p>${esc(sb.text)}</p>` : ""}`).join("")}</div>`));
   });
 
-  if (S.team || S.partners) out.push(band(head("People", "Team and partners") + `<div class="people">
+  const tp = (S.team || {}).photo;
+  if (S.team || S.partners) out.push(band(head("People", "Team and partners") +
+    (tp ? `<figure class="team-photo"><img src="${esc(tp)}" alt="${esc(S.team.caption || "Project team")}" loading="lazy">${S.team.caption ? `<figcaption>${esc(S.team.caption)}</figcaption>` : ""}</figure>` : "") + `<div class="people">
     ${S.team ? `<div><h3>Team</h3><ul>${S.team.items.map(t => `<li><b>${esc(t[0])}</b><span>${esc(t[1] || "")}</span></li>`).join("")}</ul></div>` : ""}
     ${S.partners ? `<div><h3>Partners</h3><ul>${S.partners.items.map(t => `<li><b>${t[2] ? `<a href="${esc(safeUrl(t[2]))}" target="_blank" rel="noopener">${esc(t[0])}</a>` : esc(t[0])}</b><span>${esc(t[1] || "")}</span></li>`).join("")}</ul></div>` : ""}
   </div>`));
