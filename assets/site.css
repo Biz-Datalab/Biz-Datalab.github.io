@@ -233,3 +233,8 @@ footer{padding-block:28px;font-size:.92rem}
 .team-photo{margin:0 0 28px;border:1px solid var(--line);background:var(--bg)}
 .team-photo img{width:100%;display:block;max-height:520px;object-fit:cover}
 .team-photo figcaption{padding:10px 16px;font-size:.92rem;border-top:1px solid var(--line)}
+/* never crop the main project image: show it whole on white */
+.pcard-img{background:#ffffff;display:flex;align-items:center;justify-content:center}
+.pcard-img img{object-fit:contain;padding:20px;max-height:420px}
+.phero-img{background:#ffffff}
+.phero-img img{object-fit:contain;max-height:460px;padding:20px}

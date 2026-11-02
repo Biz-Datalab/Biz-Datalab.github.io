@@ -8,7 +8,7 @@ A line "- intro: ..." directly under a section heading adds an introductory sent
 - period: 2025–2026 · one year
 - funder: North Valley Thrive (THRIVE) Catalyst grant, Idea Stage · $43,815
 - status: Completed · ready for the next phase
-- image: projects/thrive/campus-demo.jpg
+- image: projects/thrive/partners-logos.png
 - summary: Funded by North Valley Thrive, this one-year project assessed the viability of bringing solar lighting products, and ultimately clean-energy manufacturing, to the North San Joaquin Valley. Working with industry partner Portor Lighting, a faculty-led team of three student research assistants confirmed market and community interest and identified lighting needs across campuses, residential communities, and public spaces. The team also used AI to build market intelligence, studied the U.S. supply chain and the intellectual property landscape, confirmed a pathway to Buy America (BABA 2021) compliance, and developed a training framework for local technicians. The project is now ready for its next stage.
 
 ## Links
