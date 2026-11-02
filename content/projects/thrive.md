@@ -14,8 +14,6 @@ A line "- intro: ..." directly under a section heading adds an introductory sent
 ## Links
 - Project website | https://www.sjsinitiative.com/
 - Watch the video | https://app.heygen.com/videos/invest-in-stockton-the-future-of-clean-energy-manufacturing-f579956b64304a1eb71ac71f01abcdc3
-- Instagram post 1 | https://www.instagram.com/p/DWRlqQ8IKwy/
-- Instagram post 2 | https://www.instagram.com/p/DVMY0DAlGSq/
 
 ## Numbers
 - intro: In one year, the team moved from an idea to evidence: a formal industry partnership, field-tested products, AI-assisted market research across the region, and direct engagement with campus leaders, businesses, investors, and the community.
