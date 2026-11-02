@@ -446,6 +446,129 @@
    "image": "projects/diamond-pricing/dashboard.png",
    "summary": "Students learn business analytics hands-on with real-world diamond prices. Each student is assigned a carat range, collects current natural diamond listings from online retailers, and analyzes how price per carat changes with the 4Cs: carat, color, clarity, and cut. Results are benchmarked against the Rapaport industry price list and compared with lab-grown diamonds.",
    "order_num": 2.0
+  },
+  {
+   "slug": "modesto-rrc",
+   "title": "Impact of Racially Restrictive Covenants in Modesto",
+   "sections": {
+    "workflow": {
+     "name": "Workflow",
+     "items": [
+      [
+       "Project proposal",
+       "Define the research questions with City of Modesto officers and CBPR."
+      ],
+      [
+       "Data preparation",
+       "Gather and clean public environmental, health, and census data."
+      ],
+      [
+       "Analysis and discussion",
+       "Compare tracts with and without suspected RRC histories."
+      ],
+      [
+       "Visualization",
+       "Map disparities and build an interactive dashboard."
+      ],
+      [
+       "Final report",
+       "Present findings and policy ideas to city officials and CBPR."
+      ]
+     ],
+     "subs": []
+    },
+    "domain knowledge": {
+     "name": "Domain knowledge",
+     "items": [],
+     "subs": [
+      {
+       "title": "Real partners, real stakeholders",
+       "bullets": [],
+       "text": "Students worked directly with City of Modesto officers and CBPR researchers to shape the questions, find data sources, and test their findings, and presented their results and recommendations to city officials at the end of the semester."
+      },
+      {
+       "title": "California housing law, 1882–2021",
+       "bullets": [],
+       "text": "A timeline of legal developments that shaped California's housing market, used to build background knowledge. Source: Stanford Regulation, Evaluation, and Governance Lab (RegLab).",
+       "link": "https://dho.stanford.edu/wp-content/uploads/Covenants.pdf",
+       "linktext": "View the source ↗",
+       "images": [
+        "projects/modesto-rrc/california-housing-law-timeline.jpg"
+       ]
+      },
+      {
+       "title": "From redlining to present-day health",
+       "bullets": [],
+       "text": "A conceptual model linking historical redlining to today's neighborhood and health outcomes, which students could test with Modesto data. Source: Swope, Hernández, and Cushing (2022), Journal of Urban Health, 99(6), 959–983.",
+       "link": "https://doi.org/10.1007/s11524-022-00665-z",
+       "linktext": "View the source ↗",
+       "images": [
+        "projects/modesto-rrc/redlining-health-model.png"
+       ]
+      }
+     ]
+    },
+    "student work": {
+     "name": "Student work",
+     "items": [],
+     "subs": [
+      {
+       "title": "GIS maps of Modesto",
+       "bullets": [],
+       "text": "CalEnviroScreen 4.0 score percentiles and supporting indicators (solid waste sites, low birth weight) by census tract, shown against covenant locations. Sources: CalEnviroScreen 4.0 (OEHHA) and the CSU Stanislaus CASA Project.",
+       "images": [
+        "projects/modesto-rrc/gis-ces-score.jpg",
+        "projects/modesto-rrc/gis-supporting-indicators.jpg"
+       ],
+       "size": "wide"
+      },
+      {
+       "title": "Modesto RRC dashboard",
+       "bullets": [],
+       "text": "A Power BI dashboard comparing demographics and disparity percentiles across census tracts linked to RRCs and highly disinvested tracts.",
+       "size": "wide",
+       "images": [
+        "projects/modesto-rrc/powerbi-dashboard.jpg"
+       ]
+      }
+     ],
+     "intro": "Selected results from the students' final report. The analysis is exploratory and not a legal determination."
+    },
+    "acknowledgments": {
+     "name": "Acknowledgments",
+     "items": [
+      [
+       "This work acknowledges the support and guidance provided by Trevin Barber and Eric Bonander from the Modesto Community and Economic Development Department, and Thomas Pogue and Steven McCarty from the Center for Business and Policy Research (CBPR)."
+      ]
+     ],
+     "subs": []
+    },
+    "for instructors": {
+     "name": "For instructors",
+     "items": [
+      [
+       "This project can be adapted to other cities, community partners, or courses. Detailed assignment instructions are available on request, and you are welcome to contact me."
+      ]
+     ],
+     "subs": []
+    }
+   },
+   "section_order": [
+    "workflow",
+    "domain knowledge",
+    "student work",
+    "acknowledgments",
+    "for instructors"
+   ],
+   "type": "group",
+   "label": "Student group project",
+   "badge": "student",
+   "order": "3",
+   "layout": "brief",
+   "image": "projects/modesto-rrc/gis-ces-score.jpg",
+   "students": "Jonathan Horton, Ariel Collette-Delvalle, Alexis Lopez, and Omar Shalabi",
+   "summary": "A real-life community problem, studied with real partners. Racially restrictive covenants (RRCs) kept minoritized families from buying homes in Modesto from the 1930s until 1948, and their effects may still shape neighborhoods today. Working with the City of Modesto and Pacific's Center for Business and Policy Research (CBPR), a student team used CalEnviroScreen 4.0 data, GIS mapping, and census tract comparisons to test that link. Tracts with suspected RRC histories show lower pollution burden and stronger socioeconomic indicators, while adjacent tracts, largely non-white, face higher health risks, environmental stressors, and infrastructure neglect.",
+   "order_num": 3.0
   }
  ],
  "resources": [

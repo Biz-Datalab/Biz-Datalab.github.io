@@ -292,6 +292,15 @@ footer{padding-block:28px;font-size:.92rem}
 .badge.solid.funded{background:#1c2430;border-color:#1c2430;color:#ffffff}
 .badge.solid.capstone{background:#56736a;border-color:#56736a;color:#ffffff}
 .badge.solid.student{background:#5d6773;border-color:#5d6773;color:#ffffff}
-.callout{margin-top:18px;padding:14px 18px;border:1px solid var(--line);border-left:4px solid var(--ink);background:var(--bg);display:flex;flex-direction:column;gap:4px;max-width:76ch}
+.callout{margin-top:0;padding:14px 18px;border:1px solid var(--line);border-left:4px solid var(--ink);background:var(--bg);display:flex;flex-direction:column;gap:4px;max-width:76ch}
 .callout p{font-size:.95rem;line-height:1.55}
 .callout a{font-weight:700;font-size:.95rem;margin-top:2px}
+.callouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:14px;margin-top:18px}
+.callouts .callout{max-width:none}
+.callout.has-thumb{flex-direction:row;align-items:flex-start;gap:16px}
+.callout .thumb{position:relative;flex:0 0 112px;height:84px;border:1px solid var(--line);background:#ffffff;display:block;overflow:hidden}
+.callout .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.callout .thumb span{position:absolute;right:4px;bottom:4px;background:var(--ink);color:var(--bg);font-size:.8rem;line-height:1;padding:4px 5px;border-radius:2px}
+.callout .thumb:hover{outline:2px solid var(--ink)}
+.callout > div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.brief-head p.who{margin-top:14px;font-size:.98rem}
