@@ -19,7 +19,7 @@ A line "- intro: ..." directly under a section heading adds an introductory sent
 ## Numbers
 - intro: In one year, the team moved from an idea to evidence: a formal industry partnership, field-tested products, AI-assisted market research across the region, and direct engagement with campus leaders, businesses, investors, and the community.
 - 3 | student research assistants
-- 2 | student RAs received full-time job offers
+- 2 | student RAs received full-time job offers by the time the project was completed
 - 130+ | attendees reached at three school events
 - 300+ | potential sites identified with AI agents
 - 100+ | facilities leaders contacted
