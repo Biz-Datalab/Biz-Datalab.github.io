@@ -44,7 +44,7 @@ A line "- intro: ..." directly under a section heading adds an introductory sent
 - text: A night-time field survey of University of the Pacific sites became an interactive siting map: 13 lighting zones, 28 assessed points, and 64 planned fixture locations.
 
 ### AI lead-intelligence platform
-- text: AI agents drew on six public data sources to find and rank places that could benefit from solar lighting: 300+ potential sites identified and 100+ opportunities ranked across 13 market segments.
+- text: AI agents drew on six public data sources to find and rank places that could benefit from solar lighting: 300+ potential sites identified and 100+ opportunities ranked across 3 major market segments.
 
 ### Live market dashboard
 - text: With AI-assisted data preparation and coding, students built an e-commerce and residential dashboard in SQL, Python, and Google Looker Studio, combining market research and competitor analysis to support decisions.
