@@ -23,7 +23,7 @@ A line "- intro: ..." directly under a section heading adds an introductory sent
 - 130+ | attendees reached at three school events
 - 300+ | potential sites identified with AI agents
 - 100+ | facilities leaders contacted
-- 13 | market segments researched
+- 3 | major market segments researched
 - 64 | fixture locations planned on campus
 - 1 | formal industry partnership
 
@@ -61,6 +61,16 @@ A line "- intro: ..." directly under a section heading adds an introductory sent
 
 ### Workforce training framework
 - text: A training framework for Solar Light Product Assembly Technicians, with a plan to grow it into a high school summer camp, plus an AI-assisted marketing lecture for local workforce development.
+
+## Preparing for a classroom pilot
+- intro: The next step brings THRIVE into the classroom. We are preparing a first classroom pilot of "Take It to Market," a course model in which students learn AI by doing it: AI is built into every step of a real business workflow, and what three student researchers did in one funded year, a whole class can do.
+- photo: projects/thrive/take-it-to-market-poster.jpg
+- caption: "Take It to Market" poster, University of the Pacific AI Showcase & Symposium, November 12, 2026.
+- Learn the industry: AI finds and summarizes research, and students write a background report.
+- Analyze the market: AI writes code to collect and clean data, and students build a dataset and dashboard.
+- Understand customers: AI pre-tests surveys and codes answers, and students build segment profiles.
+- Build a lead agent: AI agents find and rank prospects, and students deliver a ranked lead list.
+- Pitch and take action: AI helps build the website, video, and pitch, and students run outreach and pilots.
 
 ## Emerging needs and opportunities
 - Interest in safe, sustainable lighting is growing across campuses, communities, and public spaces in the region.

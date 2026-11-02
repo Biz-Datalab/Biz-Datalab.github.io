@@ -6,7 +6,7 @@
 <title>Project · Biz Data Lab</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=95cd2b78">
+<link rel="stylesheet" href="assets/site.css?v=6bc63fb4">
 </head>
 <body>
 <nav>
@@ -31,7 +31,7 @@ const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const safeUrl = u => /^https?:\/\//i.test(u || "") ? u : (u && !/^[a-z]+:/i.test(u) ? u : "#");
 const TYPE = { funded: "Funded research project", group: "Student group project", individual: "Individual research" };
-const CAROUSEL = ["emerging needs and opportunities", "long-term vision", "student voices"];
+const CAROUSEL = ["preparing for a classroom pilot", "emerging needs and opportunities", "long-term vision", "student voices"];
 const HANDLED = ["links", "numbers", "student learning", "student work", "outcomes", "team", "partners", ...CAROUSEL];
 const paras = sec => sec.items.map(i => `<p>${esc(i.join(" | "))}</p>`).join("");
 
@@ -43,6 +43,10 @@ function band(inner, tint, id) { return `<section class="band${tint ? " tint" : 
 function slideHTML(key, sec) {
   if (key === "long-term vision") {
     return `<h3>${esc(sec.name)}</h3>${sec.intro ? `<p class="slide-intro">${esc(sec.intro)}</p>` : ""}<div class="timeline">${sec.items.map(i => `<div><span class="yr">${esc(i[0])}</span><p>${esc(i[1] || "")}</p>${i[2] ? `<span class="jobs">${esc(i[2])}</span>` : ""}</div>`).join("")}</div>`;
+  }
+  if (key === "preparing for a classroom pilot") {
+    return `<div class="pilot"><div><h3>${esc(sec.name)}</h3>${sec.intro ? `<p class="slide-intro">${esc(sec.intro)}</p>` : ""}<ol>${sec.items.map(i => { const t = i.join(" | "), c = t.indexOf(":"); return `<li>${c > 0 ? `<b>${esc(t.slice(0, c))}</b>${esc(t.slice(c))}` : esc(t)}</li>`; }).join("")}</ol></div>
+      ${sec.photo ? `<figure><a href="${esc(sec.photo)}" target="_blank" rel="noopener"><img src="${esc(sec.photo)}" alt="Take It to Market poster" loading="lazy"></a>${sec.caption ? `<figcaption>${esc(sec.caption)} <a href="${esc(sec.photo)}" target="_blank" rel="noopener">View full size ↗</a></figcaption>` : ""}</figure>` : ""}</div>`;
   }
   if (key === "student voices") {
     return `<h3>Success stories: student voices</h3><div class="quotes">${sec.items.map(i => `<figure><blockquote>“${esc(i[0])}”</blockquote><figcaption><b>${esc(i[1] || "")}</b>${esc(i[2] || "")}</figcaption></figure>`).join("")}</div>`;
@@ -83,7 +87,7 @@ function render(p) {
   }
 
   const slides = CAROUSEL.filter(k => S[k]);
-  if (slides.length) out.push(band(head("Looking ahead", "Opportunities, vision, and student voices") +
+  if (slides.length) out.push(band(head("Looking ahead", "Classroom pilot, opportunities, vision, and student voices") +
     `<div class="carousel" id="car"><div class="car-view"><div class="car-track" id="track">${slides.map((k, i) =>
       `<div class="car-slide" role="group" aria-roledescription="slide" aria-label="${i + 1} of ${slides.length}">${slideHTML(k, S[k])}</div>`).join("")}</div></div>
       <div class="car-ctl"><div class="dots" id="dots">${slides.map((k, i) => `<button type="button" data-i="${i}">${esc(S[k].name)}</button>`).join("")}</div>
