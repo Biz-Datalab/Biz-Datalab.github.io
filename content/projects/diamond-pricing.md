@@ -26,7 +26,7 @@ In "Workflow", the parts of an item are separated by " | ". In "Student work", a
 - linktext: View the sample GIA report ↗
 
 ## Student work
-- intro: These are a fraction of one student's raw dataset and visuals, from a project on round, ideal-cut diamonds of 0.70 to 0.89 carat.
+- intro: These are a fraction of the raw dataset and visuals from business student Aditi Kadam's project on round, ideal-cut diamonds of 0.70 to 0.89 carat.
 
 ### Raw data
 - text: Price, carat, cut, color, and clarity for each stone, with price per carat calculated.
