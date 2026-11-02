@@ -13,11 +13,11 @@ thumbnail that visitors can click to enlarge. In "Student work", add "- size: wi
 - summary: A real-life community problem, studied with real partners. Racially restrictive covenants (RRCs) kept minoritized families from buying homes in Modesto from the 1930s until 1948, and their effects may still shape neighborhoods today. Working with the City of Modesto and Pacific's Center for Business and Policy Research (CBPR), a student team used CalEnviroScreen 4.0 data, GIS mapping, and census tract comparisons to test that link. Tracts with suspected RRC histories show lower pollution burden and stronger socioeconomic indicators, while adjacent tracts, largely non-white, face higher health risks, environmental stressors, and infrastructure neglect.
 
 ## Workflow
-- Project proposal | Define the research questions with City of Modesto officers and CBPR.
-- Data preparation | Gather and clean public environmental, health, and census data.
-- Analysis and discussion | Compare tracts with and without suspected RRC histories.
-- Visualization | Map disparities and build an interactive dashboard.
-- Final report | Present findings and policy ideas to city officials and CBPR.
+- Project proposal | Define the questions with community partners.
+- Data preparation | Gather and organize the data.
+- Analysis and discussion | Look for patterns and what they mean.
+- Visualization | Turn the findings into clear visuals.
+- Final report | Present findings and recommendations to city officials.
 
 ## Domain knowledge
 ### Real partners, real stakeholders
