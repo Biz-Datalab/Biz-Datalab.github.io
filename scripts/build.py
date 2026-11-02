@@ -233,10 +233,28 @@ def main():
                 if s:
                     w.writerow([e["date"], label, s["n"], s["mean"], s["lo"], s["hi"], s["median"],
                                 s["min"], s["max"], s["avg_stone"], s["avg_carat"]])
+    stamp_assets()
     for wmsg in warnings:
         print("WARNING:", wmsg)
     print(f"Built site.json: {len(editions)} price edition(s), {len(projects)} project(s), "
           f"{len(resources)} AI resource(s), {len(news)} news item(s).")
+
+
+def stamp_assets():
+    """Add a content hash to the stylesheet link so browsers load the new version after each change."""
+    import hashlib
+    css = os.path.join(ROOT, "assets", "site.css")
+    if not os.path.exists(css):
+        return
+    v = hashlib.md5(open(css, "rb").read()).hexdigest()[:8]
+    for page in ("index.html", "project.html"):
+        path = os.path.join(ROOT, page)
+        if os.path.exists(path):
+            html = read(path)
+            new = re.sub(r'assets/site\.css(\?v=[0-9a-f]+)?"', f'assets/site.css?v={v}"', html)
+            if new != html:
+                with open(path, "w", encoding="utf-8") as f:
+                    f.write(new)
 
 
 if __name__ == "__main__":
