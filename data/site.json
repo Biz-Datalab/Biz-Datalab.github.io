@@ -569,6 +569,141 @@
    "students": "Jonathan Horton, Ariel Collette-Delvalle, Alexis Lopez, and Omar Shalabi",
    "summary": "A real-life community problem, studied with real partners. Racially restrictive covenants (RRCs) kept minoritized families from buying homes in Modesto from the 1930s until 1948, and their effects may still shape neighborhoods today. Working with the City of Modesto and Pacific's Center for Business and Policy Research (CBPR), a student team used CalEnviroScreen 4.0 data, GIS mapping, and census tract comparisons to test that link. Tracts with suspected RRC histories show lower pollution burden and stronger socioeconomic indicators, while adjacent tracts, largely non-white, face higher health risks, environmental stressors, and infrastructure neglect.",
    "order_num": 3.0
+  },
+  {
+   "slug": "student-housing",
+   "title": "Exploring Student Housing Preferences at Pacific",
+   "sections": {
+    "workflow": {
+     "name": "Workflow",
+     "items": [
+      [
+       "Survey design",
+       "Build a research-based survey approved by the university's IRB."
+      ],
+      [
+       "Data collection",
+       "Gather responses from real students."
+      ],
+      [
+       "Analysis and visualization",
+       "Compare student groups and build dashboards."
+      ],
+      [
+       "Recommendations",
+       "Share ideas that help more students choose campus living."
+      ],
+      [
+       "SURF extension",
+       "Predict housing choices with machine learning."
+      ]
+     ],
+     "subs": []
+    },
+    "domain knowledge": {
+     "name": "Domain knowledge",
+     "items": [],
+     "subs": [
+      {
+       "title": "Real respondents",
+       "bullets": [],
+       "text": "74 Pacific students answered an anonymous survey that ran for four weeks: 38 domestic local, 17 domestic non-local, and 19 international students. Each rated twelve housing factors and shared their own experiences."
+      }
+     ]
+    },
+    "research question": {
+     "name": "Research question",
+     "items": [
+      [
+       "What matters most to Pacific students when they decide where to live, and does it differ for international, domestic local, and domestic non-local students? Living on campus supports student retention, a stronger campus community, academic performance, and well-being, so knowing these priorities helps the university make campus housing an easy choice. The team asked students to rate twelve housing factors, from safety and affordability to proximity and amenities, and compared the results across the three groups. The SURF project then asked whether these priorities can predict where a student chooses to live."
+      ]
+     ],
+     "subs": []
+    },
+    "student work": {
+     "name": "Student work",
+     "items": [],
+     "subs": [
+      {
+       "title": "All respondents",
+       "bullets": [],
+       "text": "Safety and security is the top factor overall, a natural strength of living on campus.",
+       "images": [
+        "projects/student-housing/dashboard-overall.png"
+       ]
+      },
+      {
+       "title": "International students",
+       "bullets": [],
+       "text": "Safety and security ranks first (4.58 of 5), followed by affordability and internet and utilities.",
+       "images": [
+        "projects/student-housing/dashboard-international.png"
+       ]
+      },
+      {
+       "title": "Domestic local students",
+       "bullets": [],
+       "text": "Affordability (4.24), parking (4.21), and safety (4.16) matter most.",
+       "images": [
+        "projects/student-housing/dashboard-domestic-local.png"
+       ]
+      },
+      {
+       "title": "Domestic non-local students",
+       "bullets": [],
+       "text": "Proximity to campus ranks first (4.53), and about three in four of these respondents live on campus.",
+       "images": [
+        "projects/student-housing/dashboard-domestic-nonlocal.png"
+       ]
+      },
+      {
+       "title": "SURF: predicting housing choices",
+       "bullets": [],
+       "text": "A machine learning model (k-nearest neighbors) predicted students' housing choices with 75% accuracy, opening the door to personalized housing recommendations and better use of campus resources.",
+       "size": "wide",
+       "images": [
+        "projects/student-housing/surf-ml-slide.jpg"
+       ]
+      }
+     ],
+     "intro": "Selected dashboards from the capstone report and a slide from the SURF presentation."
+    },
+    "recommendations": {
+     "name": "Recommendations",
+     "items": [
+      [
+       "Highlight campus safety and the convenience of living close to classes, offer flexible and affordable housing options, and tailor outreach to what each student group values most."
+      ]
+     ],
+     "subs": []
+    },
+    "for instructors": {
+     "name": "For instructors",
+     "items": [
+      [
+       "This project can be adapted to other campus services or student populations. Detailed assignment instructions are available on request, and you are welcome to contact me."
+      ]
+     ],
+     "subs": []
+    }
+   },
+   "section_order": [
+    "workflow",
+    "domain knowledge",
+    "research question",
+    "student work",
+    "recommendations",
+    "for instructors"
+   ],
+   "type": "group",
+   "label": "Capstone project · SURF",
+   "badge": "capstone",
+   "order": "4",
+   "layout": "brief",
+   "image": "projects/student-housing/dashboard-overall.png",
+   "students": "Aniela Jensen, Kaleena Quintero, Nathalia Anaya Arita, Mahnoor Khan, and Felipe Gonzalez. Aniela Jensen continued the research through the Summer Undergraduate Research Fellowship (SURF).",
+   "summary": "A business analytics capstone team asked Pacific students what makes them choose campus housing, and how the university can help more students live on campus. The team surveyed 74 students and compared what international, domestic local, and domestic non-local students value most. Aniela Jensen then carried the work forward through the Summer Undergraduate Research Fellowship (SURF), using machine learning to predict students' housing choices.",
+   "order_num": 4.0
   }
  ],
  "resources": [

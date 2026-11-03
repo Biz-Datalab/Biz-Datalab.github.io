@@ -66,12 +66,14 @@ function renderBrief(p) {
     ${W ? `<ol class="steps">${W.items.map(i => `<li><b>${esc(i[0])}</b><span>${esc(i.slice(1).join(" | "))}</span></li>`).join("")}</ol>` : ""}
     ${(S["domain knowledge"] || {}).subs ? `<div class="callouts">${S["domain knowledge"].subs.map(d => { const img = (d.images || [])[0];
       return `<div class="callout${img ? " has-thumb" : ""}">${img ? `<a class="thumb" href="${esc(img)}" target="_blank" rel="noopener" title="Click to enlarge"><img src="${esc(img)}" alt="${esc(d.title)}" loading="lazy"><span aria-hidden="true">⤢</span></a>` : ""}<div><b>${esc(d.title)}</b>${d.text ? `<p>${esc(d.text)}</p>` : ""}${d.link ? `<a href="${esc(safeUrl(d.link))}" target="_blank" rel="noopener">${esc(d.linktext || "Open ↗")}</a>` : ""}</div></div>`; }).join("")}</div>` : ""}`, true));
+  const Q = S["research question"];
+  if (Q) out.push(band(head("The question", Q.name) + `<div class="prose">${paras(Q)}</div>`));
   const R = S["student work"];
   if (R) out.push(band(head("Student work", "Selected results", R.intro) +
     `<div class="gallery">${R.subs.map(w => `<figure class="${w.size === "wide" ? "wide" : ""}">
       <div class="gimg">${(w.images || []).map(src => `<a href="${esc(src)}" target="_blank" rel="noopener"><img src="${esc(src)}" alt="${esc(w.title)}" loading="lazy"></a>`).join("")}</div>
       <figcaption><b>${esc(w.title)}</b>${w.text ? `<span>${esc(w.text)}</span>` : ""}${w.link ? `<a href="${esc(safeUrl(w.link))}" target="_blank" rel="noopener">${esc(w.linktext || "Open ↗")}</a>` : ""}</figcaption></figure>`).join("")}</div>`));
-  Object.keys(S).filter(k => !["workflow", "student work", "domain knowledge"].includes(k)).forEach(k => {
+  Object.keys(S).filter(k => !["workflow", "student work", "domain knowledge", "research question"].includes(k)).forEach(k => {
     const sec = S[k];
     out.push(band(head(k === "acknowledgments" ? "Thank you" : "Project", sec.name) + `<div class="generic">${sec.intro ? `<p>${esc(sec.intro)}</p>` : ""}<div class="prose">${paras(sec)}</div></div>`, true));
   });
