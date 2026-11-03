@@ -668,8 +668,8 @@
      ],
      "intro": "Selected dashboards from the capstone report and a slide from the SURF presentation."
     },
-    "recommendations": {
-     "name": "Recommendations",
+    "student recommendations": {
+     "name": "Student recommendations",
      "items": [
       [
        "Highlight campus safety and the convenience of living close to classes, offer flexible and affordable housing options, and tailor outreach to what each student group values most."
@@ -692,7 +692,7 @@
     "domain knowledge",
     "research question",
     "student work",
-    "recommendations",
+    "student recommendations",
     "for instructors"
    ],
    "type": "group",

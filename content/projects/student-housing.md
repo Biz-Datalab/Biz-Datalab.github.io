@@ -49,7 +49,7 @@ This project uses the short "brief" layout (see diamond-pricing.md). In "Student
 - image: projects/student-housing/surf-ml-slide.jpg
 - size: wide
 
-## Recommendations
+## Student recommendations
 - Highlight campus safety and the convenience of living close to classes, offer flexible and affordable housing options, and tailor outreach to what each student group values most.
 
 ## For instructors
