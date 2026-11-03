@@ -53,8 +53,8 @@ Images go in a folder under **projects/** (for example `projects/thrive/`).
 
 **Two page styles**
 - **Full story** (long funded projects): copy **content/projects/thrive.md**.
-- **Brief** (course and student projects): copy **content/projects/diamond-pricing.md**. It shows a short summary,
-  a row of workflow steps, and a gallery of results. Add `- size: wide` to a result to show it full width.
+- **Brief** (course and student projects): copy **content/projects/diamond-pricing.md**. It shows a one-paragraph summary
+  and a gallery of results. Add `- size: wide` to a result to show it full width.
 
 **Label color** (the small banner above the title): set `- badge:` to `funded` (black), `capstone` (greenish grey),
 or `student` (grey), and `- label:` to the words shown, e.g. `- label: Capstone project`.

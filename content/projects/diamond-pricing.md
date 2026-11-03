@@ -1,7 +1,7 @@
 # Pricing Diamonds with Real-World Market Data
 How to edit: change the text after each colon. Sections start with "## ". Items in a section start with "- ".
-This project uses the short "brief" layout: a summary, workflow steps, and a results gallery.
-In "Workflow", the parts of an item are separated by " | ". In "Student work", add "- size: wide" to show an image full width.
+This project uses the short "brief" layout: a summary and a results gallery. 
+In "Student work", add "- size: wide" to show an image full width.
 "badge" sets the label color: funded (black), capstone (greenish grey), or student (grey).
 
 - type: group
@@ -10,14 +10,7 @@ In "Workflow", the parts of an item are separated by " | ". In "Student work", a
 - layout: brief
 - badge: student
 - image: projects/diamond-pricing/dashboard.png
-- summary: Students learn business analytics hands-on with real-world diamond prices. Each student is assigned a carat range, collects current natural diamond listings from online retailers, and analyzes how price per carat changes with the 4Cs: carat, color, clarity, and cut. Results are benchmarked against the Rapaport industry price list and compared with lab-grown diamonds.
-
-## Workflow
-- Domain knowledge | Learn the 4Cs and how grading reports set diamond value.
-- Data acquisition | Collect prices and grades.
-- Data preparation | Clean the data and identify variables.
-- Data analysis and visualization | Explore price patterns and turn the findings into clear visuals.
-- Communication | Build a dashboard, present in class, and write a report.
+- summary: Students learn business analytics hands-on with real-world diamond prices. Each student is assigned a carat range, collects current natural diamond listings from online retailers, and analyzes how price per carat changes with the 4Cs: carat, color, clarity, and cut. Results are benchmarked against the Rapaport industry price list, compared with lab-grown diamonds, and presented in a dashboard and a final report.
 
 ## Domain knowledge
 ### Sample GIA grading report

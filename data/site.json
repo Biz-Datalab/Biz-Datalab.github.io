@@ -326,32 +326,6 @@
    "slug": "diamond-pricing",
    "title": "Pricing Diamonds with Real-World Market Data",
    "sections": {
-    "workflow": {
-     "name": "Workflow",
-     "items": [
-      [
-       "Domain knowledge",
-       "Learn the 4Cs and how grading reports set diamond value."
-      ],
-      [
-       "Data acquisition",
-       "Collect prices and grades."
-      ],
-      [
-       "Data preparation",
-       "Clean the data and identify variables."
-      ],
-      [
-       "Data analysis and visualization",
-       "Explore price patterns and turn the findings into clear visuals."
-      ],
-      [
-       "Communication",
-       "Build a dashboard, present in class, and write a report."
-      ]
-     ],
-     "subs": []
-    },
     "domain knowledge": {
      "name": "Domain knowledge",
      "items": [],
@@ -433,7 +407,6 @@
     }
    },
    "section_order": [
-    "workflow",
     "domain knowledge",
     "student work",
     "for instructors"
@@ -444,39 +417,13 @@
    "layout": "brief",
    "badge": "student",
    "image": "projects/diamond-pricing/dashboard.png",
-   "summary": "Students learn business analytics hands-on with real-world diamond prices. Each student is assigned a carat range, collects current natural diamond listings from online retailers, and analyzes how price per carat changes with the 4Cs: carat, color, clarity, and cut. Results are benchmarked against the Rapaport industry price list and compared with lab-grown diamonds.",
+   "summary": "Students learn business analytics hands-on with real-world diamond prices. Each student is assigned a carat range, collects current natural diamond listings from online retailers, and analyzes how price per carat changes with the 4Cs: carat, color, clarity, and cut. Results are benchmarked against the Rapaport industry price list, compared with lab-grown diamonds, and presented in a dashboard and a final report.",
    "order_num": 2.0
   },
   {
    "slug": "modesto-rrc",
    "title": "Impact of Racially Restrictive Covenants in Modesto",
    "sections": {
-    "workflow": {
-     "name": "Workflow",
-     "items": [
-      [
-       "Project proposal",
-       "Define the questions with community partners."
-      ],
-      [
-       "Data preparation",
-       "Gather and organize the data."
-      ],
-      [
-       "Analysis and discussion",
-       "Look for patterns and what they mean."
-      ],
-      [
-       "Visualization",
-       "Turn the findings into clear visuals."
-      ],
-      [
-       "Final report",
-       "Present findings and recommendations to city officials."
-      ]
-     ],
-     "subs": []
-    },
     "domain knowledge": {
      "name": "Domain knowledge",
      "items": [],
@@ -554,7 +501,6 @@
     }
    },
    "section_order": [
-    "workflow",
     "domain knowledge",
     "student work",
     "acknowledgments",
@@ -574,32 +520,6 @@
    "slug": "student-housing",
    "title": "Exploring Student Housing Preferences at Pacific",
    "sections": {
-    "workflow": {
-     "name": "Workflow",
-     "items": [
-      [
-       "Survey design",
-       "Build a research-based survey approved by the university's IRB."
-      ],
-      [
-       "Data collection",
-       "Gather responses from real students."
-      ],
-      [
-       "Analysis and visualization",
-       "Compare student groups and build dashboards."
-      ],
-      [
-       "Recommendations",
-       "Share ideas that help more students choose campus living."
-      ],
-      [
-       "SURF extension",
-       "Predict housing choices with machine learning."
-      ]
-     ],
-     "subs": []
-    },
     "domain knowledge": {
      "name": "Domain knowledge",
      "items": [],
@@ -688,7 +608,6 @@
     }
    },
    "section_order": [
-    "workflow",
     "domain knowledge",
     "research question",
     "student work",
@@ -709,32 +628,6 @@
    "slug": "movie-genres",
    "title": "Predicting Students' Favorite Movie Genres",
    "sections": {
-    "workflow": {
-     "name": "Workflow",
-     "items": [
-      [
-       "Survey design",
-       "Ask about habits, moods, and influences."
-      ],
-      [
-       "Data collection",
-       "Reach real students online and in person."
-      ],
-      [
-       "Data preparation",
-       "Clean the responses and keep reliable answers."
-      ],
-      [
-       "Data analysis and visualization",
-       "Find what shapes genre preferences."
-      ],
-      [
-       "Insights",
-       "Share what the patterns mean for streaming and marketing."
-      ]
-     ],
-     "subs": []
-    },
     "domain knowledge": {
      "name": "Domain knowledge",
      "items": [],
@@ -801,7 +694,6 @@
     }
    },
    "section_order": [
-    "workflow",
     "domain knowledge",
     "student work",
     "for instructors"
