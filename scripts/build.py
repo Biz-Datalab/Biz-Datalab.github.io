@@ -2,7 +2,7 @@
 
 Inputs
   content/profile.md, content/projects/*.md, content/ai-resources.md, content/news.md
-  prices/YYYY-MM-DD_*.csv          Blue Nile exports (title column + price column)
+  prices/YYYY-MM-DD_*.csv          retailer price exports (title column + price column)
   prices/YYYY-MM-DD_comment.txt    optional comment for that edition
 
 Each price row is classified by its listing title: "Lab-Grown" -> lab-grown, otherwise natural;
@@ -201,7 +201,7 @@ def build_prices():
             continue
         cpath = os.path.join(pdir, f"{date}_comment.txt")
         comment = read(cpath).strip() if os.path.exists(cpath) else auto_comment(st, editions[-1] if editions else None)
-        editions.append({"date": date, "source": "Blue Nile listings", "comment": comment, "cells": st})
+        editions.append({"date": date, "source": "U.S. online jewelry retailers", "comment": comment, "cells": st})
     return editions
 
 

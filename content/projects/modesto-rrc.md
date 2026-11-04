@@ -8,6 +8,7 @@ thumbnail that visitors can click to enlarge. In "Student work", add "- size: wi
 - badge: student
 - order: 3
 - layout: brief
+- year: 2025
 - image: projects/modesto-rrc/gis-ces-score.jpg
 - students: Jonathan Horton, Ariel Collette-Delvalle, Alexis Lopez, and Omar Shalabi
 - summary: A real-life community problem, studied with real partners. Racially restrictive covenants (RRCs) kept minoritized families from buying homes in Modesto from the 1930s until 1948, and their effects may still shape neighborhoods today. Working with the City of Modesto and Pacific's Center for Business and Policy Research (CBPR), a student team used CalEnviroScreen 4.0 data, GIS mapping, and census tract comparisons to test that link. Tracts with suspected RRC histories show lower pollution burden and stronger socioeconomic indicators, while adjacent tracts, largely non-white, face higher health risks, environmental stressors, and infrastructure neglect.

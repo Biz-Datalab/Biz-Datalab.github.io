@@ -415,6 +415,7 @@
    "label": "Student project",
    "order": "2",
    "layout": "brief",
+   "year": "2024",
    "badge": "student",
    "image": "projects/diamond-pricing/dashboard.png",
    "summary": "Students learn business analytics hands-on with real-world diamond prices. Each student is assigned a carat range, collects current natural diamond listings from online retailers, and analyzes how price per carat changes with the 4Cs: carat, color, clarity, and cut. Results are benchmarked against the Rapaport industry price list, compared with lab-grown diamonds, and presented in a dashboard and a final report.",
@@ -511,6 +512,7 @@
    "badge": "student",
    "order": "3",
    "layout": "brief",
+   "year": "2025",
    "image": "projects/modesto-rrc/gis-ces-score.jpg",
    "students": "Jonathan Horton, Ariel Collette-Delvalle, Alexis Lopez, and Omar Shalabi",
    "summary": "A real-life community problem, studied with real partners. Racially restrictive covenants (RRCs) kept minoritized families from buying homes in Modesto from the 1930s until 1948, and their effects may still shape neighborhoods today. Working with the City of Modesto and Pacific's Center for Business and Policy Research (CBPR), a student team used CalEnviroScreen 4.0 data, GIS mapping, and census tract comparisons to test that link. Tracts with suspected RRC histories show lower pollution burden and stronger socioeconomic indicators, while adjacent tracts, largely non-white, face higher health risks, environmental stressors, and infrastructure neglect.",
@@ -619,6 +621,7 @@
    "badge": "capstone",
    "order": "4",
    "layout": "brief",
+   "year": "2025",
    "image": "projects/student-housing/dashboard-overall.png",
    "students": "Aniela Jensen, Kaleena Quintero, Nathalia Anaya Arita, Mahnoor Khan, and Felipe Gonzalez. Aniela Jensen continued the research through the Summer Undergraduate Research Fellowship (SURF).",
    "summary": "A business analytics capstone team asked Pacific students what makes them choose campus housing, and how the university can help more students live on campus. The team surveyed 74 students and compared what international, domestic local, and domestic non-local students value most. Aniela Jensen then carried the work forward through the Summer Undergraduate Research Fellowship (SURF), using machine learning to predict students' housing choices.",
@@ -703,6 +706,7 @@
    "badge": "student",
    "order": "5",
    "layout": "brief",
+   "year": "2026",
    "image": "projects/movie-genres/genre-posters.png",
    "students": "Viridiana Guillen, Jacobee Bun, Amna Blouch, Christina Johnson, and Caylen Walker",
    "summary": "In the age of streaming, what makes a college student love one movie genre over another? A student team surveyed Pacific students about their viewing habits, moods, and what shapes their choices, then used analytics to explain and predict favorite genres. Gender, personality, the feeling students want from a movie, and who they watch with turned out to matter more than trailers or social media, insights that streaming platforms and marketers can use to reach this core audience.",
@@ -806,6 +810,7 @@
    "badge": "student",
    "order": "6",
    "layout": "brief",
+   "year": "2026",
    "image": "projects/stockton-manufacturing/port-of-stockton-visit.jpg",
    "students": "Felipe Cosio, Gursehajpal Singh, Leonardo Magana, Eric Cardenas, and Fatima Naeem",
    "summary": "Could Stockton be the next home for solar lighting manufacturing? A student team used public labor, workforce, and freight data, visited the Port of Stockton, and checked their findings with industry experts. The answer was yes. Stockton combines a deep-water inland port with customs service and a Foreign Trade Zone, about 300 acres of port land ready for development, direct access to Interstate 5, Highway 99, and rail, a large available workforce, and labor and freight costs well below the Bay Area. The team concluded that the Port of Stockton is the strongest site for a new solar lighting plant.",
@@ -1036,7 +1041,7 @@
  "editions": [
   {
    "date": "2026-10-30",
-   "source": "Blue Nile listings",
+   "source": "U.S. online jewelry retailers",
    "comment": "Natural stones carry a 26% per-carat premium for crossing the 1-carat mark. Lab-grown prices are tightly clustered, which points to formula-based retail pricing.",
    "cells": {
     "n090": {

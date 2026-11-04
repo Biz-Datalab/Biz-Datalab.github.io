@@ -10,7 +10,7 @@ rebuilds itself automatically. It is usually live in **1–2 minutes**. To watch
 
 ## 1. Diamond prices (every two weeks)
 
-1. Export your four Blue Nile CSV files as usual.
+1. Export your four retailer CSV files as usual.
 2. Rename each file so it **starts with the date**, for example:
    - `2026-11-13_natural_0.90-0.99.csv`
    - `2026-11-13_natural_1.00-1.49.csv`

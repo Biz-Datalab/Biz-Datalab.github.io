@@ -8,7 +8,7 @@ Personal website: experiential learning projects, a biweekly **Diamond Market Wa
 | Folder / file | What it holds |
 |---|---|
 | `content/` | Profile, projects, AI resources, industry news (plain text you can edit) |
-| `prices/` | Blue Nile CSV exports, one set per edition (file names start with the date) |
+| `prices/` | Retailer price CSV exports, one set per edition (file names start with the date) |
 | `projects/` | Project PDFs |
 | `data/` | Generated automatically. Do not edit |
 | `scripts/build.py` | Calculates the price statistics and builds `data/site.json` |

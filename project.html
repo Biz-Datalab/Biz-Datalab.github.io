@@ -6,7 +6,7 @@
 <title>Project · Biz Data Lab</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=234cb0cb">
+<link rel="stylesheet" href="assets/site.css?v=cc39c302">
 <script data-goatcounter="https://biz-datalab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -62,7 +62,7 @@ function renderBrief(p) {
   const W = S.workflow;
   out.push(band(`<a class="back" href="index.html#teaching">← All projects</a>
     <div class="brief-head"><span class="badge solid ${esc(p.badge || (p.type === "funded" ? "funded" : "student"))}">${esc(p.label || TYPE[p.type] || "Project")}</span>
-      <h1>${esc(p.title)}</h1>${p.students ? `<p class="who"><b>Student researchers:</b> ${esc(p.students)}</p>` : ""}<p class="sum">${esc(p.summary || "")}</p></div>
+      <h1>${esc(p.title)}</h1>${p.year ? `<p class="yr">Completed ${esc(p.year)}</p>` : ""}${p.students ? `<p class="who"><b>Student researchers:</b> ${esc(p.students)}</p>` : ""}<p class="sum">${esc(p.summary || "")}</p></div>
     ${W ? `<ol class="steps">${W.items.map(i => `<li><b>${esc(i[0])}</b><span>${esc(i.slice(1).join(" | "))}</span></li>`).join("")}</ol>` : ""}
     ${(S["domain knowledge"] || {}).subs ? `<div class="callouts">${S["domain knowledge"].subs.map(d => { const img = (d.images || [])[0];
       return `<div class="callout${img ? " has-thumb" : ""}">${img ? `<a class="thumb" href="${esc(img)}" target="_blank" rel="noopener" title="Click to enlarge"><img src="${esc(img)}" alt="${esc(d.title)}" loading="lazy"><span aria-hidden="true">⤢</span></a>` : ""}<div><b>${esc(d.title)}</b>${d.text ? `<p>${esc(d.text)}</p>` : ""}${d.link ? `<a href="${esc(safeUrl(d.link))}" target="_blank" rel="noopener">${esc(d.linktext || "Open ↗")}</a>` : ""}</div></div>`; }).join("")}</div>` : ""}`, true));

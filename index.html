@@ -7,7 +7,7 @@
 <meta name="description" content="Experiential learning projects, a biweekly Diamond Market Watch, and curated AI resources.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=234cb0cb">
+<link rel="stylesheet" href="assets/site.css?v=cc39c302">
 <script data-goatcounter="https://biz-datalab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -65,7 +65,7 @@
         </table></div>
         <div class="summary"><span class="ratio" id="ratio"></span><p id="comment"></p></div>
         <details class="method"><summary>How these numbers are calculated</summary>
-          <p>Each cell samples online listings (Blue Nile) at one point in time. Price per carat = price ÷ carat weight. The 95% confidence interval (CI) = mean ± t(0.975, n−1) × standard error, and it describes the average price, not the spread of individual stones. These are asking prices, not transaction prices. Change markers compare with the previous edition. <a class="dl" href="data/price-history.csv">Download all editions (CSV)</a></p>
+          <p>Each cell samples online listings from U.S. jewelry retailers at one point in time. Price per carat = price ÷ carat weight. The 95% confidence interval (CI) = mean ± t(0.975, n−1) × standard error, and it describes the average price, not the spread of individual stones. These are asking prices, not transaction prices. Change markers compare with the previous edition. <a class="dl" href="data/price-history.csv">Download all editions (CSV)</a></p>
         </details>
       </div>
       <p class="fine">Updated every two weeks.</p>
@@ -138,7 +138,7 @@ function renderProjects(list) {
       <div class="pcard-body">
         <span><span class="badge solid ${esc(p.badge || (p.type === "funded" ? "funded" : "student"))}">${esc(p.label || PTYPE_LABEL[p.type] || p.type || "Project")}</span></span>
         <h3><a href="${url}">${esc(p.title)}</a></h3>
-        ${p.period ? `<p class="meta">${esc(p.period)}</p>` : ""}
+        ${(p.year || p.period) ? `<p class="meta yr">${esc(p.year ? "Completed " + p.year : p.period)}</p>` : ""}
         <p class="pcard-sum">${esc(first)}</p>
         <a class="pcard-more" href="${url}">Read the project →</a>
       </div></article>`; }).join("") || '<p class="empty">Projects coming soon.</p>';

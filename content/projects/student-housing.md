@@ -7,6 +7,7 @@ This project uses the short "brief" layout (see diamond-pricing.md). In "Student
 - badge: capstone
 - order: 4
 - layout: brief
+- year: 2025
 - image: projects/student-housing/dashboard-overall.png
 - students: Aniela Jensen, Kaleena Quintero, Nathalia Anaya Arita, Mahnoor Khan, and Felipe Gonzalez. Aniela Jensen continued the research through the Summer Undergraduate Research Fellowship (SURF).
 - summary: A business analytics capstone team asked Pacific students what makes them choose campus housing, and how the university can help more students live on campus. The team surveyed 74 students and compared what international, domestic local, and domestic non-local students value most. Aniela Jensen then carried the work forward through the Summer Undergraduate Research Fellowship (SURF), using machine learning to predict students' housing choices.

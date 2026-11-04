@@ -7,6 +7,7 @@ This project uses the short "brief" layout (see diamond-pricing.md). In "Student
 - badge: student
 - order: 6
 - layout: brief
+- year: 2026
 - image: projects/stockton-manufacturing/port-of-stockton-visit.jpg
 - students: Felipe Cosio, Gursehajpal Singh, Leonardo Magana, Eric Cardenas, and Fatima Naeem
 - summary: Could Stockton be the next home for solar lighting manufacturing? A student team used public labor, workforce, and freight data, visited the Port of Stockton, and checked their findings with industry experts. The answer was yes. Stockton combines a deep-water inland port with customs service and a Foreign Trade Zone, about 300 acres of port land ready for development, direct access to Interstate 5, Highway 99, and rail, a large available workforce, and labor and freight costs well below the Bay Area. The team concluded that the Port of Stockton is the strongest site for a new solar lighting plant.

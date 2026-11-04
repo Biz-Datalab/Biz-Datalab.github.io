@@ -8,6 +8,7 @@ In "Student work", add "- size: wide" to show an image full width.
 - label: Student project
 - order: 2
 - layout: brief
+- year: 2024
 - badge: student
 - image: projects/diamond-pricing/dashboard.png
 - summary: Students learn business analytics hands-on with real-world diamond prices. Each student is assigned a carat range, collects current natural diamond listings from online retailers, and analyzes how price per carat changes with the 4Cs: carat, color, clarity, and cut. Results are benchmarked against the Rapaport industry price list, compared with lab-grown diamonds, and presented in a dashboard and a final report.

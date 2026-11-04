@@ -7,6 +7,7 @@ This project uses the short "brief" layout (see diamond-pricing.md). In "Student
 - badge: student
 - order: 5
 - layout: brief
+- year: 2026
 - image: projects/movie-genres/genre-posters.png
 - students: Viridiana Guillen, Jacobee Bun, Amna Blouch, Christina Johnson, and Caylen Walker
 - summary: In the age of streaming, what makes a college student love one movie genre over another? A student team surveyed Pacific students about their viewing habits, moods, and what shapes their choices, then used analytics to explain and predict favorite genres. Gender, personality, the feeling students want from a movie, and who they watch with turned out to matter more than trailers or social media, insights that streaming platforms and marketers can use to reach this core audience.
