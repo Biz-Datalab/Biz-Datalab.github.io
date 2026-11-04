@@ -7,7 +7,7 @@
 <meta name="description" content="Experiential learning projects, a biweekly Diamond Market Watch, and curated AI resources.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=bb6ba399">
+<link rel="stylesheet" href="assets/site.css?v=60496587">
 <script data-goatcounter="https://biz-datalab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -63,7 +63,7 @@
           <div class="aid-tabs" role="group" aria-label="AI design examples">
             <button type="button" data-i="0" aria-pressed="true">Ring · Model A</button><button type="button" data-i="1">Ring · Model B</button><button type="button" data-i="2">Pendant · Model A</button><button type="button" data-i="3">Pendant · Model B</button>
           </div>
-          <p><b>AI is redesigning jewelry design.</b> Same prompt, two AI models: one returns a flat, clip-art render; the other, a near-photographic piece with believable metal, prongs, and light. Output quality varies widely across models, so choose your AI design tool as carefully as your diamond.</p>
+          <p><b>AI is reshaping jewelry design.</b> Same prompt, two models. Choose your AI as carefully as your diamond.</p>
         </figcaption>
       </figure></div>
       <div class="card">
@@ -219,7 +219,7 @@ fetch("data/site.json", { cache: "no-cache" }).then(r => r.json()).then(d => {
 <script>
 (function(){const imgs=[["ring-model-a","halo ring, model A"],["ring-model-b","halo ring, model B"],["pendant-model-a","bicolor pendant, model A"],["pendant-model-b","bicolor pendant, model B"]];
 const box=document.getElementById("aid");if(!box)return;const im=document.getElementById("aidImg"),bs=[...box.querySelectorAll("button")];let i=0,timer;
-const show=k=>{i=k;im.src="assets/ai-design/"+imgs[k][0]+".jpg";im.alt="AI-generated "+imgs[k][1];bs.forEach((b,j)=>b.setAttribute("aria-pressed",j===k));};
+const show=k=>{i=k;im.style.opacity=0;setTimeout(()=>{im.src="assets/ai-design/"+imgs[k][0]+".jpg";im.style.opacity=1;},180);im.alt="AI-generated "+imgs[k][1];bs.forEach((b,j)=>b.setAttribute("aria-pressed",j===k));};
 const start=()=>{clearInterval(timer);if(!matchMedia("(prefers-reduced-motion: reduce)").matches)timer=setInterval(()=>show((i+1)%imgs.length),5000);};
 bs.forEach((b,j)=>b.onclick=()=>{show(j);clearInterval(timer);});box.addEventListener("mouseenter",()=>clearInterval(timer));start();})();
 </script>
