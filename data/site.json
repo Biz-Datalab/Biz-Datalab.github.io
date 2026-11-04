@@ -707,6 +707,91 @@
    "students": "Viridiana Guillen, Jacobee Bun, Amna Blouch, Christina Johnson, and Caylen Walker",
    "summary": "In the age of streaming, what makes a college student love one movie genre over another? A student team surveyed Pacific students about their viewing habits, moods, and what shapes their choices, then used analytics to explain and predict favorite genres. Gender, personality, the feeling students want from a movie, and who they watch with turned out to matter more than trailers or social media, insights that streaming platforms and marketers can use to reach this core audience.",
    "order_num": 5.0
+  },
+  {
+   "slug": "stockton-manufacturing",
+   "title": "Why Stockton Works for Manufacturing",
+   "sections": {
+    "domain knowledge": {
+     "name": "Domain knowledge",
+     "items": [],
+     "subs": [
+      {
+       "title": "Incentives at a glance (PDF)",
+       "bullets": [],
+       "text": "A one-page summary of incentives for manufacturers in Stockton, from federal tax credits to state, county, city, and Port of Stockton programs. All of it is public information that readers can look up at the sources listed.",
+       "link": "projects/stockton-manufacturing/stockton-incentives-summary.pdf",
+       "linktext": "Download the one-page summary (PDF) ↗"
+      }
+     ]
+    },
+    "student work": {
+     "name": "Student work",
+     "items": [],
+     "subs": [
+      {
+       "title": "Site visit to the Port of Stockton",
+       "bullets": [],
+       "text": "The team toured the Port of Stockton to see how shipping, rail, and truck connections support manufacturers, and learned that about 300 acres are available for new development, far more than a typical solar lighting plant needs.",
+       "link": "https://www.instagram.com/p/DVMY0DAlGSq/",
+       "linktext": "See the post on Instagram ↗",
+       "size": "wide",
+       "images": [
+        "projects/stockton-manufacturing/port-of-stockton-visit.jpg"
+       ]
+      },
+      {
+       "title": "Labor cost by city",
+       "bullets": [],
+       "text": "Average salaries for jobs that support solar lighting manufacturing, shown on a map from green (lower) to red (higher). Stockton sits in the green at about $73,000, close to Fresno and far below San Francisco.",
+       "images": [
+        "projects/stockton-manufacturing/labor-cost-map.png"
+       ]
+      },
+      {
+       "title": "Estimated freight cost by city",
+       "bullets": [],
+       "text": "Stockton had the lowest estimated freight cost of the five cities compared, less than a third of San Francisco's.",
+       "images": [
+        "projects/stockton-manufacturing/freight-cost.png"
+       ]
+      },
+      {
+       "title": "Labor availability",
+       "bullets": [],
+       "text": "Stockton has the largest pool of available workers among the areas compared, which makes it easier to staff a new production facility.",
+       "size": "wide",
+       "images": [
+        "projects/stockton-manufacturing/labor-availability.png"
+       ]
+      }
+     ],
+     "intro": "Selected visuals from the students' report."
+    },
+    "for instructors": {
+     "name": "For instructors",
+     "items": [
+      [
+       "This project can be adapted to other cities or industries. Detailed assignment instructions are available on request, and you are welcome to contact me."
+      ]
+     ],
+     "subs": []
+    }
+   },
+   "section_order": [
+    "domain knowledge",
+    "student work",
+    "for instructors"
+   ],
+   "type": "group",
+   "label": "Student group project",
+   "badge": "student",
+   "order": "6",
+   "layout": "brief",
+   "image": "projects/stockton-manufacturing/port-of-stockton-visit.jpg",
+   "students": "Felipe Cosio, Gursehajpal Singh, Leonardo Magana, Eric Cardenas, and Fatima Naeem",
+   "summary": "Could Stockton be the next home for solar lighting manufacturing? A student team used public labor, workforce, and freight data, visited the Port of Stockton, and checked their findings with industry experts. The answer was yes. Stockton combines a deep-water inland port with customs service and a Foreign Trade Zone, about 300 acres of port land ready for development, direct access to Interstate 5, Highway 99, and rail, a large available workforce, and labor and freight costs well below the Bay Area. The team concluded that the Port of Stockton is the strongest site for a new solar lighting plant.",
+   "order_num": 6.0
   }
  ],
  "resources": [
