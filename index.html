@@ -7,7 +7,7 @@
 <meta name="description" content="Experiential learning projects, a biweekly Diamond Market Watch, and curated AI resources.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=60496587">
+<link rel="stylesheet" href="assets/site.css?v=7434f177">
 <script data-goatcounter="https://biz-datalab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -58,10 +58,10 @@
         <p class="cite">For more on the differences between natural and lab-grown diamonds, see Chong Huang, Haiyin Wang, and Like Zhang, “Comparative Analysis and Price Modelling of Natural and Lab-grown Diamonds,” <i>International Journal of Electronic Marketing and Retailing</i>, accepted, 2026.</p>
       </div>
       <figure class="aid" id="aid">
-        <div class="aid-view"><img id="aidImg" src="assets/ai-design/ring-model-a.jpg" alt="AI-generated halo ring design, model A"></div>
+        <div class="aid-view"><img id="aidImg" src="assets/ai-design/ring-model-b.jpg" alt="AI-generated halo ring design, model B"></div>
         <figcaption>
           <div class="aid-tabs" role="group" aria-label="AI design examples">
-            <button type="button" data-i="0" aria-pressed="true">Ring · Model A</button><button type="button" data-i="1">Ring · Model B</button><button type="button" data-i="2">Pendant · Model A</button><button type="button" data-i="3">Pendant · Model B</button>
+            <button type="button" data-i="0" aria-pressed="true">Ring · Model B</button><button type="button" data-i="1">Ring · Model A</button><button type="button" data-i="2">Pendant · Model B</button><button type="button" data-i="3">Pendant · Model A</button>
           </div>
           <p><b>AI is reshaping jewelry design.</b> Same prompt, two models. Choose your AI as carefully as your diamond.</p>
         </figcaption>
@@ -217,7 +217,7 @@ fetch("data/site.json", { cache: "no-cache" }).then(r => r.json()).then(d => {
 }).catch(() => { $("edTitle").textContent = "Could not load data. Please refresh the page."; $("newsList").innerHTML = ""; });
 </script>
 <script>
-(function(){const imgs=[["ring-model-a","halo ring, model A"],["ring-model-b","halo ring, model B"],["pendant-model-a","bicolor pendant, model A"],["pendant-model-b","bicolor pendant, model B"]];
+(function(){const imgs=[["ring-model-b","halo ring, model B"],["ring-model-a","halo ring, model A"],["pendant-model-b","bicolor pendant, model B"],["pendant-model-a","bicolor pendant, model A"]];
 const box=document.getElementById("aid");if(!box)return;const im=document.getElementById("aidImg"),bs=[...box.querySelectorAll("button")];let i=0,timer;
 const show=k=>{i=k;im.style.opacity=0;setTimeout(()=>{im.src="assets/ai-design/"+imgs[k][0]+".jpg";im.style.opacity=1;},180);im.alt="AI-generated "+imgs[k][1];bs.forEach((b,j)=>b.setAttribute("aria-pressed",j===k));};
 const start=()=>{clearInterval(timer);if(!matchMedia("(prefers-reduced-motion: reduce)").matches)timer=setInterval(()=>show((i+1)%imgs.length),5000);};
