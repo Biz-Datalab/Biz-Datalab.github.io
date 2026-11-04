@@ -7,7 +7,7 @@
 <meta name="description" content="Experiential learning projects, a biweekly Diamond Market Watch, and curated AI resources.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=502f9924">
+<link rel="stylesheet" href="assets/site.css?v=bb6ba399">
 <script data-goatcounter="https://biz-datalab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -51,12 +51,21 @@
 
   <section class="band tint" id="market-watch">
     <div class="wrap">
-      <div class="sec-head">
+      <div class="mw-top"><div class="sec-head">
         <span class="label">Market tracking</span>
         <h2>Diamond Market Watch</h2>
         <p>Average asking price per carat for round, excellent-cut, E-color, VVS2 diamonds, natural and lab-grown. These specifications balance the 4Cs: most purchases fall between 0.90 and 1.49 carats, and lab-grown stones are mostly colorless and high clarity, so E color and VVS2 compare the two on equal footing.</p>
         <p class="cite">For more on the differences between natural and lab-grown diamonds, see Chong Huang, Haiyin Wang, and Like Zhang, “Comparative Analysis and Price Modelling of Natural and Lab-grown Diamonds,” <i>International Journal of Electronic Marketing and Retailing</i>, accepted, 2026.</p>
       </div>
+      <figure class="aid" id="aid">
+        <div class="aid-view"><img id="aidImg" src="assets/ai-design/ring-model-a.jpg" alt="AI-generated halo ring design, model A"></div>
+        <figcaption>
+          <div class="aid-tabs" role="group" aria-label="AI design examples">
+            <button type="button" data-i="0" aria-pressed="true">Ring · Model A</button><button type="button" data-i="1">Ring · Model B</button><button type="button" data-i="2">Pendant · Model A</button><button type="button" data-i="3">Pendant · Model B</button>
+          </div>
+          <p><b>AI is redesigning jewelry design.</b> Same prompt, two AI models: one returns a flat, clip-art render; the other, a near-photographic piece with believable metal, prongs, and light. Output quality varies widely across models, so choose your AI design tool as carefully as your diamond.</p>
+        </figcaption>
+      </figure></div>
       <div class="card">
         <div class="card-top"><strong id="edTitle">Loading…</strong>
           <label for="edPick">Edition <select id="edPick"></select></label></div>
@@ -206,6 +215,13 @@ fetch("data/site.json", { cache: "no-cache" }).then(r => r.json()).then(d => {
   renderProfile(DATA.profile); renderProjects(DATA.projects);
   renderPrices(DATA.editions.length - 1); renderNews(); renderRes();
 }).catch(() => { $("edTitle").textContent = "Could not load data. Please refresh the page."; $("newsList").innerHTML = ""; });
+</script>
+<script>
+(function(){const imgs=[["ring-model-a","halo ring, model A"],["ring-model-b","halo ring, model B"],["pendant-model-a","bicolor pendant, model A"],["pendant-model-b","bicolor pendant, model B"]];
+const box=document.getElementById("aid");if(!box)return;const im=document.getElementById("aidImg"),bs=[...box.querySelectorAll("button")];let i=0,timer;
+const show=k=>{i=k;im.src="assets/ai-design/"+imgs[k][0]+".jpg";im.alt="AI-generated "+imgs[k][1];bs.forEach((b,j)=>b.setAttribute("aria-pressed",j===k));};
+const start=()=>{clearInterval(timer);if(!matchMedia("(prefers-reduced-motion: reduce)").matches)timer=setInterval(()=>show((i+1)%imgs.length),5000);};
+bs.forEach((b,j)=>b.onclick=()=>{show(j);clearInterval(timer);});box.addEventListener("mouseenter",()=>clearInterval(timer));start();})();
 </script>
 </body>
 </html>
