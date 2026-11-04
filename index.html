@@ -7,7 +7,7 @@
 <meta name="description" content="Experiential learning projects, a biweekly Diamond Market Watch, and curated AI resources.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=7434f177">
+<link rel="stylesheet" href="assets/site.css?v=86d728f1">
 <script data-goatcounter="https://biz-datalab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -58,7 +58,7 @@
         <p class="cite">For more on the differences between natural and lab-grown diamonds, see Chong Huang, Haiyin Wang, and Like Zhang, “Comparative Analysis and Price Modelling of Natural and Lab-grown Diamonds,” <i>International Journal of Electronic Marketing and Retailing</i>, accepted, 2026.</p>
       </div>
       <figure class="aid" id="aid">
-        <div class="aid-view"><img id="aidImg" src="assets/ai-design/ring-model-a-v2.jpg" alt="AI-generated halo ring design, model A"></div>
+        <div class="aid-view" id="aidView" role="button" tabindex="0" aria-label="View full screen" title="Click to enlarge"><span class="aid-zoom" aria-hidden="true">⤢</span><img id="aidImg" src="assets/ai-design/ring-model-a-v2.jpg" alt="AI-generated halo ring design, model A"></div>
         <figcaption>
           <div class="aid-tabs" role="group" aria-label="AI design examples">
             <button type="button" data-i="0" aria-pressed="true">Ring · Model A</button><button type="button" data-i="1">Ring · Model B</button><button type="button" data-i="2">Pendant · Model A</button><button type="button" data-i="3">Pendant · Model B</button>
@@ -221,7 +221,18 @@ fetch("data/site.json", { cache: "no-cache" }).then(r => r.json()).then(d => {
 const box=document.getElementById("aid");if(!box)return;const im=document.getElementById("aidImg"),bs=[...box.querySelectorAll("button")];let i=0,timer;
 const show=k=>{i=k;im.style.opacity=0;setTimeout(()=>{im.src="assets/ai-design/"+imgs[k][0]+"-v2.jpg";im.style.opacity=1;},180);im.alt="AI-generated "+imgs[k][1];bs.forEach((b,j)=>b.setAttribute("aria-pressed",j===k));};
 const start=()=>{clearInterval(timer);if(!matchMedia("(prefers-reduced-motion: reduce)").matches)timer=setInterval(()=>show((i+1)%imgs.length),5000);};
-bs.forEach((b,j)=>b.onclick=()=>{show(j);clearInterval(timer);});box.addEventListener("mouseenter",()=>clearInterval(timer));start();})();
+bs.forEach((b,j)=>b.onclick=()=>{show(j);clearInterval(timer);});
+const lb=document.createElement("div");lb.className="lb";lb.hidden=true;lb.setAttribute("role","dialog");lb.setAttribute("aria-modal","true");lb.setAttribute("aria-label","Enlarged image");
+lb.innerHTML='<button type="button" class="lb-x" aria-label="Close">×</button><button type="button" class="lb-p" aria-label="Previous">‹</button><img alt=""><button type="button" class="lb-n" aria-label="Next">›</button><p class="lb-c"></p>';
+document.body.appendChild(lb);const lbi=lb.querySelector("img"),lbc=lb.querySelector(".lb-c");
+const lbShow=k=>{show(k);lbi.src="assets/ai-design/"+imgs[k][0]+"-v2.jpg";lbi.alt="AI-generated "+imgs[k][1];lbc.textContent=bs[k].textContent;};
+const open=()=>{clearInterval(timer);lbShow(i);lb.hidden=false;document.body.style.overflow="hidden";lb.querySelector(".lb-x").focus();};
+const close=()=>{lb.hidden=true;document.body.style.overflow="";document.getElementById("aidView").focus();};
+document.getElementById("aidView").onclick=open;document.getElementById("aidView").onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}};
+lb.querySelector(".lb-x").onclick=close;lb.querySelector(".lb-p").onclick=e=>{e.stopPropagation();lbShow((i+imgs.length-1)%imgs.length);};
+lb.querySelector(".lb-n").onclick=e=>{e.stopPropagation();lbShow((i+1)%imgs.length);};
+lb.onclick=e=>{if(e.target===lb)close();};
+document.addEventListener("keydown",e=>{if(lb.hidden)return;if(e.key==="Escape")close();if(e.key==="ArrowRight")lbShow((i+1)%imgs.length);if(e.key==="ArrowLeft")lbShow((i+imgs.length-1)%imgs.length);});box.addEventListener("mouseenter",()=>clearInterval(timer));start();})();
 </script>
 </body>
 </html>
