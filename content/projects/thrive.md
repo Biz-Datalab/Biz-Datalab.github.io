@@ -5,6 +5,7 @@ A line "- intro: ..." directly under a section heading adds an introductory sent
 
 - type: funded
 - order: 1
+- year: 2026
 - period: 2025–2026 · one year
 - funder: North Valley Thrive (THRIVE) Catalyst grant, Idea Stage · $43,815
 - status: Completed · ready for the next phase
