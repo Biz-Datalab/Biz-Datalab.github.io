@@ -123,7 +123,7 @@ function renderProfile(p) {
   $("pAreas").innerHTML = areas.map(a => `<span>${esc(a)}</span>`).join(""); $("pAreas").hidden = !areas.length;
   $("pStatement").textContent = p.statement || ""; $("pStatement").hidden = !p.statement;
   if (name && !/^\[/.test(name)) { $("brand").textContent = name; document.title = name + " · Biz Data Lab"; }
-  $("foot").textContent = `© ${new Date().getFullYear()} Chong Huang · Personal website featuring my research, curated resources, and student projects. Views are my own.` + (p.email && !/^\[/.test(p.email) ? ` · ${p.email}` : "");
+  $("foot").textContent = `© ${new Date().getFullYear()} Chong Huang · Personal website featuring my research, curated resources, and student projects.` + (p.email && !/^\[/.test(p.email) ? ` · ${p.email}` : "");
 }
 const PTYPES = [
   ["funded", "Funded research projects", "Faculty-led, externally funded projects with paid student research assistants."],
