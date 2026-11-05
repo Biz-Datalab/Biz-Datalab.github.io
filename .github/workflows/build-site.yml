@@ -1,8 +1,9 @@
-name: Build and publish site
+name: Build site data
 
 # Runs whenever anything is pushed to main (for example a new price CSV, a PDF,
 # or an edit to a file in content/). It recalculates the price statistics and
-# publishes the website to GitHub Pages.
+# saves data/site.json. GitHub Pages then publishes the main branch directly
+# (Settings → Pages → Source: "Deploy from a branch", main, / root).
 on:
   push:
     branches: [main]
@@ -11,11 +12,9 @@ on:
 permissions:
   contents: write
   pages: write
-  id-token: write
-  deployments: read
 
 concurrency:
-  group: pages
+  group: build-site
   cancel-in-progress: false
 
 jobs:
@@ -32,27 +31,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
+          git add data/ index.html project.html
           git diff --cached --quiet || (git commit -m "Update site data" && git push)
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      # GitHub sometimes leaves a Pages deployment stuck "in progress", which blocks
-      # every later publish. Cancel any such leftover before publishing.
-      - name: Clear stuck Pages deployments
+      # Commits made by this workflow do not trigger a Pages build on their own,
+      # so ask GitHub Pages to rebuild from main after saving.
+      - name: Ask GitHub Pages to publish the latest main
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          for sha in $(gh api "repos/${{ github.repository }}/deployments?environment=github-pages&per_page=5" --jq '.[].sha'); do
-            gh api -X POST "repos/${{ github.repository }}/pages/deployments/$sha/cancel" >/dev/null 2>&1 || true
-          done
-      - id: deployment
-        uses: actions/deploy-pages@v4
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null || echo "Pages build request not accepted; the next push will publish."
