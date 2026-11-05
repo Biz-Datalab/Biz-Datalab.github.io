@@ -538,10 +538,12 @@
      "name": "Research question",
      "items": [
       [
-       "What matters most to Pacific students when they decide where to live, and does it differ for international, domestic local, and domestic non-local students? Living on campus supports student retention, a stronger campus community, academic performance, and well-being, so knowing these priorities helps the university make campus housing an easy choice. The team asked students to rate twelve housing factors, from safety and affordability to proximity and amenities, and compared the results across the three groups. The SURF project then asked whether these priorities can predict where a student chooses to live; see the SURF presentation, [Understanding UOP Student Housing Decisions: A Machine Learning Approach ↗](https://scholarlycommons.pacific.edu/surf/120/)."
+       "What matters most to Pacific students when they decide where to live, and does it differ for international, domestic local, and domestic non-local students? Living on campus supports student retention, a stronger campus community, academic performance, and well-being, so knowing these priorities helps the university make campus housing an easy choice. The team asked students to rate twelve housing factors, from safety and affordability to proximity and amenities, and compared the results across the three groups. The SURF project then asked whether these priorities can predict where a student chooses to live."
       ]
      ],
-     "subs": []
+     "subs": [],
+     "photo": "projects/student-housing/surf-presentation.jpg",
+     "caption": "Presenting the SURF research. Watch the presentation: [Understanding UOP Student Housing Decisions: A Machine Learning Approach ↗](https://scholarlycommons.pacific.edu/surf/120/)"
     },
     "student work": {
      "name": "Student work",

@@ -6,7 +6,7 @@
 <title>Project · Biz Data Lab</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=f085f9b7">
+<link rel="stylesheet" href="assets/site.css?v=51b970ee">
 <script data-goatcounter="https://biz-datalab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -69,7 +69,9 @@ function renderBrief(p) {
     ${(S["domain knowledge"] || {}).subs ? `<div class="callouts">${S["domain knowledge"].subs.map(d => { const img = (d.images || [])[0];
       return `<div class="callout${img ? " has-thumb" : ""}">${img ? `<a class="thumb" href="${esc(img)}" target="_blank" rel="noopener" title="Click to enlarge"><img src="${esc(img)}" alt="${esc(d.title)}" loading="lazy"><span aria-hidden="true">⤢</span></a>` : ""}<div><b>${esc(d.title)}</b>${d.text ? `<p>${esc(d.text)}</p>` : ""}${d.link ? `<a href="${esc(safeUrl(d.link))}" target="_blank" rel="noopener">${esc(d.linktext || "Open ↗")}</a>` : ""}</div></div>`; }).join("")}</div>` : ""}`, true));
   const Q = S["research question"];
-  if (Q) out.push(band(head("The question", Q.name) + `<div class="prose">${paras(Q)}</div>`));
+  if (Q) out.push(band(head("The question", Q.name) + (Q.photo
+    ? `<div class="rq"><div class="prose">${paras(Q)}</div><figure><a href="${esc(Q.photo)}" target="_blank" rel="noopener"><img src="${esc(Q.photo)}" alt="${esc(Q.caption || Q.name)}" loading="lazy"></a>${Q.caption ? `<figcaption>${mdLinks(Q.caption)}</figcaption>` : ""}</figure></div>`
+    : `<div class="prose">${paras(Q)}</div>`)));
   const R = S["student work"];
   if (R) out.push(band(head("Student work", "Selected results", R.intro) +
     `<div class="gallery">${R.subs.map(w => `<figure class="${w.size === "wide" ? "wide" : ""}">

@@ -17,7 +17,9 @@ This project uses the short "brief" layout (see diamond-pricing.md). In "Student
 - text: 74 Pacific students answered an anonymous survey that ran for four weeks: 38 domestic local, 17 domestic non-local, and 19 international students. Each rated twelve housing factors and shared their own experiences.
 
 ## Research question
-- What matters most to Pacific students when they decide where to live, and does it differ for international, domestic local, and domestic non-local students? Living on campus supports student retention, a stronger campus community, academic performance, and well-being, so knowing these priorities helps the university make campus housing an easy choice. The team asked students to rate twelve housing factors, from safety and affordability to proximity and amenities, and compared the results across the three groups. The SURF project then asked whether these priorities can predict where a student chooses to live; see the SURF presentation, [Understanding UOP Student Housing Decisions: A Machine Learning Approach ↗](https://scholarlycommons.pacific.edu/surf/120/).
+- photo: projects/student-housing/surf-presentation.jpg
+- caption: Presenting the SURF research. Watch the presentation: [Understanding UOP Student Housing Decisions: A Machine Learning Approach ↗](https://scholarlycommons.pacific.edu/surf/120/)
+- What matters most to Pacific students when they decide where to live, and does it differ for international, domestic local, and domestic non-local students? Living on campus supports student retention, a stronger campus community, academic performance, and well-being, so knowing these priorities helps the university make campus housing an easy choice. The team asked students to rate twelve housing factors, from safety and affordability to proximity and amenities, and compared the results across the three groups. The SURF project then asked whether these priorities can predict where a student chooses to live.
 
 ## Student work
 - intro: Selected dashboards from the capstone report and a slide from the SURF presentation.

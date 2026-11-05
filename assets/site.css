@@ -330,3 +330,8 @@ footer{padding-block:28px;font-size:.92rem}
 .lb-x{top:10px;right:14px}.lb-p{left:10px;top:50%;transform:translateY(-50%)}.lb-n{right:10px;top:50%;transform:translateY(-50%)}
 .lb-c{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:#e6e9ee;font-size:.95rem}
 @media (max-width:600px){.lb{padding:48px 8px}.lb-p,.lb-n{font-size:2rem}}
+.rq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px;align-items:start}
+.rq .prose{max-width:none}
+.rq figure{margin:0}.rq img{width:100%;display:block;border:1px solid var(--line)}
+.rq figcaption{font-size:.9rem;line-height:1.5;margin-top:8px}
+@media (max-width:860px){.rq{grid-template-columns:minmax(0,1fr)}}
