@@ -215,7 +215,8 @@ def main():
                   "source": r.get("source", ""), "date": r.get("date", ""), "comment": r.get("comment", "")}
                  for r in parse_md(os.path.join(cdir, "ai-resources.md")) if r.get("link")]
     news = [{"title": n["title"], "url": n.get("link", ""), "source": n.get("source", ""),
-             "date": n.get("date", ""), "category": n.get("category", "market").lower()}
+             "date": n.get("date", ""), "category": n.get("category", "market").lower(),
+             "takeaway": n.get("takeaway", "")}
             for n in parse_md(os.path.join(cdir, "news.md")) if n.get("link")]
     editions = build_prices()
 

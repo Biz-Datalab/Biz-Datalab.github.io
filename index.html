@@ -187,7 +187,7 @@ function renderNews() {
   const items = DATA.news.slice().sort((a, b) => (b.date || "").localeCompare(a.date || ""));
   const shown = newsAll ? items : items.slice(0, 5);
   $("newsList").innerHTML = shown.map(n => `<li><time>${esc(fmt(n.date))}</time>
-    <div><span class="tag ${esc(n.category === "market" ? "research" : n.category)}">${esc(CAT[n.category] || n.category)}</span><a class="t" href="${esc(safeUrl(n.url))}" target="_blank" rel="noopener">${esc(n.title)}</a> <span class="src">· ${esc(n.source)}</span></div><span></span></li>`).join("")
+    <div><span class="tag ${esc(n.category === "market" ? "research" : n.category)}">${esc(CAT[n.category] || n.category)}</span><a class="t" href="${esc(safeUrl(n.url))}" target="_blank" rel="noopener">${esc(n.title)}</a> <span class="src">· ${esc(n.source)}</span>${n.takeaway ? `<div class="note"><b>Takeaway:</b> ${esc(n.takeaway)}</div>` : ""}</div><span></span></li>`).join("")
     || '<li class="empty">News will appear here.</li>';
   const b = $("newsMore"); b.hidden = items.length <= 5;
   b.textContent = newsAll ? "Show fewer" : `Show all ${items.length} stories`;

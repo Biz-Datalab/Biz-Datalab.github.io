@@ -10,7 +10,8 @@ The newest date shows first on the site. Type is Video, Article, or Paper.
 - type: Article
 - source: Harvard Business Review
 - date: 2026-11-01
-- comment: One or two sentences on why it is worth reading or watching.
+- comment: One-line takeaway, kept separate from the title. Use the exact original headline as the title
+  and the date shown on the page.
 -->
 
 ## Angela Duckworth commencement speech to 2025 Penn GSE graduates
@@ -83,8 +84,8 @@ The newest date shows first on the site. Type is Video, Article, or Paper.
 
 ## Silicon Valley Is Bracing for a Permanent Underclass
 - link: https://www.nytimes.com/2026/04/30/opinion/ai-labor-work-force-silicon-valley.html
-- type: Video
-- source: The New York Times · Opinion
+- type: Article
+- source: The New York Times · Opinion (Jasmine Sun)
 - date: 2026-04-30
 
 ## Palantir CEO Alex Karp says 'something has gone completely wrong' with how AI is sold
@@ -116,13 +117,13 @@ The newest date shows first on the site. Type is Video, Article, or Paper.
 - link: https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents
 - type: Article
 - source: Anthropic Engineering
-- date: 2025
+- date: 2025-11
 
 ## We Must Pace the Frontier
 - link: https://darioamodei.com/post/we-must-pace-the-frontier
 - type: Article
 - source: Dario Amodei
-- date: 2026-09
+- date: 2026-09-12
 
 ## Claude discovers a novel enzyme system with CRISPR-like repeats
 - link: https://www.anthropic.com/news/claude-discovers-novel-enzyme-system
