@@ -48,5 +48,8 @@ This project uses the short "brief" layout (see diamond-pricing.md). In "Student
 ## Student recommendations
 - Highlight campus safety and the convenience of living close to classes, offer flexible and affordable housing options, and tailor outreach to what each student group values most.
 
+## Acknowledgments
+- We thank the [Human Subjects - Institutional Review Board (IRB) - University of the Pacific](https://my.pacific.edu/pages/human-subjects-institutional-review-board-irb) for its support of this project.
+
 ## For instructors
 - This project can be adapted to other campus services or student populations. Detailed assignment instructions are available on request, and you are welcome to contact me.

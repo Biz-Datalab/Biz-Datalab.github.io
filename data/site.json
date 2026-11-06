@@ -602,6 +602,15 @@
      ],
      "subs": []
     },
+    "acknowledgments": {
+     "name": "Acknowledgments",
+     "items": [
+      [
+       "We thank the [Human Subjects - Institutional Review Board (IRB) - University of the Pacific](https://my.pacific.edu/pages/human-subjects-institutional-review-board-irb) for its support of this project."
+      ]
+     ],
+     "subs": []
+    },
     "for instructors": {
      "name": "For instructors",
      "items": [
@@ -617,6 +626,7 @@
     "research question",
     "student work",
     "student recommendations",
+    "acknowledgments",
     "for instructors"
    ],
    "type": "group",
@@ -689,6 +699,15 @@
      ],
      "intro": "Selected visuals from the students' final report."
     },
+    "acknowledgments": {
+     "name": "Acknowledgments",
+     "items": [
+      [
+       "We thank the [Human Subjects - Institutional Review Board (IRB) - University of the Pacific](https://my.pacific.edu/pages/human-subjects-institutional-review-board-irb) for its support of this project."
+      ]
+     ],
+     "subs": []
+    },
     "for instructors": {
      "name": "For instructors",
      "items": [
@@ -702,6 +721,7 @@
    "section_order": [
     "domain knowledge",
     "student work",
+    "acknowledgments",
     "for instructors"
    ],
    "type": "group",

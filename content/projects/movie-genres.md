@@ -39,5 +39,8 @@ This project uses the short "brief" layout (see diamond-pricing.md). In "Student
 - image: projects/movie-genres/behavior-model.png
 - size: wide
 
+## Acknowledgments
+- We thank the [Human Subjects - Institutional Review Board (IRB) - University of the Pacific](https://my.pacific.edu/pages/human-subjects-institutional-review-board-irb) for its support of this project.
+
 ## For instructors
 - This project can be adapted to other consumer topics or student surveys. Detailed assignment instructions are available on request, and you are welcome to contact me.
