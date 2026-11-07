@@ -347,10 +347,17 @@ footer{padding-block:28px;font-size:.92rem}
 @media (max-width:760px){.generic.with-logo{grid-template-columns:minmax(0,1fr)}.sec-logo{max-width:360px}.sec-logo.n3{grid-template-columns:110px minmax(0,1fr)}}
 
 /* Experiential Learning: statement with supporters panel beside it */
-.statement-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start;margin-bottom:28px}
+.statement-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:48px;align-items:start;margin-bottom:28px}
 .statement-row .statement{margin-bottom:0;max-width:none}
-.thanks{border-left:3px solid var(--ink);padding:2px 0 2px 24px}
-.thanks .label{display:block;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
-.thanks ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 24px;font-size:.95rem;line-height:1.45}
-.thanks a{font-weight:700;color:var(--ink);text-underline-offset:3px}
-@media (max-width:860px){.statement-row{grid-template-columns:minmax(0,1fr);gap:24px}.thanks ul{grid-template-columns:minmax(0,1fr)}}
+.thanks{background:var(--band);border-left:3px solid #56736a;padding:20px 26px 14px}
+.thanks .label{display:block;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#56736a;margin-bottom:6px}
+.thanks ul{list-style:none;margin:0;padding:0;counter-reset:thx;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px;font-size:.93rem;line-height:1.4}
+.thanks li{counter-increment:thx;display:grid;grid-template-columns:26px minmax(0,1fr);align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.thanks li::before{content:counter(thx);width:24px;height:24px;border-radius:50%;background:#56736a;color:#ffffff;font-size:.75rem;font-weight:700;display:flex;align-items:center;justify-content:center}
+.thanks li:nth-last-child(-n+2){border-bottom:0}
+.thanks a{font-weight:700;color:var(--ink);text-decoration:none}
+.thanks a:hover,.thanks a:focus-visible{text-decoration:underline;text-underline-offset:3px}
+.thanks a::after{content:" \2197";font-weight:400;font-size:.8em;opacity:.55}
+@media (max-width:860px){.statement-row{grid-template-columns:minmax(0,1fr);gap:24px}.thanks ul{grid-template-columns:minmax(0,1fr)}.thanks li:nth-last-child(2){border-bottom:1px solid var(--line)}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .thanks .label{color:#8fb0a5}}
+:root[data-theme="dark"] .thanks .label{color:#8fb0a5}
