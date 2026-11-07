@@ -35,7 +35,7 @@ const safeUrl = u => /^https?:\/\//i.test(u || "") ? u : (u && !/^[a-z]+:/i.test
 const TYPE = { funded: "Funded research project", group: "Student group project", individual: "Individual research" };
 const CAROUSEL = ["preparing for a classroom pilot", "emerging needs and opportunities", "long-term vision", "student voices"];
 const HANDLED = ["links", "numbers", "student learning", "student work", "outcomes", "team", "partners", ...CAROUSEL];
-const mdLinks = t => esc(t).replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, (m, txt, url) => `<a href="${url}" target="_blank" rel="noopener">${txt}</a>`);
+const mdLinks = t => esc(t).replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, (m, txt, url) => `<a href="${url}" target="_blank" rel="noopener">${txt}</a>`).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
 const paras = sec => sec.items.map(i => `<p>${mdLinks(i.join(" | "))}</p>`).join("");
 
 function head(label, title, intro) {

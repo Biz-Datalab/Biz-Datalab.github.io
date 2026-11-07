@@ -96,7 +96,7 @@ A line "- intro: ..." directly under a section heading adds an introductory sent
 ## Acknowledgments
 - photo: projects/thrive/partners-logos.png
 - caption: North Valley Thrive, University of the Pacific, and Portor Lighting
-- We thank North Valley Thrive for funding this project through its Catalyst grant, and Portor Lighting for its partnership, product expertise, and mentorship of our students. We are also grateful to University of the Pacific Sustainability, Facilities, Engineering, and Public Safety, and to the community partners who shared their time and insight.
+- We thank **[North Valley Thrive](https://northvalleythrive.org/)** for funding this project through its Catalyst grant, and **[Portor Lighting](https://portorlighting.com/)** for its partnership, product expertise, and mentorship of our students. We are also grateful to University of the Pacific Sustainability, Facilities, Engineering, and Public Safety, and to the community partners who shared their time and insight.
 
 ## Team
 - photo: projects/thrive/team-portor-visit.jpg
