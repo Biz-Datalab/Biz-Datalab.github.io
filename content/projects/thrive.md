@@ -94,8 +94,8 @@ A line "- intro: ..." directly under a section heading adds an introductory sent
 - The project grew well beyond its original scope. Students left with professional experience that led directly to jobs, the industry partner expressed interest in hosting more student interns, and the work produced reusable tools and new community connections that will support future projects in the region.
 
 ## Acknowledgments
-- photo: projects/thrive/partners-logos.png
-- caption: North Valley Thrive, University of the Pacific, and Portor Lighting
+- photo: projects/thrive/logo-north-valley-thrive.png, projects/thrive/logo-university-of-the-pacific.png, projects/thrive/logo-portor-lighting.png
+- caption: North Valley Thrive, University of the Pacific, Portor Lighting
 - We thank **[North Valley Thrive](https://northvalleythrive.org/)** for funding this project through its Catalyst grant, and **[Portor Lighting](https://portorlighting.com/)** for its partnership, product expertise, and mentorship of our students. We are also grateful to University of the Pacific Sustainability, Facilities, Engineering, and Public Safety, and to the community partners who shared their time and insight.
 
 ## Team

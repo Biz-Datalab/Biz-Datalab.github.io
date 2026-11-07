@@ -6,7 +6,7 @@
 <title>Project · Biz Data Lab</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=6745b692">
+<link rel="stylesheet" href="assets/site.css?v=5cc5d993">
 <script data-goatcounter="https://biz-datalab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -130,7 +130,7 @@ function render(p) {
     const sec = S[k];
     const isProse = sec.items.length && sec.items.every(i => i.length === 1 && i[0].length > 80);
     out.push(band(head(k === "acknowledgments" ? "Thank you" : "Project", sec.name) + `<div class="generic${sec.photo ? " with-logo" : ""}"><div>${sec.intro ? `<p>${esc(sec.intro)}</p>` : ""}${isProse ? `<div class="prose">${paras(sec)}</div>` : `<ul>${sec.items.map(i => `<li>${esc(i.join(" | "))}</li>`).join("")}</ul>`}
-      ${sec.subs.map(sb => `<h3>${esc(sb.title)}</h3>${sb.text ? `<p>${esc(sb.text)}</p>` : ""}`).join("")}</div>${sec.photo ? `<figure class="sec-logo"><img src="${esc(sec.photo)}" alt="${esc(sec.caption || sec.name)}" loading="lazy"></figure>` : ""}</div>`));
+      ${sec.subs.map(sb => `<h3>${esc(sb.title)}</h3>${sb.text ? `<p>${esc(sb.text)}</p>` : ""}`).join("")}</div>${sec.photo ? (() => { const imgs = sec.photo.split(",").map(x => x.trim()).filter(Boolean), alts = (sec.caption || "").split(",").map(x => x.trim()); return `<figure class="sec-logo n${imgs.length}">${imgs.map((src, i) => `<img src="${esc(src)}" alt="${esc(alts[i] || sec.name)}" loading="lazy">`).join("")}</figure>`; })() : ""}</div>`));
   });
 
   const tp = (S.team || {}).photo;

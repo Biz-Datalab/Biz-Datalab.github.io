@@ -337,7 +337,11 @@ footer{padding-block:28px;font-size:.92rem}
 @media (max-width:860px){.rq{grid-template-columns:minmax(0,1fr)}}
 
 /* Section with a logo panel beside the text (e.g., Acknowledgments) */
-.generic.with-logo{display:grid;grid-template-columns:minmax(0,72ch) 200px;gap:48px;align-items:center;justify-content:start}
-.sec-logo{margin:0;background:#ffffff;border:1px solid var(--line);padding:14px}
-.sec-logo img{width:100%;display:block}
-@media (max-width:760px){.generic.with-logo{grid-template-columns:minmax(0,1fr)}.sec-logo{max-width:200px}}
+.generic.with-logo{display:grid;grid-template-columns:minmax(0,72ch) minmax(0,440px);gap:48px;align-items:center;justify-content:start}
+.sec-logo{margin:0;display:grid;gap:18px 28px;align-items:center}
+.sec-logo img{width:100%;height:auto;display:block}
+.sec-logo.n3{grid-template-columns:150px minmax(0,1fr)}
+.sec-logo.n3 img:first-child{grid-row:span 2}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sec-logo{background:#ffffff;padding:16px;border-radius:6px}}
+:root[data-theme="dark"] .sec-logo{background:#ffffff;padding:16px;border-radius:6px}
+@media (max-width:760px){.generic.with-logo{grid-template-columns:minmax(0,1fr)}.sec-logo{max-width:360px}.sec-logo.n3{grid-template-columns:110px minmax(0,1fr)}}
