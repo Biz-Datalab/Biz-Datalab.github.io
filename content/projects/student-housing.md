@@ -8,7 +8,7 @@ This project uses the short "brief" layout (see diamond-pricing.md). In "Student
 - order: 4
 - layout: brief
 - year: 2025
-- image: projects/student-housing/dashboard-overall.png
+- image: projects/student-housing/surf-presentation.jpg
 - students: Aniela Jensen, Kaleena Quintero, Nathalia Anaya Arita, Mahnoor Khan, and Felipe Gonzalez. Aniela Jensen continued the research through the Summer Undergraduate Research Fellowship (SURF).
 - summary: A business analytics capstone team asked Pacific students what makes them choose campus housing, and how the university can help more students live on campus. The team surveyed 74 students and compared what international, domestic local, and domestic non-local students value most. The research then continued through the Summer Undergraduate Research Fellowship (SURF), using machine learning to predict students' housing choices.
 
@@ -26,7 +26,7 @@ This project uses the short "brief" layout (see diamond-pricing.md). In "Student
 
 ### All respondents
 - text: Safety and security is the top factor overall, a natural strength of living on campus.
-- image: projects/student-housing/dashboard-overall.png
+- image: projects/student-housing/surf-presentation.jpg
 
 ### International students
 - text: Safety and security ranks first (4.58 of 5), followed by affordability and internet and utilities.
