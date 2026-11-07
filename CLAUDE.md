@@ -10,7 +10,8 @@ guide and the repo disagree, trust the repo and update this guide.
 - Sections: About · Experiential Learning (student projects) · Diamond Market Watch (prices, AI design
   showcase, paper citation, Industry News) · AI Watch (curated videos, articles, papers).
 - Footer: "© YEAR Chong Huang · Personal website featuring my research, curated resources, and student projects."
-- Not yet officially announced. Contact details will be added later by the owner. Never publish the owner's email.
+- Not yet officially announced. The owner approved one email link (2026-11-07): "contact me" in the Experiential
+  Learning statement links to chuang@pacific.edu. Do not add the email anywhere else unless the owner asks.
 - Visitor analytics: GoatCounter (biz-datalab.goatcounter.com).
 
 ## Access and publishing

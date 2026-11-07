@@ -121,7 +121,7 @@ function renderProfile(p) {
   $("pBio").textContent = p.bio || ""; $("pBio2").textContent = p.bio2 || ""; $("pBio2").hidden = !p.bio2;
   const areas = (p.areas || [p.area1, p.area2].filter(Boolean).join(" | ")).split("|").map(x => x.trim()).filter(Boolean);
   $("pAreas").innerHTML = areas.map(a => `<span>${esc(a)}</span>`).join(""); $("pAreas").hidden = !areas.length;
-  $("pStatement").textContent = p.statement || ""; $("pStatement").hidden = !p.statement;
+  $("pStatement").innerHTML = esc(p.statement || "").replace(/\[([^\]]+)\]\(((?:https?:\/\/|mailto:)[^\s)]+)\)/g, (m, txt, url) => `<a href="${url}"${url.startsWith("mailto:") ? "" : ' target="_blank" rel="noopener"'}>${txt}</a>`).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>"); $("pStatement").hidden = !p.statement;
   const thanks = (p.thanks || "").split("|").map(x => x.trim()).filter(Boolean);
   $("pThanksList").innerHTML = thanks.map(x => { const m = x.match(/^\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)$/); return `<li>${m ? `<a href="${esc(m[2])}" target="_blank" rel="noopener noreferrer">${esc(m[1])}</a>` : esc(x)}</li>`; }).join("");
   $("pThanks").hidden = !thanks.length;
