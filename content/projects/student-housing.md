@@ -26,7 +26,7 @@ This project uses the short "brief" layout (see diamond-pricing.md). In "Student
 
 ### All respondents
 - text: Safety and security is the top factor overall, a natural strength of living on campus.
-- image: projects/student-housing/surf-presentation.jpg
+- image: projects/student-housing/dashboard-overall.png
 
 ### International students
 - text: Safety and security ranks first (4.58 of 5), followed by affordability and internet and utilities.
