@@ -335,3 +335,9 @@ footer{padding-block:28px;font-size:.92rem}
 .rq figure{margin:0}.rq img{width:100%;display:block;border:1px solid var(--line)}
 .rq figcaption{font-size:.9rem;line-height:1.5;margin-top:8px}
 @media (max-width:860px){.rq{grid-template-columns:minmax(0,1fr)}}
+
+/* Section with a logo panel beside the text (e.g., Acknowledgments) */
+.generic.with-logo{display:grid;grid-template-columns:minmax(0,72ch) 200px;gap:48px;align-items:center;justify-content:start}
+.sec-logo{margin:0;background:#ffffff;border:1px solid var(--line);padding:14px}
+.sec-logo img{width:100%;display:block}
+@media (max-width:760px){.generic.with-logo{grid-template-columns:minmax(0,1fr)}.sec-logo{max-width:200px}}

@@ -9,7 +9,7 @@ A line "- intro: ..." directly under a section heading adds an introductory sent
 - period: 2025–2026 · one year
 - funder: North Valley Thrive (THRIVE) Catalyst grant, Idea Stage · $43,815
 - status: Completed · ready for the next phase
-- image: projects/thrive/partners-logos.png
+- image: projects/thrive/team-portor-visit.jpg
 - hero: projects/thrive/weber-hall-team.jpg
 - summary: Funded by North Valley Thrive, this one-year project assessed the viability of bringing solar lighting products, and ultimately clean-energy manufacturing, to the North San Joaquin Valley. Working with industry partner Portor Lighting, a faculty-led team of three student research assistants confirmed market and community interest and identified lighting needs across campuses, residential communities, and public spaces. The team also used AI to build market intelligence, studied the U.S. supply chain and the intellectual property landscape, confirmed a pathway to Buy America (BABA 2021) compliance, and developed a training framework for local technicians. The project is now ready for its next stage.
 
@@ -94,6 +94,8 @@ A line "- intro: ..." directly under a section heading adds an introductory sent
 - The project grew well beyond its original scope. Students left with professional experience that led directly to jobs, the industry partner expressed interest in hosting more student interns, and the work produced reusable tools and new community connections that will support future projects in the region.
 
 ## Acknowledgments
+- photo: projects/thrive/partners-logos.png
+- caption: North Valley Thrive, University of the Pacific, and Portor Lighting
 - We thank North Valley Thrive for funding this project through its Catalyst grant, and Portor Lighting for its partnership, product expertise, and mentorship of our students. We are also grateful to University of the Pacific Sustainability, Facilities, Engineering, and Public Safety, and to the community partners who shared their time and insight.
 
 ## Team
