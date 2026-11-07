@@ -7,7 +7,7 @@
 <meta name="description" content="Experiential learning projects, a biweekly Diamond Market Watch, and curated AI resources.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=5cc5d993">
+<link rel="stylesheet" href="assets/site.css?v=5aaf9ea2">
 <script data-goatcounter="https://biz-datalab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -42,7 +42,7 @@
   <section class="band" id="teaching">
     <div class="wrap">
       <div class="sec-head"><span class="label">Teaching</span><h2>Experiential Learning</h2></div>
-      <p class="statement" id="pStatement"></p>
+      <div class="statement-row"><p class="statement" id="pStatement"></p><aside class="thanks" id="pThanks" hidden><span class="label">With thanks for their support</span><ul id="pThanksList"></ul></aside></div>
       <div class="types" id="projTypes"></div>
       <div class="proj-list" id="projList"></div>
       <div class="more"><button class="linkbtn" id="projMore" type="button" hidden></button></div>
@@ -122,6 +122,9 @@ function renderProfile(p) {
   const areas = (p.areas || [p.area1, p.area2].filter(Boolean).join(" | ")).split("|").map(x => x.trim()).filter(Boolean);
   $("pAreas").innerHTML = areas.map(a => `<span>${esc(a)}</span>`).join(""); $("pAreas").hidden = !areas.length;
   $("pStatement").textContent = p.statement || ""; $("pStatement").hidden = !p.statement;
+  const thanks = (p.thanks || "").split("|").map(x => x.trim()).filter(Boolean);
+  $("pThanksList").innerHTML = thanks.map(x => { const m = x.match(/^\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)$/); return `<li>${m ? `<a href="${esc(m[2])}" target="_blank" rel="noopener">${esc(m[1])}</a>` : esc(x)}</li>`; }).join("");
+  $("pThanks").hidden = !thanks.length;
   if (name && !/^\[/.test(name)) { $("brand").textContent = name; document.title = name + " · Biz Data Lab"; }
   $("foot").textContent = `© ${new Date().getFullYear()} Chong Huang · Personal website featuring my research, curated resources, and student projects.` + (p.email && !/^\[/.test(p.email) ? ` · ${p.email}` : "");
 }

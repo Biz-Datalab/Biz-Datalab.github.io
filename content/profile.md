@@ -1,5 +1,6 @@
 # Profile
 Edit the text after each colon. Keep the labels before the colon as they are.
+"thanks" is the list of supporters shown beside the Experiential Learning statement: [Name](link) items separated by a | (vertical bar).
 "areas" is an optional list of tags under your bio, separated by a | (vertical bar). Leave it empty to show none.
 
 
@@ -9,3 +10,4 @@ Edit the text after each colon. Keep the labels before the colon as they are.
 - areas:
 - email: [your email]
 - statement: Built on real-world data and live business scenarios, these student projects train the judgment textbooks can’t, and several led to public presentations and showcases.
+- thanks: [North Valley Thrive](https://northvalleythrive.org/) | [Portor Industry](https://portorlighting.com/) | [City of Modesto Community and Economic Development Department](https://www.modestogov.com/463/Community-Economic-Development) | [Center for Business and Policy Research (CBPR)](https://www.pacific.edu/business/centers-and-institutes/center-for-business-and-policy-research) | [Pacific Summer Undergraduate Research Fellowship (SURF)](https://scholarlycommons.pacific.edu/surf/) | [Port of Stockton](https://www.portofstockton.com/) | [HeyGen](https://app.heygen.com/) | [NewportAI](https://newportai.com)
