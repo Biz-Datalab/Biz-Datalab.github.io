@@ -11,12 +11,14 @@
 <script data-goatcounter="https://biz-datalab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <style>
 /* Diamond Basics page (static education page; not rebuilt by build.py) */
-.db-head{max-width:76ch}
+.db-hero{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:end}
 .db-head h1{font-size:clamp(2rem,4.2vw,2.6rem);margin-top:12px;padding-bottom:12px;border-bottom:3px solid var(--ink)}
-.db-head .sum{font-size:1.08rem;line-height:1.75;margin-top:16px}
-.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-.toc a{font-size:.9rem;font-weight:700;text-decoration:none;border:1px solid var(--ink);border-radius:3px;padding:5px 12px}
-.toc a:hover{background:var(--ink);color:var(--bg)}
+.db-head .sum{font-size:1.08rem;line-height:1.75;margin-top:16px;text-align:justify;hyphens:auto}
+.toc{background:var(--bg);border:1px solid var(--line);border-left:3px solid #56736a;padding:18px 22px}
+.toc .label{display:block;color:#56736a;margin-bottom:8px}
+.toc ol{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:4px;font-size:.95rem}
+.toc a{font-weight:700;text-decoration:none}
+.toc a:hover{text-decoration:underline}
 .sec-head{margin-bottom:26px}
 .sec-head p{max-width:72ch;margin-top:14px}
 .cs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
@@ -85,10 +87,10 @@
 .labs u{margin-top:auto;font-weight:700;font-size:.9rem;text-decoration:none;color:#56736a}
 .labs a:hover u{text-decoration:underline}
 .sub{font-size:1.1rem;margin:4px 0 14px}
-.papers{margin:0 0 30px;padding-left:1.3em;display:flex;flex-direction:column;gap:12px;max-width:95ch;font-size:.98rem;line-height:1.6}
+.papers{margin:0 0 30px;padding-left:1.3em;display:flex;flex-direction:column;gap:12px;font-size:.98rem;line-height:1.6;text-align:justify;hyphens:auto}
 .papers a{font-weight:700;white-space:nowrap}
 .src{font-size:.92rem;line-height:1.6;padding-left:1.1em;display:flex;flex-direction:column;gap:6px}
-@media (max-width:860px){.b3{grid-template-columns:minmax(0,1fr)}.labs{grid-template-columns:minmax(0,1fr)}.res{grid-template-columns:minmax(0,1fr)}.check li:last-child:nth-child(odd){grid-column:auto}.cs,.report,.check,.links3{grid-template-columns:minmax(0,1fr)}.fields li{grid-template-columns:minmax(0,1fr);gap:4px}.cmp tbody th{width:auto}}
+@media (max-width:860px){.db-hero{grid-template-columns:minmax(0,1fr);gap:24px}.b3{grid-template-columns:minmax(0,1fr)}.labs{grid-template-columns:minmax(0,1fr)}.res{grid-template-columns:minmax(0,1fr)}.check li:last-child:nth-child(odd){grid-column:auto}.cs,.report,.check,.links3{grid-template-columns:minmax(0,1fr)}.fields li{grid-template-columns:minmax(0,1fr);gap:4px}.cmp tbody th{width:auto}}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .cmp td.same{background:var(--chip)}}
 :root[data-theme="dark"] .cmp td.same{background:var(--chip)}
 .report figure a{display:block}
@@ -109,12 +111,14 @@
 
 <section class="band tint"><div class="wrap">
   <a class="back" href="index.html#market-watch">← Diamond Market Watch</a>
-  <div class="db-head">
-    <span class="badge solid capstone">Diamond education</span>
-    <h1>Diamond Basics</h1>
-    <p class="sum">An education page for anyone learning about diamonds or buying one. Start with the 4Cs, the shared language used to describe diamond quality, then see how natural and lab-grown diamonds differ, how to read a grading report, and where to learn more through selected articles and videos.</p>
+  <div class="db-hero">
+    <div class="db-head">
+      <span class="badge solid capstone">Diamond education</span>
+      <h1>Diamond Basics</h1>
+      <p class="sum">An education page for anyone learning about diamonds or buying one. It was built mainly for my business students: diamonds are the setting for projects, data analysis, and assignments in several of my courses, and this page helps students build the domain knowledge that work requires. Start with the 4Cs, the shared language used to describe diamond quality, then see how natural and lab-grown diamonds differ, how to read a grading report, and where to learn more through selected articles and videos.</p>
+    </div>
+    <aside class="toc"><span class="label">On this page</span><ol><li><a href="#cs">The 4Cs</a></li><li><a href="#nl">Natural or lab-grown?</a></li><li><a href="#report">Reading a grading report</a></li><li><a href="#labs">Grading laboratories</a></li><li><a href="#buy">Before you buy</a></li><li><a href="#more">Articles and videos</a></li><li><a href="#src">Sources</a></li></ol></aside>
   </div>
-  <div class="toc"><a href="#cs">The 4Cs</a><a href="#nl">Natural or lab-grown</a><a href="#report">Grading reports</a><a href="#labs">Grading labs</a><a href="#buy">Before you buy</a><a href="#more">Articles and videos</a><a href="#src">Sources</a></div>
 </div></section>
 
 <section class="band" id="cs"><div class="wrap">
@@ -175,7 +179,7 @@
       <tr><th scope="row">How it is made</th><td>Mined, then cut and polished</td><td><b>HPHT</b> (high pressure, high temperature) or <b>CVD</b> (chemical vapor deposition), which builds the crystal layer by layer from carbon-containing gas</td></tr>
       <tr><th scope="row">Telling them apart</th><td colspan="2" class="same">Not by eye. Laboratories use advanced gemological and spectroscopic testing; screening devices help jewelers separate the two.</td></tr>
       <tr><th scope="row">Labeling (U.S.)</th><td>May be called "diamond"</td><td>Must be clearly qualified, for example "laboratory-grown," "laboratory-created," or "[manufacturer name]-created" (FTC Jewelry Guides)</td></tr>
-      <tr><th scope="row">Grading reports</th><td>Full 4Cs grades</td><td>Since October 1, 2025, GIA describes D-to-Z lab-grown diamonds as "Premium" or "Standard" instead of 4Cs grades; some other laboratories still issue 4Cs grades. Reports note the laser inscription on the girdle.</td></tr>
+      <tr><th scope="row">Grading reports</th><td>Full 4Cs grades</td><td><a href="https://www.gia.edu/gia-news-press/updated-laboratory-grown-diamond-services-to-launch-october-1" target="_blank" rel="noopener">Since October 1, 2025, GIA describes D-to-Z lab-grown diamonds as "Premium" or "Standard" instead of 4Cs grades</a>; <a href="https://www.igi.org/reports/lab-grown-diamond-report/" target="_blank" rel="noopener">some other laboratories, such as IGI, still issue 4Cs grades</a>. <a href="https://4cs.gia.edu/en-us/laboratory-grown-diamond/" target="_blank" rel="noopener">Reports note the laser inscription on the girdle</a>.</td></tr>
       <tr><th scope="row">Price</th><td>Generally higher for the same 4Cs</td><td>Generally much lower for the same 4Cs</td></tr>
     </tbody>
   </table>
@@ -233,9 +237,9 @@
   </ol>
   <h3 class="sub">Videos</h3>
   <div class="res">
-    <a href="https://www.youtube.com/watch?v=tXdPlZPI9qM" target="_blank" rel="noopener"><span class="thumbph">▶ YouTube</span><span class="badge">Video</span><b>How to Choose a Diamond: Four-Minute GIA Diamond Grading Guide by GIA</b><span class="src2">GIA · July 21, 2014</span><span class="cm">Topic: the 4Cs and how GIA grades diamonds.</span></a>
-    <a href="https://www.youtube.com/watch?v=1hvjuOKKX_I" target="_blank" rel="noopener"><span class="thumbph">▶ YouTube</span><span class="badge">Video</span><b>How Are DIAMONDS Formed?</b><span class="src2">Making It Happen · October 24, 2023</span><span class="cm">Topic: how natural diamonds form.</span></a>
-    <a href="https://www.youtube.com/watch?v=D9pVtHDxeFU" target="_blank" rel="noopener"><span class="thumbph">▶ YouTube</span><span class="badge">Video</span><b>How Lab-Grown Diamonds Are Made – Billions of Dollars in American Labs | THE MAKING</b><span class="src2">THE MAKING · September 25, 2025</span><span class="cm">Topic: how lab-grown diamonds are produced.</span></a>
+    <a href="https://www.youtube.com/watch?v=tXdPlZPI9qM" target="_blank" rel="noopener"><span class="badge">Video</span><b>How to Choose a Diamond: Four-Minute GIA Diamond Grading Guide by GIA</b><span class="src2">GIA · July 21, 2014</span><span class="cm">Topic: the 4Cs and how GIA grades diamonds.</span></a>
+    <a href="https://www.youtube.com/watch?v=1hvjuOKKX_I" target="_blank" rel="noopener"><span class="badge">Video</span><b>How Are DIAMONDS Formed?</b><span class="src2">Making It Happen · October 24, 2023</span><span class="cm">Topic: how natural diamonds form.</span></a>
+    <a href="https://www.youtube.com/watch?v=D9pVtHDxeFU" target="_blank" rel="noopener"><span class="badge">Video</span><b>How Lab-Grown Diamonds Are Made – Billions of Dollars in American Labs | THE MAKING</b><span class="src2">THE MAKING · September 25, 2025</span><span class="cm">Topic: how lab-grown diamonds are produced.</span></a>
   </div>
   
 </div></section>
