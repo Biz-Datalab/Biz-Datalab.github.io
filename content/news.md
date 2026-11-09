@@ -51,3 +51,17 @@ Title = the article's exact original headline. Date = the date shown on the page
 - date: 2026-01-11
 - category: ai
 - takeaway: At a GJEPC symposium (11 January 2026), speakers said AI is no longer optional for India's jewellery industry; results depend on mindset, collaboration, education and data quality.
+
+## Prices of Smaller Diamonds Decline as Inventories Grow
+- link: https://rapaport.com/news/prices-of-smaller-diamonds-decline-as-inventories-grow/
+- source: Rapaport
+- date: 2026-11-03
+- category: prices
+- takeaway: Rapaport's index for 0.30-carat natural diamonds fell 5.5% in October (0.50 ct −2.3%, 1 ct −0.9%, 3 ct +0.9%), as the number of 0.30-carat stones listed on its trading platform rose 165% between June 1 and November 1.
+
+## Botswana will increase stake in De Beers to 30%, president says
+- link: https://www.cnbcafrica.com/2026/botswana-will-increase-stake-in-de-beers-to-30-president-says
+- source: CNBC Africa (Reuters)
+- date: 2026-11-09
+- category: market
+- takeaway: Botswana will double its De Beers stake to 30% under the sale of Anglo American's 85% holding to the Global Diamond Consortium led by former De Beers CEO Gareth Penny, the preferred bidder.
