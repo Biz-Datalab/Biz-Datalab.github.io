@@ -248,7 +248,7 @@ def stamp_assets():
     if not os.path.exists(css):
         return
     v = hashlib.md5(open(css, "rb").read()).hexdigest()[:8]
-    for page in ("index.html", "project.html"):
+    for page in ("index.html", "project.html", "diamond-basics.html"):
         path = os.path.join(ROOT, page)
         if os.path.exists(path):
             html = read(path)

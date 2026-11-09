@@ -91,6 +91,13 @@ Claude maintains **content/news.md** weekly. You don't need to do anything.
 
 ---
 
+## 6. Diamond Basics (education page)
+
+**diamond-basics.html** is a fixed education page linked from Diamond Market Watch. It does not change with the price updates.
+To add a research article, video, or reading, send the link to Claude. Claude checks the exact title, authors or channel, and date on the original page, then adds it to the "Articles and videos" section.
+
+---
+
 ## If something goes wrong
 
 - **Red cross in the Actions tab:** click it, then click "build" to see the message.

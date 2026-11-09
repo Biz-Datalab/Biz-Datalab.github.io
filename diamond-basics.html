@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Diamond Basics · Biz Data Lab</title>
+<meta name="description" content="Diamond education: the 4Cs, polish, symmetry, and fluorescence; natural versus lab-grown diamonds; grading reports and laboratories; selected research and videos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=4407b339">
+<script data-goatcounter="https://biz-datalab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<style>
+/* Diamond Basics page (static education page; not rebuilt by build.py) */
+.db-head{max-width:76ch}
+.db-head h1{font-size:clamp(2rem,4.2vw,2.6rem);margin-top:12px;padding-bottom:12px;border-bottom:3px solid var(--ink)}
+.db-head .sum{font-size:1.08rem;line-height:1.75;margin-top:16px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.toc a{font-size:.9rem;font-weight:700;text-decoration:none;border:1px solid var(--ink);border-radius:3px;padding:5px 12px}
+.toc a:hover{background:var(--ink);color:var(--bg)}
+.sec-head{margin-bottom:26px}
+.sec-head p{max-width:72ch;margin-top:14px}
+.cs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.cs article{background:var(--bg);border:1px solid var(--line);border-top:3px solid #56736a;padding:22px 24px;display:flex;flex-direction:column;gap:10px}
+.cs h3{font-size:1.3rem;display:flex;align-items:baseline;gap:10px}
+.cs h3 small{font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#56736a}
+.cs p{font-size:.98rem;line-height:1.6}
+.cs .beyond{grid-column:1 / -1}
+.b3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.b3 b{display:block;margin-bottom:4px}
+.scale{display:flex;gap:3px;margin-top:6px}
+.scale div{flex:1;text-align:center;font-size:.72rem;font-weight:700;padding:8px 2px;border-radius:2px;line-height:1.2}
+.scale div span{display:block;font-weight:400;font-size:.68rem;margin-top:3px}
+.color-scale div{border:1px solid var(--line)}
+.color-scale div:nth-child(1){background:#ffffff}
+.color-scale div:nth-child(2){background:#fffefa}
+.color-scale div:nth-child(3){background:#fefbef}
+.color-scale div:nth-child(4){background:#fcf7e2}
+.color-scale div:nth-child(5){background:#faf2d3}
+.color-scale div{color:#1c2430}
+.clar-scale div{background:var(--chip);color:var(--ink)}
+.clar-scale div.top{background:#56736a;color:#fff}
+.cut-scale div{background:var(--chip);color:var(--ink)}
+.cut-scale div:first-child{background:#56736a;color:#fff}
+.carat-row{display:flex;align-items:flex-end;gap:22px;margin-top:6px}
+.carat-row figure{margin:0;text-align:center;font-size:.78rem;font-weight:700}
+.carat-row svg{display:block;margin:0 auto 4px}
+.note{font-size:.85rem;opacity:.75}
+.cmp{width:100%;border-collapse:collapse;background:var(--bg);border:1px solid var(--line);font-size:.98rem}
+.cmp th,.cmp td{text-align:left;vertical-align:top;padding:12px 16px;border-bottom:1px solid var(--line);line-height:1.5}
+.cmp thead th{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;background:var(--band)}
+.cmp tbody th{width:18%;font-weight:700}
+.cmp td.same{text-align:center;background:#eef3f1}
+.callnote{margin-top:16px;padding:14px 18px;border:1px solid var(--line);border-left:4px solid #56736a;background:var(--bg);max-width:80ch;font-size:.97rem}
+.report{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px;align-items:start}
+.report figure{margin:0;border:1px solid var(--line);background:#fff;padding:12px}
+.report figure img{width:100%;display:block}
+.report figcaption{font-size:.85rem;margin-top:8px}
+.fields{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.fields li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:14px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.fields b{font-size:.95rem}
+.check{list-style:none;margin:0;padding:0;counter-reset:ck;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 28px}
+.check li{counter-increment:ck;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;align-items:start;background:var(--bg);border:1px solid var(--line);padding:14px 16px}
+.check li::before{content:counter(ck);width:28px;height:28px;border-radius:50%;background:#56736a;color:#fff;font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center}
+.check b{display:block}
+.check li:last-child:nth-child(odd){grid-column:1 / -1}
+.links3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.links3 a{display:block;text-decoration:none;border:1px solid var(--line);border-top:3px solid var(--ink);padding:18px 20px;background:var(--bg)}
+.links3 a b{display:block;font-size:1.05rem;margin-bottom:6px}
+.links3 a span{font-size:.93rem;line-height:1.5}
+.links3 a:hover b{text-decoration:underline}
+.res{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.res a{display:flex;flex-direction:column;gap:8px;text-decoration:none;border:1px solid var(--line);border-top:3px solid #56736a;padding:18px 20px;background:var(--bg)}
+.res a .badge{align-self:flex-start}
+.res a b{font-size:1.05rem;line-height:1.35}
+.res a:hover b{text-decoration:underline}
+.res .src2{font-size:.85rem;opacity:.7}
+.res .cm{font-size:.93rem;line-height:1.5}
+.res .tbc{color:#a14a2b;opacity:1;font-weight:700}
+.res .thumbph{display:flex;align-items:center;justify-content:center;height:120px;background:var(--chip);font-size:.85rem;opacity:.8;order:-1}
+.labs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.labs a{display:flex;flex-direction:column;gap:6px;text-decoration:none;background:var(--bg);border:1px solid var(--line);border-top:3px solid var(--ink);padding:18px 20px}
+.labs b{font-size:1.2rem}
+.labs i{font-style:normal;font-size:.85rem;opacity:.75}
+.labs span{font-size:.95rem;line-height:1.55}
+.labs u{margin-top:auto;font-weight:700;font-size:.9rem;text-decoration:none;color:#56736a}
+.labs a:hover u{text-decoration:underline}
+.sub{font-size:1.1rem;margin:4px 0 14px}
+.papers{margin:0 0 30px;padding-left:1.3em;display:flex;flex-direction:column;gap:12px;max-width:95ch;font-size:.98rem;line-height:1.6}
+.papers a{font-weight:700;white-space:nowrap}
+.src{font-size:.92rem;line-height:1.6;padding-left:1.1em;display:flex;flex-direction:column;gap:6px}
+@media (max-width:860px){.b3{grid-template-columns:minmax(0,1fr)}.labs{grid-template-columns:minmax(0,1fr)}.res{grid-template-columns:minmax(0,1fr)}.check li:last-child:nth-child(odd){grid-column:auto}.cs,.report,.check,.links3{grid-template-columns:minmax(0,1fr)}.fields li{grid-template-columns:minmax(0,1fr);gap:4px}.cmp tbody th{width:auto}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .cmp td.same{background:var(--chip)}}
+:root[data-theme="dark"] .cmp td.same{background:var(--chip)}
+.report figure a{display:block}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html">Biz Data Lab</a>
+    <div class="links">
+      <a href="index.html#teaching">Experiential Learning</a>
+      <a href="index.html#market-watch">Diamond Market Watch</a>
+      <a href="index.html#ai-watch">AI Watch</a>
+    </div>
+  </div>
+</nav>
+<main>
+
+<section class="band tint"><div class="wrap">
+  <a class="back" href="index.html#market-watch">← Diamond Market Watch</a>
+  <div class="db-head">
+    <span class="badge solid capstone">Diamond education</span>
+    <h1>Diamond Basics</h1>
+    <p class="sum">An education page for anyone learning about diamonds or buying one. Start with the 4Cs, the shared language used to describe diamond quality, then see how natural and lab-grown diamonds differ, how to read a grading report, and where to learn more through selected articles and videos.</p>
+  </div>
+  <div class="toc"><a href="#cs">The 4Cs</a><a href="#nl">Natural or lab-grown</a><a href="#report">Grading reports</a><a href="#labs">Grading labs</a><a href="#buy">Before you buy</a><a href="#more">Articles and videos</a><a href="#src">Sources</a></div>
+</div></section>
+
+<section class="band" id="cs"><div class="wrap">
+  <div class="sec-head"><span class="label">Quality</span><h2>The 4Cs</h2>
+    <p>The Gemological Institute of America (GIA) created the 4Cs (carat, color, clarity, and cut) as a universal way to describe diamond quality. Two diamonds of the same weight can differ widely in price because of the other three Cs.</p></div>
+  <div class="cs">
+    <article>
+      <h3>Carat <small>Weight</small></h3>
+      <p>Carat measures weight, not size. One carat equals 0.2 grams and is divided into 100 points, so a 0.75-carat diamond is a "75-pointer." Larger diamonds are rarer, so the price per carat rises as weight increases, not just the total price.</p>
+      <div class="carat-row">
+        <figure><svg width="40" height="40"><circle cx="20" cy="20" r="13" fill="none" stroke="currentColor" stroke-width="2"/></svg>0.50 ct</figure>
+        <figure><svg width="50" height="50"><circle cx="25" cy="25" r="16.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>1.00 ct</figure>
+        <figure><svg width="62" height="62"><circle cx="31" cy="31" r="21" fill="none" stroke="currentColor" stroke-width="2"/></svg>2.00 ct</figure>
+        <span class="note">Illustration only: doubling the weight does not double the visible size.</span>
+      </div>
+    </article>
+    <article>
+      <h3>Color <small>Absence of color</small></h3>
+      <p>Colorless diamonds are graded on GIA's D-to-Z scale, from D (colorless) to Z (light yellow, brown, or gray). Each letter is a defined range, judged against master stones under controlled lighting. Most diamonds in jewelry stores are colorless to near colorless; the N-to-Z range is less common in jewelry. Diamonds with more color than Z are graded separately as fancy color.</p>
+      <div class="scale color-scale">
+        <div>D–F<span>Colorless</span></div><div>G–J<span>Near colorless</span></div><div>K–M<span>Faint</span></div><div>N–R<span>Very light</span></div><div>S–Z<span>Light</span></div>
+      </div>
+      <span class="note">Tints are approximate; color is graded face-down against master stones, not on screen.</span>
+    </article>
+    <article>
+      <h3>Clarity <small>Inclusions and blemishes</small></h3>
+      <p>Clarity describes internal features (inclusions) and surface features (blemishes), judged under 10× magnification. The GIA scale has 11 grades in 6 groups. Many diamonds in the middle grades look clean to the unaided eye.</p>
+      <div class="scale clar-scale">
+        <div class="top">FL<span>Flawless</span></div><div class="top">IF<span>Internally flawless</span></div><div>VVS1–2<span>Very, very slightly included</span></div><div>VS1–2<span>Very slightly included</span></div><div>SI1–2<span>Slightly included</span></div><div>I1–3<span>Included</span></div>
+      </div>
+    </article>
+    <article>
+      <h3>Cut <small>Light performance</small></h3>
+      <p>Cut is about how well a diamond's angles, proportions, and finish return light as brightness and sparkle. It is the most complex C to assess. GIA gives a cut grade to standard round brilliant diamonds in the D-to-Z range, based on seven components.</p>
+      <div class="scale cut-scale">
+        <div>Excellent</div><div>Very Good</div><div>Good</div><div>Fair</div><div>Poor</div>
+      </div>
+    </article>
+    <article class="beyond">
+      <h3>Beyond the 4Cs <small>Also on the report</small></h3>
+      <div class="b3">
+        <div><b>Polish</b><p>Smoothness of the diamond's surface, graded Excellent to Poor. For an Excellent cut grade, polish and symmetry must both be Very Good or Excellent.</p></div>
+        <div><b>Symmetry</b><p>Exactness of the outline and the shape, placement, and alignment of the facets, graded Excellent to Poor. Poor symmetry can make a diamond look flat.</p></div>
+        <div><b>Fluorescence</b><p>Glow under long-wave ultraviolet light, described as None, Faint, Medium, Strong, or Very Strong. About 25% to 35% of diamonds fluoresce, mostly blue. GIA treats it as an identifying characteristic, not a grade.</p></div>
+      </div>
+    </article>
+  </div>
+</div></section>
+
+<section class="band tint" id="nl"><div class="wrap">
+  <div class="sec-head"><span class="label">Origin</span><h2>Natural or lab-grown?</h2>
+    <p>Both are real diamonds: pure carbon in the same crystal structure. The difference is where and how they formed, and that difference matters for disclosure, grading, and price.</p></div>
+  <table class="cmp">
+    <thead><tr><th scope="col"></th><th scope="col">Natural diamond</th><th scope="col">Lab-grown diamond</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Origin</th><td>Formed by heat and pressure deep in the earth, then mined</td><td>Grown in a factory from a small diamond seed</td></tr>
+      <tr><th scope="row">Material</th><td colspan="2" class="same">Essentially the same chemical, optical, and physical properties and crystal structure</td></tr>
+      <tr><th scope="row">How it is made</th><td>Mined, then cut and polished</td><td><b>HPHT</b> (high pressure, high temperature) or <b>CVD</b> (chemical vapor deposition), which builds the crystal layer by layer from carbon-containing gas</td></tr>
+      <tr><th scope="row">Telling them apart</th><td colspan="2" class="same">Not by eye. Laboratories use advanced gemological and spectroscopic testing; screening devices help jewelers separate the two.</td></tr>
+      <tr><th scope="row">Labeling (U.S.)</th><td>May be called "diamond"</td><td>Must be clearly qualified, for example "laboratory-grown," "laboratory-created," or "[manufacturer name]-created" (FTC Jewelry Guides)</td></tr>
+      <tr><th scope="row">Grading reports</th><td>Full 4Cs grades</td><td>Since October 1, 2025, GIA describes D-to-Z lab-grown diamonds as "Premium" or "Standard" instead of 4Cs grades; some other laboratories still issue 4Cs grades. Reports note the laser inscription on the girdle.</td></tr>
+      <tr><th scope="row">Price</th><td>Generally higher for the same 4Cs</td><td>Generally much lower for the same 4Cs</td></tr>
+    </tbody>
+  </table>
+  <div class="callnote"><b>Not the same as look-alikes.</b> Cubic zirconia and moissanite only look like diamond. They have different chemical and physical properties and are not diamonds, natural or lab-grown.</div>
+</div></section>
+
+<section class="band" id="report"><div class="wrap">
+  <div class="sec-head"><span class="label">Paperwork</span><h2>Reading a grading report</h2>
+    <p>An independent grading report records a diamond's 4Cs and identifying details. Here is what each part of a typical report means.</p></div>
+  <div class="report">
+    <figure><a href="projects/diamond-pricing/gia-sample-report.jpg" target="_blank" rel="noopener" title="Click to enlarge"><img src="projects/diamond-pricing/gia-sample-report.jpg" alt="Sample GIA Diamond Grading Report" loading="lazy"></a><figcaption>Sample GIA Diamond Grading Report. Click to enlarge.</figcaption></figure>
+    <ul class="fields">
+      <li><b>Report number</b><span>Unique ID; it can be checked online with the issuing laboratory and is often laser-inscribed on the diamond's girdle.</span></li>
+      <li><b>Shape and measurements</b><span>Outline shape (such as round brilliant) and dimensions in millimeters.</span></li>
+      <li><b>Carat weight</b><span>Recorded to the hundredth of a carat (for example, 1.01 ct).</span></li>
+      <li><b>Color grade</b><span>A letter on the D-to-Z scale.</span></li>
+      <li><b>Clarity grade</b><span>One of the 11 grades, with a plot showing where the main inclusions are.</span></li>
+      <li><b>Cut grade</b><span>For standard round brilliants: Excellent to Poor, plus polish and symmetry.</span></li>
+      <li><b>Fluorescence</b><span>How the diamond reacts to ultraviolet light; used for identification.</span></li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="band tint" id="labs"><div class="wrap">
+  <div class="sec-head"><span class="label">Who grades diamonds</span><h2>Grading laboratories</h2>
+    <p>A grading report is only as reliable as the laboratory behind it. These are four widely recognized independent laboratories. Each lets you check a report number on its website.</p></div>
+  <div class="labs">
+    <a href="https://www.gia.edu/" target="_blank" rel="noopener"><b>GIA</b><i>Gemological Institute of America · Carlsbad, California</i><span>An independent nonprofit established in 1931. GIA created the 4Cs and, in 1953, the International Diamond Grading System.</span><u>gia.edu ↗</u></a>
+    <a href="https://www.igi.org/" target="_blank" rel="noopener"><b>IGI</b><i>International Gemological Institute · Antwerp, Belgium</i><span>Founded in Antwerp in 1975, with laboratories in many countries. IGI began certifying lab-grown diamonds in 2005.</span><u>igi.org ↗</u></a>
+    <a href="https://hrdantwerp.com/" target="_blank" rel="noopener"><b>HRD Antwerp</b><i>Antwerp, Belgium</i><span>Established in 1973 as the Diamond High Council (Hoge Raad voor Diamant); its diamond lab opened in 1976. Labs in Antwerp, Mumbai, and Dubai.</span><u>hrdantwerp.com ↗</u></a>
+    <a href="https://www.gemscience.net/" target="_blank" rel="noopener"><b>GSI</b><i>Gemological Science International · New York</i><span>Founded in New York in 2005, with laboratories on four continents.</span><u>gemscience.net ↗</u></a>
+  </div>
+</div></section>
+
+<section class="band" id="buy"><div class="wrap">
+  <div class="sec-head"><span class="label">Practical</span><h2>Before you buy</h2></div>
+  <ol class="check">
+    <li><span><b>Set your priorities.</b>Decide which of the 4Cs matter most to you and where a lower grade is acceptable.</span></li>
+    <li><span><b>Ask for an independent report.</b>Check the report number with the issuing laboratory.</span></li>
+    <li><span><b>Get the origin in writing.</b>The receipt should state natural or lab-grown.</span></li>
+    <li><span><b>Compare like with like.</b>Compare price per carat only across the same shape, carat range, color, clarity, and cut.</span></li>
+    <li><span><b>Check the policies.</b>Read the return, upgrade, and warranty terms before you pay.</span></li>
+  </ol>
+</div></section>
+
+<section class="band" id="more"><div class="wrap">
+  <div class="sec-head"><span class="label">Go further</span><h2>Articles and videos</h2>
+    <p>Selected research, readings, and videos on diamond quality and origin. More will be added over time.</p></div>
+  <h3 class="sub">Research articles</h3>
+  <ol class="papers">
+    <li>Sally Eaton-Magaña, Troy Ardon, Christopher M. Breeding, and James E. Shigley, “Natural-Color D-to-Z Diamonds: A Crystal-Clear Perspective,” <i>Gems &amp; Gemology</i>, 56(3), 318–335, 2020. <a href="https://hongkong.gia.edu/dam/jcr:042dcfda-9053-4aec-874a-5294d99b6f3c/Fall-2020-natural-color-d-to-z-diamonds-crystal-clear.pdf" target="_blank" rel="noopener">Read at gia.edu ↗</a></li>
+    <li>Christopher M. Breeding, Sally Eaton-Magaña, and James E. Shigley, “Naturally Colored Yellow and Orange Gem Diamonds: The Nitrogen Factor,” <i>Gems &amp; Gemology</i>, 56(2), 194–219, 2020. <a href="https://hongkong.gia.edu/dam/jcr:84a84222-1061-4447-8e45-c649e2113c86/SU20-naturally-colored-yellow-orange-diamonds-v2.pdf" target="_blank" rel="noopener">Read at gia.edu ↗</a></li>
+    <li>Yun Luo, David Nelson, Troy Ardon, and Christopher M. Breeding, “Measurement and Characterization of the Effects of Blue Fluorescence on Diamond Appearance,” <i>Gems &amp; Gemology</i>, 57(2), 102–123, 2021. <a href="https://cms.gia.edu/dam/jcr:bfb2ab91-6df7-4241-9b28-d475faa2b395/SU21_Luo.pdf" target="_blank" rel="noopener">Read at gia.edu ↗</a></li>
+    <li>Sally Eaton-Magaña and James E. Shigley, “Observations on CVD-Grown Synthetic Diamonds: A Review,” <i>Gems &amp; Gemology</i>, 52(3), 222–245, 2016. <a href="https://www.gia.edu/dam/migrated-assets/docs/doc1/GG-FA16-Magana.pdf" target="_blank" rel="noopener">Read at gia.edu ↗</a></li>
+  </ol>
+  <h3 class="sub">Videos</h3>
+  <div class="res">
+    <a href="https://www.youtube.com/watch?v=tXdPlZPI9qM" target="_blank" rel="noopener"><span class="thumbph">▶ YouTube</span><span class="badge">Video</span><b>How to Choose a Diamond: Four-Minute GIA Diamond Grading Guide by GIA</b><span class="src2">GIA · July 21, 2014</span><span class="cm">Topic: the 4Cs and how GIA grades diamonds.</span></a>
+    <a href="https://www.youtube.com/watch?v=1hvjuOKKX_I" target="_blank" rel="noopener"><span class="thumbph">▶ YouTube</span><span class="badge">Video</span><b>How Are DIAMONDS Formed?</b><span class="src2">Making It Happen · October 24, 2023</span><span class="cm">Topic: how natural diamonds form.</span></a>
+    <a href="https://www.youtube.com/watch?v=D9pVtHDxeFU" target="_blank" rel="noopener"><span class="thumbph">▶ YouTube</span><span class="badge">Video</span><b>How Lab-Grown Diamonds Are Made – Billions of Dollars in American Labs | THE MAKING</b><span class="src2">THE MAKING · September 25, 2025</span><span class="cm">Topic: how lab-grown diamonds are produced.</span></a>
+  </div>
+  
+</div></section>
+
+<section class="band tint" id="src"><div class="wrap">
+  <div class="sec-head"><span class="label">References</span><h2>Sources</h2></div>
+  <ul class="src">
+    <li>GIA, 4Cs of Diamond Quality: <a href="https://4cs.gia.edu/en-us/diamond-color/" target="_blank" rel="noopener">4cs.gia.edu ↗</a></li>
+    <li>GIA, How to Read a GIA Diamond Grading Report (polish, symmetry, fluorescence): <a href="https://www.gia.edu/dam/jcr:2fb6ec66-085c-4106-9b7f-11ffc27b0438/8.5x11%20How%20to%20Read%20a%20Diamond%20Grading%20Report%202026.pdf" target="_blank" rel="noopener">gia.edu ↗</a></li>
+    <li>GIA, Laboratory-Grown Diamonds: <a href="https://4cs.gia.edu/en-us/laboratory-grown-diamond/" target="_blank" rel="noopener">4cs.gia.edu ↗</a></li>
+    <li>GIA, Updated laboratory-grown diamond services (October 1, 2025): <a href="https://www.gia.edu/gia-news-press/updated-laboratory-grown-diamond-services-to-launch-october-1" target="_blank" rel="noopener">gia.edu ↗</a></li>
+    <li>Laboratory details from each lab's own website: <a href="https://www.gia.edu/gia-about" target="_blank" rel="noopener">gia.edu</a>, <a href="https://www.igi.org/about/timeline/" target="_blank" rel="noopener">igi.org</a>, <a href="https://hrdantwerp.com/about/" target="_blank" rel="noopener">hrdantwerp.com</a>, <a href="https://www.gemscience.net/about-us/" target="_blank" rel="noopener">gemscience.net</a></li>
+    <li>U.S. Federal Trade Commission, Guides for the Jewelry, Precious Metals, and Pewter Industries (16 CFR Part 23): <a href="https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-23" target="_blank" rel="noopener">ecfr.gov ↗</a></li>
+  </ul>
+</div></section>
+</main>
+
+<footer><div class="wrap" id="foot">© Chong Huang · Personal website featuring my research, curated resources, and student projects.</div></footer>
+<script>document.getElementById("foot").textContent="© "+new Date().getFullYear()+" Chong Huang · Personal website featuring my research, curated resources, and student projects.";</script>
+</body>
+</html>

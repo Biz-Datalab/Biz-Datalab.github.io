@@ -36,6 +36,10 @@ guide and the repo disagree, trust the repo and update this guide.
 - `prices/`: the owner uploads four CSVs every two weeks, named `YYYY-MM-DD_<natural|lab>_<carat range>.csv`.
   The benchmark is E color, VVS2, 0.90–0.99 ct and 1.00–1.49 ct. An optional `YYYY-MM-DD_comment.txt` replaces the
   automatic comment.
+- `diamond-basics.html`: static Diamond education page (badge "Diamond education"), linked from the Diamond Market Watch
+  intro. Not data-driven and not updated with prices. Page styles are in its own <style> block. To add an article or video,
+  edit its "Articles and videos" section; confirm title, authors or channel, and date first. Labs listed: GIA, IGI,
+  HRD Antwerp, GSI only (owner removed GCAL). Papers use the owner's citation format plus a "Read at gia.edu" link.
 - `index.html`: `renderNews()` and `renderRes()`. `project.html`: project page renderer. `assets/site.css`: styles.
 - `HOW-TO-UPDATE.md`: the owner's own step-by-step guide. Keep it in sync when workflows change.
 
