@@ -14,6 +14,13 @@ The newest date shows first on the site. Type is Video, Article, or Paper.
   and the date shown on the page.
 -->
 
+## Nvidia and the World Without Jensen
+- link: https://newsletter.semianalysis.com/p/nvidia-and-the-world-without-jensen
+- type: Article
+- source: SemiAnalysis
+- date: 2026-11-12
+- comment: Analysis of Nvidia after Jensen Huang's resignation as CEO, covering export controls, succession, and supply and capacity commitments that the authors report rose from $119B to $279B in one quarter; part of the article is for paid subscribers.
+
 ## Angela Duckworth commencement speech to 2025 Penn GSE graduates
 - link: https://www.youtube.com/watch?v=DeXBEDXJMaQ
 - type: Video
