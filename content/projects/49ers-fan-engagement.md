@@ -5,7 +5,7 @@ This project uses the short "brief" layout (see diamond-pricing.md). In "Student
 - type: group
 - label: Student group project
 - badge: student
-- order: 7
+- order: 5
 - layout: brief
 - year: 2026
 - image: projects/49ers-fan-engagement/cloud-standout-player.png

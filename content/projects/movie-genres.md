@@ -5,7 +5,7 @@ This project uses the short "brief" layout (see diamond-pricing.md). In "Student
 - type: group
 - label: Student group project
 - badge: student
-- order: 5
+- order: 7
 - layout: brief
 - year: 2026
 - image: projects/movie-genres/genre-posters.png

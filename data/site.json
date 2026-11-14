@@ -644,69 +644,75 @@
    "order_num": 4.0
   },
   {
-   "slug": "movie-genres",
-   "title": "Predicting Students' Favorite Movie Genres",
+   "slug": "49ers-fan-engagement",
+   "title": "49ers Fan Sentiment & Team Performance Signals",
    "sections": {
     "domain knowledge": {
      "name": "Domain knowledge",
      "items": [],
      "subs": [
       {
-       "title": "A survey that worked",
+       "title": "Real fans, real games",
        "bullets": [],
-       "text": "When online responses slowed at about 60, the team took a QR code to campus and asked students in person. The survey reached 103 responses, and 93 complete, reliable answers were kept for analysis."
+       "text": "The team surveyed 63 fans and matched their answers with weekly search interest and with team statistics for every game of the season, including yards, passing and rushing attempts, turnovers, points, and results.",
+       "images": [
+        "projects/49ers-fan-engagement/game-data.png"
+       ]
+      },
+      {
+       "title": "Two kinds of evidence",
+       "bullets": [],
+       "text": "Survey answers show what fans say; search trends show what fans do. Comparing the two let students test whether self-reported engagement matches real online behavior, using five statistical tests."
       }
      ]
+    },
+    "research question": {
+     "name": "Research question",
+     "items": [
+      [
+       "Do fans' reported engagement and their online search behavior tell the same story? The team asked how team performance shapes fan engagement, whether survey answers line up with search activity, and which fan behaviors show up in search trends. Students also analyzed fans' own words: what the team should improve next season and which player stood out most."
+      ]
+     ],
+     "subs": []
     },
     "student work": {
      "name": "Student work",
      "items": [],
      "subs": [
       {
-       "title": "Favorite genres",
+       "title": "What fans want improved, and who stood out",
        "bullets": [],
-       "text": "Comedy, romance or romantic comedy, and action were the most popular favorite genres.",
-       "size": "wide",
+       "text": "Left: asked what the 49ers should improve next season, fans most often named defense, offense, and keeping players healthy. Right: asked which player stood out, fans most often named Christian McCaffrey and Brock Purdy.",
        "images": [
-        "projects/movie-genres/genre-posters.png"
-       ]
-      },
-      {
-       "title": "Gender and genre",
-       "bullets": [],
-       "text": "A chi-square test and mosaic plot show that favorite genre differs significantly by gender (p < 0.05).",
-       "size": "wide",
-       "images": [
-        "projects/movie-genres/gender-genre-mosaic.png"
-       ]
-      },
-      {
-       "title": "Favorite genre by gender",
-       "bullets": [],
-       "text": "Left, women: romance or romantic comedy (27%) and comedy (22%) lead. Right, men: action (29%) and comedy (19%) lead.",
-       "images": [
-        "projects/movie-genres/genre-female.png",
-        "projects/movie-genres/genre-male.png"
+        "projects/49ers-fan-engagement/cloud-improve.png",
+        "projects/49ers-fan-engagement/cloud-standout-player.png"
        ],
        "size": "wide"
       },
       {
-       "title": "What predicts a favorite genre",
+       "title": "Season satisfaction",
        "bullets": [],
-       "text": "Who students watch with, the feeling they want, and personality were the strongest predictors, explaining about half of the variation in favorite genre.",
-       "size": "wide",
+       "text": "About 59% of respondents rated their satisfaction with the season 4 or 5 out of 5.",
        "images": [
-        "projects/movie-genres/behavior-model.png"
+        "projects/49ers-fan-engagement/season-satisfaction.png"
+       ]
+      },
+      {
+       "title": "A star-driven season",
+       "bullets": [],
+       "text": "About 90% of respondents rated Christian McCaffrey's impact on the team 4 or 5 out of 5.",
+       "images": [
+        "projects/49ers-fan-engagement/mccaffrey-impact.png"
        ]
       }
      ],
-     "intro": "Selected visuals from the students' final report."
+     "intro": "Selected results from the students' final report."
     },
     "acknowledgments": {
      "name": "Acknowledgments",
      "items": [
       [
-       "We thank the [Human Subjects - Institutional Review Board (IRB) - University of the Pacific](https://my.pacific.edu/pages/human-subjects-institutional-review-board-irb) for its support of this project."
+       "We thank the 49ers fans who took the time to answer the survey."
       ]
      ],
      "subs": []
@@ -715,7 +721,7 @@
      "name": "For instructors",
      "items": [
       [
-       "This project can be adapted to other consumer topics or student surveys. Detailed assignment instructions are available on request, and you are welcome to contact me."
+       "This project can be adapted to other sports teams, brands, or any topic where a survey can be compared with public search data. Detailed assignment instructions are available on request, and you are welcome to contact me."
       ]
      ],
      "subs": []
@@ -723,6 +729,7 @@
    },
    "section_order": [
     "domain knowledge",
+    "research question",
     "student work",
     "acknowledgments",
     "for instructors"
@@ -733,9 +740,9 @@
    "order": "5",
    "layout": "brief",
    "year": "2026",
-   "image": "projects/movie-genres/genre-posters.png",
-   "students": "Viridiana Guillen, Jacobee Bun, Amna Blouch, Christina Johnson, and Caylen Walker",
-   "summary": "In the age of streaming, what makes a college student love one movie genre over another? A student team surveyed Pacific students about their viewing habits, moods, and what shapes their choices, then used analytics to explain and predict favorite genres. Gender, personality, the feeling students want from a movie, and who they watch with turned out to matter more than trailers or social media, insights that streaming platforms and marketers can use to reach this core audience.",
+   "image": "projects/49ers-fan-engagement/cloud-standout-player.png",
+   "students": "Luis Torres, Nick Gill, Giovanni Garcia, Sundeep Badwal, and Antonio Munoz",
+   "summary": "How closely does fan engagement follow what happens on the field? A student team studied San Francisco 49ers fans during the 2025–2026 NFL season, combining a survey of 63 fans with weekly Google search interest in California and game-by-game team data. Fans' reported satisfaction and their search activity moved in the same direction, and engagement rose and fell with the team's results, pointing to fan engagement that is largely performance-based and driven by star players. One team member received a mini internship opportunity with the San Francisco 49ers.",
    "order_num": 5.0
   },
   {
@@ -843,75 +850,69 @@
    "order_num": 6.0
   },
   {
-   "slug": "49ers-fan-engagement",
-   "title": "49ers Fan Sentiment & Team Performance Signals",
+   "slug": "movie-genres",
+   "title": "Predicting Students' Favorite Movie Genres",
    "sections": {
     "domain knowledge": {
      "name": "Domain knowledge",
      "items": [],
      "subs": [
       {
-       "title": "Real fans, real games",
+       "title": "A survey that worked",
        "bullets": [],
-       "text": "The team surveyed 63 fans and matched their answers with weekly search interest and with team statistics for every game of the season, including yards, passing and rushing attempts, turnovers, points, and results.",
-       "images": [
-        "projects/49ers-fan-engagement/game-data.png"
-       ]
-      },
-      {
-       "title": "Two kinds of evidence",
-       "bullets": [],
-       "text": "Survey answers show what fans say; search trends show what fans do. Comparing the two let students test whether self-reported engagement matches real online behavior, using five statistical tests."
+       "text": "When online responses slowed at about 60, the team took a QR code to campus and asked students in person. The survey reached 103 responses, and 93 complete, reliable answers were kept for analysis."
       }
      ]
-    },
-    "research question": {
-     "name": "Research question",
-     "items": [
-      [
-       "Do fans' reported engagement and their online search behavior tell the same story? The team asked how team performance shapes fan engagement, whether survey answers line up with search activity, and which fan behaviors show up in search trends. Students also analyzed fans' own words: what the team should improve next season and which player stood out most."
-      ]
-     ],
-     "subs": []
     },
     "student work": {
      "name": "Student work",
      "items": [],
      "subs": [
       {
-       "title": "What fans want improved, and who stood out",
+       "title": "Favorite genres",
        "bullets": [],
-       "text": "Left: asked what the 49ers should improve next season, fans most often named defense, offense, and keeping players healthy. Right: asked which player stood out, fans most often named Christian McCaffrey and Brock Purdy.",
+       "text": "Comedy, romance or romantic comedy, and action were the most popular favorite genres.",
+       "size": "wide",
        "images": [
-        "projects/49ers-fan-engagement/cloud-improve.png",
-        "projects/49ers-fan-engagement/cloud-standout-player.png"
+        "projects/movie-genres/genre-posters.png"
+       ]
+      },
+      {
+       "title": "Gender and genre",
+       "bullets": [],
+       "text": "A chi-square test and mosaic plot show that favorite genre differs significantly by gender (p < 0.05).",
+       "size": "wide",
+       "images": [
+        "projects/movie-genres/gender-genre-mosaic.png"
+       ]
+      },
+      {
+       "title": "Favorite genre by gender",
+       "bullets": [],
+       "text": "Left, women: romance or romantic comedy (27%) and comedy (22%) lead. Right, men: action (29%) and comedy (19%) lead.",
+       "images": [
+        "projects/movie-genres/genre-female.png",
+        "projects/movie-genres/genre-male.png"
        ],
        "size": "wide"
       },
       {
-       "title": "Season satisfaction",
+       "title": "What predicts a favorite genre",
        "bullets": [],
-       "text": "About 59% of respondents rated their satisfaction with the season 4 or 5 out of 5.",
+       "text": "Who students watch with, the feeling they want, and personality were the strongest predictors, explaining about half of the variation in favorite genre.",
+       "size": "wide",
        "images": [
-        "projects/49ers-fan-engagement/season-satisfaction.png"
-       ]
-      },
-      {
-       "title": "A star-driven season",
-       "bullets": [],
-       "text": "About 90% of respondents rated Christian McCaffrey's impact on the team 4 or 5 out of 5.",
-       "images": [
-        "projects/49ers-fan-engagement/mccaffrey-impact.png"
+        "projects/movie-genres/behavior-model.png"
        ]
       }
      ],
-     "intro": "Selected results from the students' final report."
+     "intro": "Selected visuals from the students' final report."
     },
     "acknowledgments": {
      "name": "Acknowledgments",
      "items": [
       [
-       "We thank the 49ers fans who took the time to answer the survey."
+       "We thank the [Human Subjects - Institutional Review Board (IRB) - University of the Pacific](https://my.pacific.edu/pages/human-subjects-institutional-review-board-irb) for its support of this project."
       ]
      ],
      "subs": []
@@ -920,7 +921,7 @@
      "name": "For instructors",
      "items": [
       [
-       "This project can be adapted to other sports teams, brands, or any topic where a survey can be compared with public search data. Detailed assignment instructions are available on request, and you are welcome to contact me."
+       "This project can be adapted to other consumer topics or student surveys. Detailed assignment instructions are available on request, and you are welcome to contact me."
       ]
      ],
      "subs": []
@@ -928,7 +929,6 @@
    },
    "section_order": [
     "domain knowledge",
-    "research question",
     "student work",
     "acknowledgments",
     "for instructors"
@@ -939,9 +939,9 @@
    "order": "7",
    "layout": "brief",
    "year": "2026",
-   "image": "projects/49ers-fan-engagement/cloud-standout-player.png",
-   "students": "Luis Torres, Nick Gill, Giovanni Garcia, Sundeep Badwal, and Antonio Munoz",
-   "summary": "How closely does fan engagement follow what happens on the field? A student team studied San Francisco 49ers fans during the 2025–2026 NFL season, combining a survey of 63 fans with weekly Google search interest in California and game-by-game team data. Fans' reported satisfaction and their search activity moved in the same direction, and engagement rose and fell with the team's results, pointing to fan engagement that is largely performance-based and driven by star players. One team member received a mini internship opportunity with the San Francisco 49ers.",
+   "image": "projects/movie-genres/genre-posters.png",
+   "students": "Viridiana Guillen, Jacobee Bun, Amna Blouch, Christina Johnson, and Caylen Walker",
+   "summary": "In the age of streaming, what makes a college student love one movie genre over another? A student team surveyed Pacific students about their viewing habits, moods, and what shapes their choices, then used analytics to explain and predict favorite genres. Gender, personality, the feeling students want from a movie, and who they watch with turned out to matter more than trailers or social media, insights that streaming platforms and marketers can use to reach this core audience.",
    "order_num": 7.0
   }
  ],
