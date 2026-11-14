@@ -654,15 +654,7 @@
       {
        "title": "Real fans, real games",
        "bullets": [],
-       "text": "The team surveyed 63 fans and matched their answers with weekly search interest and with team statistics for every game of the season, including yards, passing and rushing attempts, turnovers, points, and results.",
-       "images": [
-        "projects/49ers-fan-engagement/game-data.png"
-       ]
-      },
-      {
-       "title": "Two kinds of evidence",
-       "bullets": [],
-       "text": "Survey answers show what fans say; search trends show what fans do. Comparing the two let students test whether self-reported engagement matches real online behavior, using five statistical tests."
+       "text": "The team surveyed 63 fans and matched their answers with weekly search interest and with team statistics for every game of the season, including yards, passing and rushing attempts, turnovers, points, and results."
       }
      ]
     },
@@ -679,6 +671,15 @@
      "name": "Student work",
      "items": [],
      "subs": [
+      {
+       "title": "Two kinds of evidence",
+       "bullets": [],
+       "text": "Survey answers show what fans say; search trends show what fans do. Comparing the two let students test whether self-reported engagement matches real online behavior, using five statistical tests. Right: the game-by-game team data the students compiled for the season.",
+       "size": "side",
+       "images": [
+        "projects/49ers-fan-engagement/game-data.png"
+       ]
+      },
       {
        "title": "What fans want improved, and who stood out",
        "bullets": [],

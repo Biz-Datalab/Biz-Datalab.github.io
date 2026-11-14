@@ -30,6 +30,8 @@ guide and the repo disagree, trust the repo and update this guide.
 - `content/projects/*.md`: one file per project. Full story layout: copy `thrive.md`. Brief layout: copy `diamond-pricing.md`.
   Images go in `projects/<slug>/`. In prose and captions, `[text](url)` becomes a link.
   An `## Acknowledgments` section renders as "Thank you".
+  In a brief-layout "Student work" item, `- size: wide` shows it full width; `- size: side` puts the text on the left and
+  the image on the right, full width (stacks on phones).
 - `content/news.md`: Industry News. Fields: link, source, date, category (prices | market | ai), takeaway.
 - `content/ai-resources.md`: AI Watch. Fields: link, type (Video | Article | Paper), source, date, comment.
   The owner also adds items through the GitHub issue form (`.github/ISSUE_TEMPLATE/ai-watch.yml`).

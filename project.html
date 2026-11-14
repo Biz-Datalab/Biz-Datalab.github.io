@@ -6,7 +6,7 @@
 <title>Project · Biz Data Lab</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=4407b339">
+<link rel="stylesheet" href="assets/site.css?v=f0b9bacc">
 <script data-goatcounter="https://biz-datalab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -74,7 +74,7 @@ function renderBrief(p) {
     : `<div class="prose">${paras(Q)}</div>`)));
   const R = S["student work"];
   if (R) out.push(band(head("Student work", "Selected results", R.intro) +
-    `<div class="gallery">${R.subs.map(w => `<figure class="${w.size === "wide" ? "wide" : ""}">
+    `<div class="gallery">${R.subs.map(w => `<figure class="${w.size === "wide" || w.size === "side" ? w.size : ""}">
       <div class="gimg">${(w.images || []).map(src => `<a href="${esc(src)}" target="_blank" rel="noopener"><img src="${esc(src)}" alt="${esc(w.title)}" loading="lazy"></a>`).join("")}</div>
       <figcaption><b>${esc(w.title)}</b>${w.text ? `<span>${esc(w.text)}</span>` : ""}${w.link ? `<a href="${esc(safeUrl(w.link))}" target="_blank" rel="noopener">${esc(w.linktext || "Open ↗")}</a>` : ""}</figcaption></figure>`).join("")}</div>`));
   Object.keys(S).filter(k => !["workflow", "student work", "domain knowledge", "research question"].includes(k)).forEach(k => {

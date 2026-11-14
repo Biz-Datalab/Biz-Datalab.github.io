@@ -15,16 +15,17 @@ This project uses the short "brief" layout (see diamond-pricing.md). In "Student
 ## Domain knowledge
 ### Real fans, real games
 - text: The team surveyed 63 fans and matched their answers with weekly search interest and with team statistics for every game of the season, including yards, passing and rushing attempts, turnovers, points, and results.
-- image: projects/49ers-fan-engagement/game-data.png
-
-### Two kinds of evidence
-- text: Survey answers show what fans say; search trends show what fans do. Comparing the two let students test whether self-reported engagement matches real online behavior, using five statistical tests.
 
 ## Research question
 - Do fans' reported engagement and their online search behavior tell the same story? The team asked how team performance shapes fan engagement, whether survey answers line up with search activity, and which fan behaviors show up in search trends. Students also analyzed fans' own words: what the team should improve next season and which player stood out most.
 
 ## Student work
 - intro: Selected results from the students' final report.
+
+### Two kinds of evidence
+- text: Survey answers show what fans say; search trends show what fans do. Comparing the two let students test whether self-reported engagement matches real online behavior, using five statistical tests. Right: the game-by-game team data the students compiled for the season.
+- image: projects/49ers-fan-engagement/game-data.png
+- size: side
 
 ### What fans want improved, and who stood out
 - text: Left: asked what the 49ers should improve next season, fans most often named defense, offense, and keeping players healthy. Right: asked which player stood out, fans most often named Christian McCaffrey and Brock Purdy.
