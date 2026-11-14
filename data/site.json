@@ -841,6 +841,108 @@
    "students": "Felipe Cosio, Gursehajpal Singh, Leonardo Magana, Eric Cardenas, and Fatima Naeem",
    "summary": "Could Stockton be the next home for solar lighting manufacturing? A student team used public labor, workforce, and freight data, visited the Port of Stockton, and checked their findings with industry experts. The answer was yes. Stockton combines a deep-water inland port with customs service and a Foreign Trade Zone, about 300 acres of port land ready for development, direct access to Interstate 5, Highway 99, and rail, a large available workforce, and labor and freight costs well below the Bay Area. The team concluded that the Port of Stockton is the strongest site for a new solar lighting plant.",
    "order_num": 6.0
+  },
+  {
+   "slug": "49ers-fan-engagement",
+   "title": "49ers Fan Sentiment & Team Performance Signals",
+   "sections": {
+    "domain knowledge": {
+     "name": "Domain knowledge",
+     "items": [],
+     "subs": [
+      {
+       "title": "Real fans, real games",
+       "bullets": [],
+       "text": "The team surveyed 63 fans and matched their answers with weekly search interest and with team statistics for every game of the season, including yards, passing and rushing attempts, turnovers, points, and results.",
+       "images": [
+        "projects/49ers-fan-engagement/game-data.png"
+       ]
+      },
+      {
+       "title": "Two kinds of evidence",
+       "bullets": [],
+       "text": "Survey answers show what fans say; search trends show what fans do. Comparing the two let students test whether self-reported engagement matches real online behavior, using five statistical tests."
+      }
+     ]
+    },
+    "research question": {
+     "name": "Research question",
+     "items": [
+      [
+       "Do fans' reported engagement and their online search behavior tell the same story? The team asked how team performance shapes fan engagement, whether survey answers line up with search activity, and which fan behaviors show up in search trends. Students also analyzed fans' own words: what the team should improve next season and which player stood out most."
+      ]
+     ],
+     "subs": []
+    },
+    "student work": {
+     "name": "Student work",
+     "items": [],
+     "subs": [
+      {
+       "title": "What fans want improved, and who stood out",
+       "bullets": [],
+       "text": "Left: asked what the 49ers should improve next season, fans most often named defense, offense, and keeping players healthy. Right: asked which player stood out, fans most often named Christian McCaffrey and Brock Purdy.",
+       "images": [
+        "projects/49ers-fan-engagement/cloud-improve.png",
+        "projects/49ers-fan-engagement/cloud-standout-player.png"
+       ],
+       "size": "wide"
+      },
+      {
+       "title": "Season satisfaction",
+       "bullets": [],
+       "text": "About 59% of respondents rated their satisfaction with the season 4 or 5 out of 5.",
+       "images": [
+        "projects/49ers-fan-engagement/season-satisfaction.png"
+       ]
+      },
+      {
+       "title": "A star-driven season",
+       "bullets": [],
+       "text": "About 90% of respondents rated Christian McCaffrey's impact on the team 4 or 5 out of 5.",
+       "images": [
+        "projects/49ers-fan-engagement/mccaffrey-impact.png"
+       ]
+      }
+     ],
+     "intro": "Selected results from the students' final report."
+    },
+    "acknowledgments": {
+     "name": "Acknowledgments",
+     "items": [
+      [
+       "We thank the 49ers fans who took the time to answer the survey."
+      ]
+     ],
+     "subs": []
+    },
+    "for instructors": {
+     "name": "For instructors",
+     "items": [
+      [
+       "This project can be adapted to other sports teams, brands, or any topic where a survey can be compared with public search data. Detailed assignment instructions are available on request, and you are welcome to contact me."
+      ]
+     ],
+     "subs": []
+    }
+   },
+   "section_order": [
+    "domain knowledge",
+    "research question",
+    "student work",
+    "acknowledgments",
+    "for instructors"
+   ],
+   "type": "group",
+   "label": "Student group project",
+   "badge": "student",
+   "order": "7",
+   "layout": "brief",
+   "year": "2026",
+   "image": "projects/49ers-fan-engagement/cloud-standout-player.png",
+   "students": "Luis Torres, Nick Gill, Giovanni Garcia, Sundeep Badwal, and Antonio Munoz",
+   "summary": "How closely does fan engagement follow what happens on the field? A student team studied San Francisco 49ers fans during the 2025–2026 NFL season, combining a survey of 63 fans with weekly Google search interest in California and game-by-game team data. Fans' reported satisfaction and their search activity moved in the same direction, and engagement rose and fell with the team's results, pointing to fan engagement that is largely performance-based and driven by star players. One team member received a mini internship opportunity with the San Francisco 49ers.",
+   "order_num": 7.0
   }
  ],
  "resources": [
