@@ -12,6 +12,24 @@ The newest date shows first on the site. Type is Video, Article, or Paper. Only 
 - date: 2026-11-01
 -->
 
+## Math 2.0
+- link: https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf
+- type: Paper
+- source: Terence Tao · lecture slides
+- date: 2026-10
+
+## Towards Long-Horizon Agents: A Survey
+- link: https://long-horizon-agents.github.io/
+- type: Paper
+- source: Renmin University of China et al. · preprint
+- date: 2026-07
+
+## Code as Agent Harness
+- link: https://arxiv.org/abs/2605.18747
+- type: Paper
+- source: arXiv
+- date: 2026-05-18
+
 ## United States Data Center Energy Usage Report: 2025 Update
 - link: https://escholarship.org/uc/item/33m6w3x0
 - type: Article
