@@ -2,7 +2,7 @@
 Easiest way to add an item: use the "Add to AI Watch" form (see HOW-TO-UPDATE.md).
 Or add a block by hand here, starting with "## " and its title.
 Copy the example below, remove the "<!--" and "-->" lines around it, and fill it in.
-The newest date shows first on the site. Type is Video, Article, or Paper.
+The newest date shows first on the site. Type is Video, Article, or Paper. Only the title, source, and date are shown (no comments). Use the exact original headline as the title and the date shown on the page.
 
 <!--
 ## Title of the article or video
@@ -10,16 +10,19 @@ The newest date shows first on the site. Type is Video, Article, or Paper.
 - type: Article
 - source: Harvard Business Review
 - date: 2026-11-01
-- comment: One-line takeaway, kept separate from the title. Use the exact original headline as the title
-  and the date shown on the page.
 -->
+
+## United States Data Center Energy Usage Report: 2025 Update
+- link: https://escholarship.org/uc/item/33m6w3x0
+- type: Article
+- source: Lawrence Berkeley National Laboratory
+- date: 2026-06
 
 ## Nvidia and the World Without Jensen
 - link: https://newsletter.semianalysis.com/p/nvidia-and-the-world-without-jensen
 - type: Article
 - source: SemiAnalysis
 - date: 2026-11-12
-- comment: Analysis of Nvidia after Jensen Huang's resignation as CEO, covering export controls, succession, and supply and capacity commitments that the authors report rose from $119B to $279B in one quarter; part of the article is for paid subscribers.
 
 ## Angela Duckworth commencement speech to 2025 Penn GSE graduates
 - link: https://www.youtube.com/watch?v=DeXBEDXJMaQ
@@ -71,7 +74,6 @@ The newest date shows first on the site. Type is Video, Article, or Paper.
 - link: https://www.youtube.com/watch?v=7u-DXVADyhc&t=2034s
 - type: Video
 - source: YouTube
-- comment: About 2 hours.
 
 ## Elon Musk on AGI Timeline, US vs China, Job Markets, Clean Energy & Humanoid Robots
 - link: https://www.youtube.com/watch?v=RSNuB9pj9P8&t=6631s
@@ -82,7 +84,6 @@ The newest date shows first on the site. Type is Video, Article, or Paper.
 - link: https://www.youtube.com/watch?v=ZMrjvxCIPpY&t=1103s
 - type: Video
 - source: YouTube
-- comment: Companion read: Ivan Zhao's essay "Steam, Steel, and Infinite Minds" on the Notion blog (notion.com/blog/steam-steel-and-infinite-minds-ai).
 
 ## The Thinking Game
 - link: https://www.youtube.com/watch?v=d95J8yzvjbQ
@@ -106,7 +107,6 @@ The newest date shows first on the site. Type is Video, Article, or Paper.
 - type: Video
 - source: YouTube
 - date: 2026
-- comment: 20% of YC companies have a solo founder, and companies are reaching meaningful revenue faster than ever.
 
 ## Andrej Karpathy: "Delete Everything, Keep Attention" (Stanford lecture)
 - link: https://www.usetranscribe.io/yt/rxv6B7JODTY/andrej-karpathy-ai

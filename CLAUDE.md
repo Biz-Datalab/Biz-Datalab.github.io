@@ -58,7 +58,8 @@ guide and the repo disagree, trust the repo and update this guide.
 - Title = the exact original headline from the linked page, character for character. Never use a finding as the title.
 - Date = the date shown on the page: the publication date; if there is none, the "last updated" date or, for an event,
   the event date (say which in the takeaway).
-- The finding goes only in the separate takeaway line (news) or comment (AI Watch), one neutral sentence with figures.
+- The finding goes only in the separate takeaway line (news), one neutral sentence with figures. AI Watch shows the
+  title, source, and date only: no comments (owner decision, 2026-11-15).
 - Open each page to confirm the headline and date before publishing. If a site is blocked, find the page with WebSearch.
   If the headline or date still cannot be confirmed, do not publish it; ask the owner.
 - No duplicates: also skip syndicated copies of the same article on another site.

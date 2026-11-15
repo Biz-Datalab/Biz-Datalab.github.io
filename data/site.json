@@ -948,12 +948,20 @@
  ],
  "resources": [
   {
+   "title": "United States Data Center Energy Usage Report: 2025 Update",
+   "url": "https://escholarship.org/uc/item/33m6w3x0",
+   "type": "Article",
+   "source": "Lawrence Berkeley National Laboratory",
+   "date": "2026-06",
+   "comment": ""
+  },
+  {
    "title": "Nvidia and the World Without Jensen",
    "url": "https://newsletter.semianalysis.com/p/nvidia-and-the-world-without-jensen",
    "type": "Article",
    "source": "SemiAnalysis",
    "date": "2026-11-12",
-   "comment": "Analysis of Nvidia after Jensen Huang's resignation as CEO, covering export controls, succession, and supply and capacity commitments that the authors report rose from $119B to $279B in one quarter; part of the article is for paid subscribers."
+   "comment": ""
   },
   {
    "title": "Angela Duckworth commencement speech to 2025 Penn GSE graduates",
@@ -1033,7 +1041,7 @@
    "type": "Video",
    "source": "YouTube",
    "date": "",
-   "comment": "About 2 hours."
+   "comment": ""
   },
   {
    "title": "Elon Musk on AGI Timeline, US vs China, Job Markets, Clean Energy & Humanoid Robots",
@@ -1049,7 +1057,7 @@
    "type": "Video",
    "source": "YouTube",
    "date": "",
-   "comment": "Companion read: Ivan Zhao's essay \"Steam, Steel, and Infinite Minds\" on the Notion blog (notion.com/blog/steam-steel-and-infinite-minds-ai)."
+   "comment": ""
   },
   {
    "title": "The Thinking Game",
@@ -1081,7 +1089,7 @@
    "type": "Video",
    "source": "YouTube",
    "date": "2026",
-   "comment": "20% of YC companies have a solo founder, and companies are reaching meaningful revenue faster than ever."
+   "comment": ""
   },
   {
    "title": "Andrej Karpathy: \"Delete Everything, Keep Attention\" (Stanford lecture)",

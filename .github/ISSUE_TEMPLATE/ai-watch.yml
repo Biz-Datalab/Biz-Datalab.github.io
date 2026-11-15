@@ -31,8 +31,3 @@ body:
     attributes:
       label: Source
       description: Optional. For example YouTube channel, journal, or publication name.
-  - type: textarea
-    id: comment
-    attributes:
-      label: Your comment
-      description: One or two sentences on why it is worth watching or reading.

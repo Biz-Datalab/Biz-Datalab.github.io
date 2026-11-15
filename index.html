@@ -206,7 +206,7 @@ function renderRes() {
   const mb = $("resMore"); mb.hidden = matched.length <= 8;
   mb.textContent = resAll ? "Show fewer" : `Show all ${matched.length}`;
   $("resList").innerHTML = items.map(r => `<li><span class="kind"><span class="tag">${esc(r.type)}</span>${r.date ? "<br>" + esc(fmt(r.date)) : ""}</span>
-    <div><a class="t" href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener">${esc(r.title || host(r.url))}</a>${r.source ? ` <span class="src">· ${esc(r.source)}</span>` : ""}${r.comment ? `<div class="note">${esc(r.comment)}</div>` : ""}</div><span></span></li>`).join("")
+    <div><a class="t" href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener">${esc(r.title || host(r.url))}</a>${r.source ? ` <span class="src">· ${esc(r.source)}</span>` : ""}</div><span></span></li>`).join("")
     || '<li class="empty">First picks coming soon.</li>';
 }
 document.addEventListener("click", ev => { const b = ev.target.closest("#resFilters button"); if (b) { resType = b.dataset.t; resAll = false; renderRes(); } });

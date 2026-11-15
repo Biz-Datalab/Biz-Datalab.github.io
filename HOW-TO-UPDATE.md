@@ -35,7 +35,7 @@ https://github.com/Biz-Datalab/Biz-Datalab.github.io/issues/new?template=ai-watc
 
 1. Open the link (you must be signed in to GitHub as Biz-Datalab).
 2. In the title box, replace `AI Watch: ` with the title of the video, article, or paper.
-3. Paste the **Link**, choose the **Type** (Video, Article, or Paper), optionally add the **Source** and **Your comment**.
+3. Paste the **Link**, choose the **Type** (Video, Article, or Paper), optionally add the **Source**. AI Watch shows titles only, with no comments.
 4. Click **Create**.
 
 Within about 2 minutes the item is on the website, and the form closes itself with the note
