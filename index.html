@@ -7,7 +7,7 @@
 <meta name="description" content="Experiential learning projects, a biweekly Diamond Market Watch, and curated AI resources.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=f0b9bacc">
+<link rel="stylesheet" href="assets/site.css?v=f943ef4b">
 <script data-goatcounter="https://biz-datalab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -92,9 +92,12 @@
 
   <section class="band" id="ai-watch">
     <div class="wrap">
+<div class="ai-top"><div>
       <div class="sec-head"><span class="label">Curated picks</span><h2>AI Watch</h2>
         <p>Selected videos, articles, and papers on AI, shared as reading and viewing materials for my courses BUSI 146: Advanced Business Analytics and BUSI 150: Business Analytics Project, and for the MS in Business Analytics program.</p></div>
       <div class="filters" id="resFilters" role="group" aria-label="Filter by type"></div>
+      </div>
+      <aside class="llm" id="llmBoard" hidden></aside></div>
       <ul class="list" id="resList"></ul>
       <div class="more"><button class="linkbtn" id="resMore" type="button" hidden></button></div>
     </div>
@@ -210,6 +213,15 @@ function renderRes() {
     <div><a class="t" href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener">${esc(r.title || host(r.url))}</a>${r.source ? ` <span class="src">· ${esc(r.source)}</span>` : ""}</div><span></span></li>`).join("")
     || '<li class="empty">First picks coming soon.</li>';
 }
+function renderLLM() {
+  const lb = DATA.leaderboard;
+  if (!lb || !lb.rows || !lb.rows.length) return;
+  const row = r => { const c = String(r.change || ""); const cls = /^-/.test(c) ? "dn" : (/^\+/.test(c) && !/^\+?0%$/.test(c) ? "up" : "");
+    return `<li><span class="rk">${r.rank}.</span><span class="md"><b>${esc(r.model)}</b><small>by ${esc(r.author)}</small></span><span class="tk">${esc(r.tokens)} tokens<em class="${cls}">${cls === "up" ? "↑" : cls === "dn" ? "↓" : ""}${esc(c.replace(/^[+-]/, ""))}</em></span></li>`; };
+  $("llmBoard").innerHTML = `<div class="llm-h"><span class="label">LLM Leaderboard · top 10 this week</span><a href="https://openrouter.ai/rankings#leaderboard-table" target="_blank" rel="noopener">OpenRouter ↗</a></div>
+    <ol>${lb.rows.map(row).join("")}</ol><p class="llm-f">Weekly tokens processed through OpenRouter. Usage data through ${esc(fmt(lb.date))}. Updated weekly.</p>`;
+  $("llmBoard").hidden = false;
+}
 document.addEventListener("click", ev => { const b = ev.target.closest("#resFilters button"); if (b) { resType = b.dataset.t; resAll = false; renderRes(); } });
 $("resMore").addEventListener("click", () => { resAll = !resAll; renderRes(); });
 $("edPick").addEventListener("change", ev => renderPrices(+ev.target.value));
@@ -218,7 +230,7 @@ $("newsMore").addEventListener("click", () => { newsAll = !newsAll; renderNews()
 fetch("data/site.json", { cache: "no-cache" }).then(r => r.json()).then(d => {
   DATA = Object.assign({ profile: {}, projects: [], resources: [], news: [], editions: [] }, d);
   renderProfile(DATA.profile); renderProjects(DATA.projects);
-  renderPrices(DATA.editions.length - 1); renderNews(); renderRes();
+  renderPrices(DATA.editions.length - 1); renderNews(); renderRes(); renderLLM();
 }).catch(() => { $("edTitle").textContent = "Could not load data. Please refresh the page."; $("newsList").innerHTML = ""; });
 </script>
 <script>

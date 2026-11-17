@@ -205,6 +205,27 @@ def build_prices():
     return editions
 
 
+def build_leaderboard():
+    path = os.path.join(ROOT, "content", "llm-leaderboard.md")
+    if not os.path.exists(path):
+        return None
+    lb = {"date": "", "rows": []}
+    for line in read(path).splitlines():
+        m = re.match(r"-\s*date:\s*(\S+)", line)
+        if m:
+            lb["date"] = m.group(1)
+            continue
+        m = re.match(r"-\s*(\d+)\s*\|(.+)", line)
+        if m:
+            parts = [x.strip() for x in m.group(2).split("|")]
+            if len(parts) == 4:
+                lb["rows"].append({"rank": int(m.group(1)), "model": parts[0], "author": parts[1],
+                                   "tokens": parts[2], "change": parts[3]})
+    if len(lb["rows"]) != 10 or not lb["date"]:
+        warnings.append("content/llm-leaderboard.md: needs a date and exactly 10 rows")
+    return lb
+
+
 def main():
     cdir = os.path.join(ROOT, "content")
     profile = parse_fields(os.path.join(cdir, "profile.md"))
@@ -221,7 +242,8 @@ def main():
     editions = build_prices()
 
     os.makedirs(os.path.join(ROOT, "data"), exist_ok=True)
-    site = {"profile": profile, "projects": projects, "resources": resources, "news": news, "editions": editions}
+    site = {"profile": profile, "projects": projects, "resources": resources, "news": news, "editions": editions,
+            "leaderboard": build_leaderboard()}
     with open(os.path.join(ROOT, "data", "site.json"), "w", encoding="utf-8") as f:
         json.dump(site, f, ensure_ascii=False, indent=1)
     stamp_assets()

@@ -103,6 +103,13 @@ To add a research article, video, or reading, send the link to Claude. Claude ch
 
 ---
 
+## 7. LLM Leaderboard (AI Watch)
+
+The top-10 panel beside the AI Watch introduction is updated every Monday by a scheduled task, from
+OpenRouter's weekly leaderboard. To fix it by hand, edit **content/llm-leaderboard.md** (date and 10 rows).
+
+---
+
 ## If something goes wrong
 
 - **Red cross in the Actions tab:** click it, then click "build" to see the message.

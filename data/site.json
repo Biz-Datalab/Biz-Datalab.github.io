@@ -1349,5 +1349,80 @@
     }
    }
   }
- ]
+ ],
+ "leaderboard": {
+  "date": "2026-11-16",
+  "rows": [
+   {
+    "rank": 1,
+    "model": "DeepSeek V4.1 Flash 1017",
+    "author": "deepseek",
+    "tokens": "61.2T",
+    "change": "+10%"
+   },
+   {
+    "rank": 2,
+    "model": "Hy4",
+    "author": "tencent",
+    "tokens": "16T",
+    "change": "0%"
+   },
+   {
+    "rank": 3,
+    "model": "DeepSeek V4.1 Flash",
+    "author": "deepseek",
+    "tokens": "15.5T",
+    "change": "-12%"
+   },
+   {
+    "rank": 4,
+    "model": "GLM 5.3 Flash",
+    "author": "z-ai",
+    "tokens": "11.8T",
+    "change": "-3%"
+   },
+   {
+    "rank": 5,
+    "model": "GPT-6 Luna",
+    "author": "openai",
+    "tokens": "8.08T",
+    "change": "+14%"
+   },
+   {
+    "rank": 6,
+    "model": "Claude Opus 5.5",
+    "author": "anthropic",
+    "tokens": "7.37T",
+    "change": "+9%"
+   },
+   {
+    "rank": 7,
+    "model": "Step 5 Preview",
+    "author": "stepfun",
+    "tokens": "6.36T",
+    "change": "-11%"
+   },
+   {
+    "rank": 8,
+    "model": "MiMo-V2.6-Flash",
+    "author": "xiaomi",
+    "tokens": "4.16T",
+    "change": "+63%"
+   },
+   {
+    "rank": 9,
+    "model": "GLM 5.3",
+    "author": "z-ai",
+    "tokens": "3.74T",
+    "change": "+5%"
+   },
+   {
+    "rank": 10,
+    "model": "GPT-6.1 Sol",
+    "author": "openai",
+    "tokens": "3.71T",
+    "change": "-5%"
+   }
+  ]
+ }
 }

@@ -47,6 +47,10 @@ guide and the repo disagree, trust the repo and update this guide.
   intro. Not data-driven and not updated with prices. Page styles are in its own <style> block. To add an article or video,
   edit its "Articles and videos" section; confirm title, authors or channel, and date first. Labs listed: GIA, IGI,
   HRD Antwerp, GSI only (owner removed GCAL). Papers use the owner's citation format plus a "Read at gia.edu" link.
+- `content/llm-leaderboard.md`: top 10 of the OpenRouter LLM Leaderboard ("This Week", all models), shown as a text panel
+  beside the AI Watch intro (`renderLLM()`). date = the page's "Usage data through" date; exactly 10 rows
+  `rank | model | author | weekly tokens | change`. Rebuilt as text, never a screenshot (logos). Updated by the weekly
+  scheduled task "Weekly LLM leaderboard" (Mondays 2:37 pm Pacific).
 - `index.html`: `renderNews()` and `renderRes()`. `project.html`: project page renderer. `assets/site.css`: styles.
 - `HOW-TO-UPDATE.md`: the owner's own step-by-step guide. Keep it in sync when workflows change.
 

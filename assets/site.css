@@ -364,3 +364,24 @@ footer{padding-block:28px;font-size:.92rem}
 @media (max-width:860px){.statement-row{grid-template-columns:minmax(0,1fr);gap:24px}.thanks ul{grid-template-columns:minmax(0,1fr)}.thanks li:nth-last-child(2){border-bottom:1px solid var(--line)}}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .thanks .label{color:#8fb0a5}}
 :root[data-theme="dark"] .thanks .label{color:#8fb0a5}
+
+/* AI Watch: weekly LLM leaderboard panel beside the intro */
+.ai-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:40px;align-items:start}
+.llm{border:1px solid var(--line);border-top:3px solid var(--ink);background:var(--bg);padding:16px 20px 12px}
+.llm-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:6px}
+.llm-h a{font-size:.85rem;font-weight:700;text-decoration:none;white-space:nowrap}
+.llm-h a:hover{text-decoration:underline}
+.llm ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-flow:column;grid-template-rows:repeat(5,auto);column-gap:24px}
+.llm li{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line)}
+.llm li:nth-child(5),.llm li:nth-child(10){border-bottom:0}
+.llm .rk{font-size:.85rem;opacity:.7}
+.llm .md b{display:block;font-size:.9rem;line-height:1.25}
+.llm .md small{font-size:.78rem;opacity:.7}
+.llm .tk{text-align:right;font-size:.8rem;line-height:1.3;white-space:nowrap}
+.llm .tk em{display:block;font-style:normal;font-weight:700}
+.llm .tk em.up{color:#1f7a3f}
+.llm .tk em.dn{color:#b3261e}
+.llm-f{font-size:.75rem;opacity:.7;margin-top:8px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .llm .tk em.up{color:#5cc983}:root:not([data-theme="light"]) .llm .tk em.dn{color:#f28b82}}
+@media (max-width:860px){.ai-top{grid-template-columns:minmax(0,1fr);gap:20px}}
+@media (max-width:480px){.llm ol{grid-template-columns:minmax(0,1fr);grid-auto-flow:row;grid-template-rows:none}.llm li:nth-child(5){border-bottom:1px solid var(--line)}}
