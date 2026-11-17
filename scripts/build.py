@@ -1,4 +1,4 @@
-"""Build data/site.json (and data/price-history.csv) from the editable files.
+"""Build data/site.json from the editable files. (The price history is not published as a separate file.)
 
 Inputs
   content/profile.md, content/projects/*.md, content/ai-resources.md, content/news.md
@@ -224,16 +224,6 @@ def main():
     site = {"profile": profile, "projects": projects, "resources": resources, "news": news, "editions": editions}
     with open(os.path.join(ROOT, "data", "site.json"), "w", encoding="utf-8") as f:
         json.dump(site, f, ensure_ascii=False, indent=1)
-    with open(os.path.join(ROOT, "data", "price-history.csv"), "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
-        w.writerow(["date", "indicator", "n", "mean_per_ct", "ci95_low", "ci95_high", "median_per_ct",
-                    "min_per_ct", "max_per_ct", "avg_stone_price", "avg_carat"])
-        for e in editions:
-            for k, label in LABELS.items():
-                s = e["cells"].get(k)
-                if s:
-                    w.writerow([e["date"], label, s["n"], s["mean"], s["lo"], s["hi"], s["median"],
-                                s["min"], s["max"], s["avg_stone"], s["avg_carat"]])
     stamp_assets()
     for wmsg in warnings:
         print("WARNING:", wmsg)

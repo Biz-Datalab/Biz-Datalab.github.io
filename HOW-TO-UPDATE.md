@@ -28,8 +28,8 @@ name it `2026-11-13_comment.txt`, type your paragraph, and commit. It replaces t
 
 **Excel workbook:** you can also simply send the four CSV files to Claude. Claude adds them, checks the comment,
 and builds the Excel workbook for that edition (Summary, one sheet per cell with live formulas, and a History sheet
-with every edition). Workbooks are saved in `prices/workbooks/`. Every edition stays on the site in the Edition menu,
-and "Download all editions (CSV)" gives the full history.
+with every edition) and sends it to you. Workbooks are not published on the website, so keep your copies.
+Every edition stays on the site in the Edition menu. The price history is not offered as a download.
 
 ---
 

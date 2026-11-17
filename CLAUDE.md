@@ -40,7 +40,9 @@ guide and the repo disagree, trust the repo and update this guide.
   automatic comment. Before publishing, compare the new edition with the previous one; if a large change comes from a
   different sample mix (for example, grading lab), write a comment file that says so instead of using the automatic one.
   Then run `python3 scripts/make_workbook.py <date>` (after build.py): it fills `scripts/workbook-template.xlsx` and
-  saves `prices/workbooks/Diamond_Market_Watch_<date>.xlsx`; send it to the owner. Never put a vendor name in it.
+  saves `prices/workbooks/Diamond_Market_Watch_<date>.xlsx` (git-ignored, never committed); send it to the owner.
+  Never put a vendor name in it. Do not publish the price history as a download (owner decision, 2026-11-16): no
+  history CSV, no workbook, and no download link on the site. Past editions stay viewable in the Edition menu.
 - `diamond-basics.html`: static Diamond education page (badge "Diamond education"), linked from the Diamond Market Watch
   intro. Not data-driven and not updated with prices. Page styles are in its own <style> block. To add an article or video,
   edit its "Articles and videos" section; confirm title, authors or channel, and date first. Labs listed: GIA, IGI,

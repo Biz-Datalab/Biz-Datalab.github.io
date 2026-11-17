@@ -5,8 +5,8 @@ Usage:  python3 scripts/make_workbook.py [YYYY-MM-DD]
 
 Reads prices/<date>_<natural|lab>_<band>.csv, fills scripts/workbook-template.xlsx
 (Summary sheet + one sample sheet per cell, with live Excel formulas), adds a History
-sheet from data/price-history.csv, and saves prices/workbooks/Diamond_Market_Watch_<date>.xlsx.
-Run scripts/build.py first so data/price-history.csv is current.
+sheet with every edition (from data/site.json), and saves prices/workbooks/Diamond_Market_Watch_<date>.xlsx.
+Run scripts/build.py first. Workbooks are for the owner only: prices/workbooks/ is not committed.
 """
 import copy, csv, os, re, sys
 from openpyxl import load_workbook
@@ -86,10 +86,19 @@ def main():
     if "History" in wb.sheetnames:
         del wb["History"]
     h = wb.create_sheet("History")
-    hist = os.path.join(ROOT, "data", "price-history.csv")
-    with open(hist, newline="", encoding="utf-8") as f:
-        for i, row in enumerate(csv.reader(f)):
-            h.append([row[0], row[1]] + [float(x) if i else x for x in row[2:]] if i else row)
+    import json
+    LABELS = {"n090": "Natural 0.90-0.99 ct", "n100": "Natural 1.00-1.49 ct",
+              "l090": "Lab-grown 0.90-0.99 ct", "l100": "Lab-grown 1.00-1.49 ct"}
+    h.append(["date", "indicator", "n", "mean_per_ct", "ci95_low", "ci95_high", "median_per_ct",
+              "min_per_ct", "max_per_ct", "avg_stone_price", "avg_carat"])
+    with open(os.path.join(ROOT, "data", "site.json"), encoding="utf-8") as f:
+        editions = json.load(f)["editions"]
+    for e in editions:
+        for k, label in LABELS.items():
+            c = e["cells"].get(k)
+            if c:
+                h.append([e["date"], label, c["n"], c["mean"], c["lo"], c["hi"], c["median"],
+                          c["min"], c["max"], c["avg_stone"], c["avg_carat"]])
     for cell in h[1]:
         cell.font = Font(bold=True, color="FFFFFF")
         cell.fill = copy.copy(s["A4"].fill)
@@ -100,7 +109,7 @@ def main():
             cell.number_format = "$#,##0"
         row[10].number_format = "0.000"
     h.freeze_panes = "A2"
-    h["M1"] = "All editions, from the website's price-history.csv. One row per cell per edition."
+    h["M1"] = "All editions to date. One row per cell per edition."
 
     out = os.path.join(PDIR, "workbooks", f"Diamond_Market_Watch_{date}.xlsx")
     os.makedirs(os.path.dirname(out), exist_ok=True)
