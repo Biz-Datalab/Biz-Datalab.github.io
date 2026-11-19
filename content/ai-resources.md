@@ -12,6 +12,12 @@ The newest date shows first on the site. Type is Video, Article, or Paper. Only 
 - date: 2026-11-01
 -->
 
+## Labor Market Report: Building a Future of Work That Works
+- link: https://delivery-p143253-e1476319.adobeaemcloud.com/adobe/assets/urn:aaid:aem:aa2b4cfa-fc52-444f-9f58-6d7fba072a59/original/as/original.pdf
+- type: Article
+- source: LinkedIn Economic Graph Research Institute
+- date: 2026-01
+
 ## The state of AI in 2026
 - link: https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/the%20state%20of%20ai/the-state-of-ai-in-2026-on-the-road-to-roi-aug-2026.pdf?shouldIndex=false
 - type: Article
