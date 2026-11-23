@@ -79,3 +79,17 @@ Title = the article's exact original headline. Date = the date shown on the page
 - date: 2026-11-14
 - category: market
 - takeaway: GJEPC data show India's gem and jewellery exports rose 34.01% year over year to $2.92 billion in October 2026, with cut and polished diamond exports up 10.5% and gold jewellery up 48.2%; April–October exports rose 7.28% to $17.22 billion.
+
+## Kira Jewels Triples Lab-Grown Diamond Production
+- link: https://nationaljeweler.com/articles/15526-kira-jewels-triples-lab-grown-diamond-production
+- source: National Jeweler
+- date: 2026-11-23
+- category: market
+- takeaway: Lab-grown progress: Kira Jewels has expanded its CVD reactors in Surat, India, from 4,000 to 10,000, raising monthly output to 750,000 polished carats (including 250,000 certified stones), about three times its 2025 monthly production.
+
+## Angola to pay $180 million for 10% of De Beers, Endiama CEO says
+- link: https://clubofmozambique.com/news/angola-to-pay-180-million-for-10-of-de-beers-endiama-ceo-says
+- source: Club of Mozambique (Reuters)
+- date: 2026-11-23
+- category: market
+- takeaway: Angolan state miner Endiama's CEO said Angola will pay about $180 million for a 10% stake in De Beers as Anglo American sells the company, joining Botswana, already a 15% shareholder, and Namibia among the expected new owners.
