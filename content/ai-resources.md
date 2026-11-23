@@ -12,6 +12,12 @@ The newest date shows first on the site. Type is Video, Article, or Paper. Only 
 - date: 2026-11-01
 -->
 
+## ‘Great Patriot and National Treasure’: Trump Applauds NVIDIA’s Decision to Reinstate Jensen Huang
+- link: https://time.com/article/2026/11/23/trump-nvidia-jensen-huang-reinstated/
+- type: Article
+- source: TIME
+- date: 2026-11-23
+
 ## Labor Market Report: Building a Future of Work That Works
 - link: https://delivery-p143253-e1476319.adobeaemcloud.com/adobe/assets/urn:aaid:aem:aa2b4cfa-fc52-444f-9f58-6d7fba072a59/original/as/original.pdf
 - type: Article
