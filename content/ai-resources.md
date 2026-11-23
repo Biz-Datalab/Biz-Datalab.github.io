@@ -12,6 +12,12 @@ The newest date shows first on the site. Type is Video, Article, or Paper. Only 
 - date: 2026-11-01
 -->
 
+## Mathematicians astounded by AI and human-written proofs of iconic Riemann hypothesis
+- link: https://www.nature.com/articles/d41586-026-03812-7
+- type: Article
+- source: Nature
+- date: 2026-11-20
+
 ## ‘Great Patriot and National Treasure’: Trump Applauds NVIDIA’s Decision to Reinstate Jensen Huang
 - link: https://time.com/article/2026/11/23/trump-nvidia-jensen-huang-reinstated/
 - type: Article
