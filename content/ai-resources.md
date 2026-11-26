@@ -54,6 +54,12 @@ The newest date shows first on the site. Type is Video, Article, or Paper. Only 
 - source: arXiv
 - date: 2026-05-18
 
+## Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+- link: https://arxiv.org/pdf/2005.11401
+- type: Paper
+- source: arXiv
+- date: 2020-05-22
+
 ## United States Data Center Energy Usage Report: 2025 Update
 - link: https://escholarship.org/uc/item/33m6w3x0
 - type: Article
