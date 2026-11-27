@@ -60,6 +60,18 @@ The newest date shows first on the site. Type is Video, Article, or Paper. Only 
 - source: arXiv
 - date: 2020-05-22
 
+## Introducing Llama 3.1: Our most capable models to date
+- link: https://ai.meta.com/blog/meta-llama-3-1/
+- type: Article
+- source: Meta AI blog
+- date: 2024-07-23
+
+## Attention is All you Need
+- link: https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf
+- type: Paper
+- source: NIPS 2017 proceedings
+- date: 2017
+
 ## United States Data Center Energy Usage Report: 2025 Update
 - link: https://escholarship.org/uc/item/33m6w3x0
 - type: Article
